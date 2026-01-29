@@ -13,6 +13,9 @@
 	<a href="/projects">Projects</a>
 </nav>
 
+<div class="footer">
+	<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev">GitHub</a>.</p>
+</div>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {@render children()}
