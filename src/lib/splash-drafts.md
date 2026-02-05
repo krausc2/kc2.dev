@@ -1,4 +1,4 @@
 # Scratch/Drafts
-~~vibe coding~~ aura coding
+- ~~vibe coding~~ aura coding
 
 # Implemented
