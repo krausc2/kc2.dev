@@ -1,11 +1,4 @@
 <script>
-  /*
-    Passes data from load function to the page as data prop,
-    from +page.ts.
-
-    Anywhere data.meta.option or data.content is used, Svelte
-    will update the value.
-  */
   let { data } = $props();
 </script>
 
@@ -15,7 +8,8 @@
   </h1>
 
   <h2>
-    {data.meta.date}
+    <!-- Display date in user local format -->
+    {data.meta.date.toLocaleDateString(undefined, { dateStyle: 'long' })}
   </h2>
 
   <div> 
