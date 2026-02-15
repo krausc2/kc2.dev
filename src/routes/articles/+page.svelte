@@ -8,7 +8,9 @@
       
 			<h1>{article.title}</h1>
 
-			<h2>{article.date.toLocaleDateString(undefined, { dateStyle: 'long' })}</h2>
+			<p>Date created: {article.date.toLocaleDateString(undefined, { dateStyle: 'long' })}</p>
+
+			<p>Last modified: {article.lastModified.toLocaleDateString(undefined, { dateStyle: 'long' })}</p>
 
 			{#if article.tags.length > 0}
 				{#each article.tags as tag}
