@@ -21,7 +21,7 @@
 
 <footer>
 	<div>
-		<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev">GitHub</a>.</p>
+		<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
 	</div>
 </footer>
 
