@@ -27,3 +27,16 @@
 
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+
+<style>
+	header {
+		display: flex;
+		justify-content: center;
+	}
+
+	nav {
+		display: flex;
+		gap: 4rem;
+		padding: 1rem;
+	}
+</style>
