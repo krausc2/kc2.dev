@@ -1,17 +1,17 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import * as Button from "$lib/components/ui/button/button.svelte";
+	import { Button } from "$lib/components/ui/button";
 	let { children } = $props();
 </script>
 
-<header>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/now">Now</a>
-		<a href="/things">Things</a>
-		<a href="/articles">Articles</a>
-		<a href="/projects">Projects</a>
+<header class="flex justify-center p-4">
+	<nav class="flex">
+		<Button variant="ghost" href="/">Home</Button>
+		<!--<Button variant="ghost" href="/now">Now</Button>-->
+		<Button variant="ghost" href="/things">Things</Button>
+		<Button variant="ghost" href="/articles">Articles</Button>
+		<Button variant="ghost" href="/projects">Projects</Button>
 	</nav>
 </header>
 
@@ -28,6 +28,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
+<!--
 <style>
 	header {
 		display: flex;
@@ -40,3 +41,4 @@
 		padding: 1rem;
 	}
 </style>
+-->
