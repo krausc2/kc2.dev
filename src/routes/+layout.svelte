@@ -5,19 +5,21 @@
 	let { children } = $props();
 </script>
 
-<header class="flex justify-center p-4">
-	<nav class="flex">
+<div class="flex min-h-screen">
+	<!-- Sidebar Nav -->
+	<nav class="flex flex-col">
 		<Button variant="ghost" href="/">Home</Button>
 		<!--<Button variant="ghost" href="/now">Now</Button>-->
 		<Button variant="ghost" href="/things">Things</Button>
 		<Button variant="ghost" href="/articles">Articles</Button>
 		<Button variant="ghost" href="/projects">Projects</Button>
 	</nav>
-</header>
 
-<main>
-	{@render children()}
-</main>
+	<!-- Main Content -->
+	<main>
+		{@render children()}
+	</main>
+</div>
 
 <footer>
 	<div>
@@ -27,18 +29,3 @@
 
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-
-<!--
-<style>
-	header {
-		display: flex;
-		justify-content: center;
-	}
-
-	nav {
-		display: flex;
-		gap: 4rem;
-		padding: 1rem;
-	}
-</style>
--->
