@@ -6,7 +6,7 @@
 </script>
 
 <div class="grid min-h-screen grid-cols-3">
-	<aside class="col-span-1">
+	<aside class="col-span-1 border-r-1">
 		<!-- [Logo and stuff goes here] -->
 		<nav class="flex flex-col">
 			<Button variant="ghost" href="/">Home</Button>
@@ -18,9 +18,13 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2">
+	<main class="col-span-1">
 		{@render children()}
 	</main>
+
+	<section class="col-span-1 border-l-1">
+		<!-- Optional future sidebar for blog? -->
+	</section>
 </div>
 
 <footer>
