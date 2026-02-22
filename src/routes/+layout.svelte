@@ -6,7 +6,7 @@
 </script>
 
 <div class="grid min-h-screen grid-cols-3">
-	<aside class="col-span-1 border-r-1">
+	<aside class="col-span-1 border-r">
 		<!-- [Logo and stuff goes here] -->
 		<nav class="flex flex-col">
 			<Button variant="ghost" href="/">Home</Button>
@@ -18,20 +18,18 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-1">
+	<main class="col-span-1 flex flex-col">
 		{@render children()}
+
+		<footer class="text-center">
+			<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
+		</footer>
 	</main>
 
 	<section class="col-span-1 border-l-1">
 		<!-- Optional future sidebar for blog? -->
 	</section>
 </div>
-
-<footer>
-	<div>
-		<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
-	</div>
-</footer>
 
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
