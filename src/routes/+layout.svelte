@@ -5,18 +5,20 @@
 	let { children } = $props();
 </script>
 
-<div class="flex min-h-screen">
-	<!-- Sidebar Nav -->
-	<nav class="flex flex-col">
-		<Button variant="ghost" href="/">Home</Button>
-		<!--<Button variant="ghost" href="/now">Now</Button>-->
-		<Button variant="ghost" href="/things">Things</Button>
-		<Button variant="ghost" href="/articles">Articles</Button>
-		<Button variant="ghost" href="/projects">Projects</Button>
-	</nav>
+<div class="grid min-h-screen grid-cols-3">
+	<aside class="col-span-1">
+		<!-- [Logo and stuff goes here] -->
+		<nav class="flex flex-col">
+			<Button variant="ghost" href="/">Home</Button>
+			<!--<Button variant="ghost" href="/now">Now</Button>-->
+			<Button variant="ghost" href="/things">Things</Button>
+			<Button variant="ghost" href="/articles">Articles</Button>
+			<Button variant="ghost" href="/projects">Projects</Button>	
+		</nav>
+	</aside>
 
 	<!-- Main Content -->
-	<main>
+	<main class="col-span-2">
 		{@render children()}
 	</main>
 </div>
