@@ -5,7 +5,7 @@
 	let { children } = $props();
 </script>
 
-<div class="grid min-h-screen grid-cols-3">
+<div class="grid min-h-screen grid-cols-4">
 	<aside class="col-span-1 border-r">
 		<!-- [Logo and stuff goes here] -->
 		<nav class="flex flex-col">
@@ -18,10 +18,12 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-1 flex flex-col">
-		{@render children()}
+	<main class="col-span-2 flex flex-col h-full">
+		<div class="p-8">
+			{@render children()}
+		</div>
 
-		<footer class="text-center">
+		<footer class="mt-auto py-4 text-center">
 			<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
 		</footer>
 	</main>
