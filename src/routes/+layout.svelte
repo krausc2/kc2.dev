@@ -6,7 +6,7 @@
 </script>
 
 <div class="grid min-h-screen grid-cols-4">
-	<aside class="col-span-1 border-r">
+	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 		<nav class="flex flex-col">
 			<Button variant="ghost" href="/">Home</Button>
