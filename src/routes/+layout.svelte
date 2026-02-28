@@ -28,7 +28,7 @@
 		</footer>
 	</main>
 
-	<section class="col-span-1 border-l-1">
+	<section class="col-span-1 border-l">
 		<!-- Optional future sidebar for blog? -->
 	</section>
 </div>
