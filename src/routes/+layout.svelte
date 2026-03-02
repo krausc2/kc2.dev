@@ -9,11 +9,11 @@
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 		<nav class="flex flex-col">
-			<Button variant="ghost" href="/">Home</Button>
-			<!--<Button variant="ghost" href="/now">Now</Button>-->
-			<Button variant="ghost" href="/things">Things</Button>
-			<Button variant="ghost" href="/articles">Articles</Button>
-			<Button variant="ghost" href="/projects">Projects</Button>	
+			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/">Home</Button>
+			<!--<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/now">Now</Button>-->
+			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/things">Things</Button>
+			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/articles">Articles</Button>
+			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/projects">Projects</Button>	
 		</nav>
 	</aside>
 
