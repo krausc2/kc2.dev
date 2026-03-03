@@ -28,7 +28,7 @@
 		-->
 		<nav class="flex flex-col">
 			{#each navItems as item}
-				<div class="group relative overflow-hidden" role="none">
+				<div class="group relative overflow-hidden">
 					<div class="pointer-events-none absolute inset-0 z-0 bg-linear-to-r from-stone-200 to-white opacity-0 transition-opacity duration-500 group-hover:opacity-100 transform-gpu"></div>
 					<Button variant="ghost" class="relative z-10 w-full hover:bg-transparent" href={item.href}>
 						{item.label}
