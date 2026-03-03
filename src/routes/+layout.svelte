@@ -2,18 +2,39 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { Button } from "$lib/components/ui/button";
+
 	let { children } = $props();
+
+	/*
+		Array of items for the navigation menu.
+	*/
+	const navItems = [
+		{ label: 'Home', href: '/' },
+		// { label: 'Now', href: '/now' },
+		{ label: 'Things', href: '/things' },
+		{ label: 'Articles', href: '/articles' },
+		{ label: 'Projects', href: '/projects' }
+	];
 </script>
 
 <div class="grid min-h-screen grid-cols-4">
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
+
+		<!--
+			For each item in array, creates a button with hover effect.
+			z-10 (the <Button>)
+			z-0 (the gradient <div>)
+		-->
 		<nav class="flex flex-col">
-			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/">Home</Button>
-			<!--<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/now">Now</Button>-->
-			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/things">Things</Button>
-			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/articles">Articles</Button>
-			<Button variant="ghost" class="hover:bg-linear-to-r hover:from-stone-200 hover:to-white" href="/projects">Projects</Button>	
+			{#each navItems as item}
+				<div class="group relative overflow-hidden" role="none">
+					<div class="pointer-events-none absolute inset-0 z-0 bg-linear-to-r from-stone-200 to-white opacity-0 transition-opacity duration-500 group-hover:opacity-100 transform-gpu"></div>
+					<Button variant="ghost" class="relative z-10 w-full hover:bg-transparent" href={item.href}>
+						{item.label}
+					</Button>
+				</div>
+			{/each}
 		</nav>
 	</aside>
 
@@ -29,7 +50,7 @@
 	</main>
 
 	<section class="col-span-1 border-l">
-		<!-- Optional future sidebar for blog? -->
+		<!-- [Optional future sidebar for blog?] -->
 	</section>
 </div>
 
