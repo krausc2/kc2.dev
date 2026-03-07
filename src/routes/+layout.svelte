@@ -45,7 +45,7 @@
 		</div>
 
 		<footer class="mt-auto py-4 text-center">
-			<p>© 2026 KC². Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
+			<p>© 2026 krausc2. Source available at <a href="https://github.com/krausc2/kc2.dev" target="_blank" rel="noreferrer">GitHub</a>.</p>
 		</footer>
 	</main>
 
