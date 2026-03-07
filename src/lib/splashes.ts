@@ -2,12 +2,15 @@ const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
 
 const SPLASHES = {
 	day: [
-		"Any computer is a laptop if you're strong enough",
+		"Any computer is a laptop if you're strong enough.",
 		"Hello world!",
-		"<s>Vibe coding?</s> Prompt engineering."
+		"<s>Vibe coding?</s> Prompt engineering.",
+		"git push --force",
+		"Built with Svelte ♥"
 	],
 	night: [
-		"8 hour of sleep is reccomended for optimal performance",
+		"8 hour of sleep is reccomended for optimal performance.",
+		"The best code is written at 2am.",
 	]
 };
 
