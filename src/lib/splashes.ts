@@ -2,18 +2,12 @@ const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
 
 const SPLASHES = {
 	day: [
-		'Splash a',
-		'Splash b',
-		'Splash c',
-		'Splash d',
-		'Splash e'
+		"Any computer is a laptop if you're strong enough",
+		"Hello world!",
+		"<s>Vibe coding?</s> Prompt engineering."
 	],
 	night: [
-		'Night splash a',
-		'Night splash b',
-		'Night splash c',
-		'Night splash d',
-		'Night splash e'
+		"8 hour of sleep is reccomended for optimal performance",
 	]
 };
 
