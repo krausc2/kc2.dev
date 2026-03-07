@@ -3,14 +3,20 @@
 
 	let { data } = $props();
 
-	// Checks time of day then overrides splash.
+	/*
+		Checks time of day then overrides splash.
+
+		#TODO: This causes a hydration mismatch, where splash
+		is different on the server and client. Try to find
+		a better solution.
+	*/
 	let splash = $derived.by(() => {
 		const hour = new Date().getHours();
 
 		if (hour >= 21 || hour < 3) {
 			return getSplash('night');
 		}
-		
+
 		return data.splash;
 	});
 </script>
