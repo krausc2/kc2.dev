@@ -1,17 +1,9 @@
 import type { PageServerLoad } from './$types';
-import { splashes } from '$lib/splashes';
+import { getSplash } from '$lib/splashes';
 
-const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
-
-/*
-	Sets the splash text for index page.
-
-	Calculates days since epoch and uses that value to select
-	a splash from the splashes array.
-*/
+// Sets splash.
 export const load: PageServerLoad = () => {
-	const daysSinceEpoch = Math.floor(Date.now() / MS_PER_DAY);
-	const splash = splashes[daysSinceEpoch % splashes.length];
+	const splash = getSplash('day');
 
 	return {
 		splash

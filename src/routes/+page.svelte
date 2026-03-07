@@ -1,12 +1,16 @@
 <script lang="ts">
+	import { getSplash } from '$lib/splashes';
+
 	let { data } = $props();
 
-	// Custom store that changes splash based on the time of day
+	// Checks time of day then overrides splash.
 	let splash = $derived.by(() => {
 		const hour = new Date().getHours();
+
 		if (hour >= 21 || hour < 3) {
-			return "Go to sleep!";
+			return getSplash('night');
 		}
+		
 		return data.splash;
 	});
 </script>
