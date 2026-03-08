@@ -3,10 +3,12 @@ const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
 const SPLASHES = {
 	day: [
 		"Any computer is a laptop if you're strong enough.",
+		"See my latest project at localhost:5173/",
 		"Hello world!",
 		"<s>Vibe coding?</s> Prompt engineering.",
 		"git push --force",
 		"Built with Svelte ♥",
+		"3000? All my homies use 5173.",
 		"Don't touch the CSS, it's still wet.",
 		"640x480. Just as God intended.",
 		"'The Cloud' is just someone else's computer.",
@@ -23,5 +25,9 @@ const SPLASHES = {
 export function getSplash(type: keyof typeof SPLASHES): string {
 	const items = SPLASHES[type];
 	const daysSinceEpoch = Math.floor(Date.now() / MS_PER_DAY);
+	// Test variant.
+	//return items[(daysSinceEpoch -4) % items.length];
+
+	// Live variant.
 	return items[daysSinceEpoch % items.length];
 }
