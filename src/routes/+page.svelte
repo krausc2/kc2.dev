@@ -6,9 +6,7 @@
 	/*
 		Checks time of day then overrides splash.
 
-		#TODO: This causes a hydration mismatch, where splash
-		is different on the server and client. Try to find
-		a better solution.
+		#TODO: This causes a hydration mismatch.
 	*/
 	let splash = $derived.by(() => {
 		const hour = new Date().getHours();
