@@ -23,5 +23,5 @@
 
 <div>
 	<p class="pt-12 text-5xl font-bold">krausc2</p>
-	<p class="py-4">{@html splash}</p>
+	<p class="py-4 text-stone-400">// {@html splash}</p>
 </div>

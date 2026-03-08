@@ -6,11 +6,17 @@ const SPLASHES = {
 		"Hello world!",
 		"<s>Vibe coding?</s> Prompt engineering.",
 		"git push --force",
-		"Built with Svelte ♥"
+		"Built with Svelte ♥",
+		"Don't touch the CSS, it's still wet.",
+		"640x480. Just as God intended.",
+		"'The Cloud' is just someone else's computer.",
+		"Your smart fridge is spying on you.",
+		"To understand recursion, one must first understand recursion."
 	],
 	night: [
-		"8 hour of sleep is reccomended for optimal performance.",
+		"8 hours of sleep is recommended for optimal performance.",
 		"The best code is written at 2am.",
+		"The glowies are asleep."
 	]
 };
 
