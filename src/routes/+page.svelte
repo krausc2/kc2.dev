@@ -4,11 +4,9 @@
 	let { data } = $props();
 
 	/*
-		Checks time of day then overrides splash.
-
-		#TODO: This causes a hydration mismatch.
+		#TODO Check if this causes a hydration mismatch.
 	*/
-	let splash = $derived.by(() => {
+	const splash = () => {
 		const hour = new Date().getHours();
 
 		if (hour >= 21 || hour < 3) {
@@ -16,12 +14,12 @@
 		}
 
 		return data.splash;
-	});
+	};
 </script>
 
 <div>
 	<p class="pt-12 text-5xl font-bold">krausc2</p>
-	<p class="py-4 text-stone-400">// {@html splash} <span class="cursor">|</span></p>
+	<p class="py-4 text-stone-400">// {@html splash()} <span class="cursor">|</span></p>
 </div>
 
 <style>
