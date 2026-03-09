@@ -5,6 +5,8 @@
 
 	let { children } = $props();
 
+	console.log("%cWell aren't you clever! Here's your reward: aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==", "color: #a3a3a3");
+
 	/*
 		Array of items for the navigation menu.
 	*/
