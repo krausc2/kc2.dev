@@ -17,9 +17,9 @@
 	};
 </script>
 
-<div>
-	<p class="pt-12 text-5xl font-bold">krausc2</p>
-	<p class="py-4 text-stone-400">// {@html splash()} <span class="cursor">|</span></p>
+<div class="flex flex-col pt-16 gap-4 px-8">
+	<p class="text-5xl font-bold">krausc2</p>
+	<p class="text-stone-400">// {@html splash()} <span class="cursor">|</span></p>
 </div>
 
 <style>

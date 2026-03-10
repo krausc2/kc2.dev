@@ -3,7 +3,7 @@ const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
 const SPLASHES = {
 	day: [
 		"Any computer is a laptop if you're strong enough.",
-		"Clippy just wanted to help out.",
+		"Clippy just wanted to help.",
 		"See my latest project at localhost:5173/",
 		"Hello world!",
 		"<s>Vibe coding?</s> Prompt engineering.",
