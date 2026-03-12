@@ -17,17 +17,17 @@
 	};
 </script>
 
-<div class="flex flex-col pt-16 gap-8 px-8">
+<section class="flex flex-col pt-16 gap-8 px-8">
 	<p class="text-5xl font-bold">krausc2</p>
 	<p class="text-stone-400">// {@html splash()} <span class="cursor">|</span></p>
 
 	<div class="grid grid-cols-2 mt-8">
-		<p>Text on the left side.</p>
+		<p>G'day, I'm Curtis.</p>
 		<div class="bg-stone-400 min-h-100 flex items-center justify-center">
 			<p class="text-stone-500">Placeholder Image</p>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 	.cursor {
