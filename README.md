@@ -1,13 +1,10 @@
-# kc2.dev 
+# kc2.dev
 
-
-This is my personal site and corner of the internet. Contains projects, articles, and whatever else I'm currently working on. 
+This is my personal site and corner of the internet. Contains projects, articles, and whatever else I'm currently working on.
 
 The site itself is a project to teach myself Svelte and better understand web fundamentals.
 
 ---
-
-
 
 ### Running Locally
 
@@ -17,3 +14,4 @@ npm install
 
 # Start dev server
 npm run dev
+```
