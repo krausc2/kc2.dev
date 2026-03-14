@@ -14,7 +14,8 @@ const SPLASHES = {
 		'640x480. Just as God intended.',
 		"'The Cloud' is just someone else's computer.",
 		'Your smart fridge is spying on you.',
-		'To understand recursion, one must first understand recursion.'
+		'To understand recursion, one must first understand recursion.',
+		'Orwell was an optimist.'
 	],
 	night: [
 		'8 hours of sleep is recommended for optimal performance.',
