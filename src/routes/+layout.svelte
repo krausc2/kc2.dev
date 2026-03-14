@@ -37,7 +37,7 @@
 		-->
 		<nav class="flex flex-col">
 			{#each navItems as item}
-				<div class="group relative overflow-hidde font-mono">
+				<div class="group relative font-mono">
 					<div
 						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 					></div>
