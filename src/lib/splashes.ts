@@ -25,12 +25,10 @@ const SPLASHES = {
 	]
 };
 
-export function getSplash(type: keyof typeof SPLASHES): string {
+export type SplashType = keyof typeof SPLASHES;
+
+export function getSplash(type: SplashType): string {
 	const items = SPLASHES[type];
 	const daysSinceEpoch = Math.floor(Date.now() / MS_PER_DAY);
-	// Test variant.
-	//return items[(daysSinceEpoch -4) % items.length];
-
-	// Live variant.
 	return items[daysSinceEpoch % items.length];
 }
