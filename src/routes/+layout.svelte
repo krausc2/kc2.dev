@@ -2,13 +2,17 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { Button } from '$lib/components/ui/button';
+	import "@fontsource-variable/jetbrains-mono";
+	import "@fontsource/inter";
 
 	let { children } = $props();
 
+	/*
 	console.log(
 		"%cWell aren't you clever! Here's your reward: aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==",
 		'color: #a3a3a3'
 	);
+	*/
 
 	/*
 		Array of items for the navigation menu.
@@ -33,7 +37,7 @@
 		-->
 		<nav class="flex flex-col">
 			{#each navItems as item}
-				<div class="group relative overflow-hidden">
+				<div class="group relative overflow-hidde font-mono">
 					<div
 						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 					></div>
@@ -53,7 +57,7 @@
 	<main class="col-span-2 flex h-full flex-col">
 		{@render children()}
 
-		<footer class="mt-auto p-4 text-center">
+		<footer class="mt-auto p-4 text-center font-mono">
 			<p>
 				© 2026 krausc2. Source available at <a
 					href="https://github.com/krausc2/kc2.dev"

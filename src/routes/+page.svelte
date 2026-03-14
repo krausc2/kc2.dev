@@ -19,7 +19,7 @@
 
 <section class="flex flex-col gap-8 px-8 pt-16">
 	<p class="text-5xl font-bold">krausc2</p>
-	<p class="text-stone-400">// {@html splash()} <span class="cursor">|</span></p>
+	<p class="text-stone-400 font-mono">// {@html splash()} <span class="cursor">|</span></p>
 
 	<div class="mt-8 grid grid-cols-2">
 		<p>G'day, I'm Curtis.</p>
