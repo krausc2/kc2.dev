@@ -26,7 +26,7 @@
 	];
 </script>
 
-<div class="grid min-h-screen grid-cols-4">
+<div class="grid min-h-screen grid-cols-3 lg:grid-cols-4">
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 
@@ -68,7 +68,7 @@
 		</footer>
 	</main>
 
-	<section class="col-span-1 border-l">
+	<section class="hidden lg:block col-span-1 border-l">
 		<!-- [Optional future sidebar for blog?] -->
 	</section>
 </div>
