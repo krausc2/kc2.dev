@@ -22,7 +22,8 @@ const SPLASHES = {
 		'The best code is written at 2am.',
 		'The glowies are asleep.',
 		'#TODO Go to sleep.',
-		'Were you expecting a dark mode?'
+		'Were you expecting a dark mode?',
+		'The edge of oblivion. A soul-crushing weight. I drown in the radiance.'
 	]
 };
 
