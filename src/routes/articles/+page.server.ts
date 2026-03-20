@@ -1,5 +1,5 @@
-import * as path from 'node:path';
-import * as fs from 'node:fs';
+import * as path from "node:path";
+import * as fs from "node:fs";
 
 // Define Article interface, similar to a struct
 interface Article {
@@ -12,7 +12,7 @@ interface Article {
 
 export const load = () => {
 	// Get all markdown files in the articles directory
-	const imports = import.meta.glob('$lib/articles/*.md', { eager: true });
+	const imports = import.meta.glob("$lib/articles/*.md", { eager: true });
 
 	const articles: Article[] = Object.entries(imports).map(([articleName, contents]) => {
 		const slug = path.parse(articleName).name;

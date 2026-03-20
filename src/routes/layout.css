@@ -1,6 +1,6 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import 'tw-animate-css';
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -110,8 +110,8 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 
-	--font-sans: 'Inter Variable', sans-serif;
-	--font-mono: 'JetBrains Mono Variable', monospace;
+	--font-sans: "Inter Variable", sans-serif;
+	--font-mono: "JetBrains Mono Variable", monospace;
 }
 
 @layer base {

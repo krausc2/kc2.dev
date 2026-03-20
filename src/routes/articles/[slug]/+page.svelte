@@ -9,7 +9,7 @@
 
 	<h2>
 		<!-- Display date in user local format -->
-		{data.meta.date.toLocaleDateString(undefined, { dateStyle: 'long' })}
+		{data.meta.date.toLocaleDateString(undefined, { dateStyle: "long" })}
 	</h2>
 
 	<div>
