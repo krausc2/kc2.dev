@@ -59,11 +59,13 @@
 
 		<footer class="mt-auto p-4 text-center font-mono">
 			<p>
-				© 2026 krausc2. Source available at <a
-					href="https://github.com/krausc2/kc2.dev"
-					target="_blank"
-					rel="noreferrer">GitHub</a
-				>.
+				© 2026 krausc2.<span class="hidden lg:inline">
+					Source available at <a
+						href="https://github.com/krausc2/kc2.dev"
+						target="_blank"
+						rel="noreferrer">GitHub</a
+					>.</span
+				>
 			</p>
 		</footer>
 	</main>
