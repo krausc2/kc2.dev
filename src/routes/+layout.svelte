@@ -1,7 +1,7 @@
 <script lang="ts">
-	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import { Button } from '$lib/components/ui/button';
+	import "./layout.css";
+	import favicon from "$lib/assets/favicon.svg";
+	import { Button } from "$lib/components/ui/button";
 	import "@fontsource-variable/jetbrains-mono";
 	import "@fontsource/inter";
 
@@ -18,11 +18,11 @@
 		Array of items for the navigation menu.
 	*/
 	const navItems = [
-		{ label: 'Home', href: '/' },
+		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
-		{ label: 'Things', href: '/things' },
-		{ label: 'Articles', href: '/articles' },
-		{ label: 'Projects', href: '/projects' }
+		{ label: "Things", href: "/things" },
+		{ label: "Articles", href: "/articles" },
+		{ label: "Projects", href: "/projects" }
 	];
 </script>
 
@@ -54,7 +54,7 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2 flex h-full flex-col">
+	<main class="col-span-2 flex h-full flex-col px-8 pt-16 pb-16">
 		{@render children()}
 
 		<footer class="mt-auto p-4 text-center font-mono">
@@ -70,7 +70,7 @@
 		</footer>
 	</main>
 
-	<section class="hidden lg:block col-span-1 border-l">
+	<section class="col-span-1 hidden border-l lg:block">
 		<!-- [Optional future sidebar for blog?] -->
 	</section>
 </div>
