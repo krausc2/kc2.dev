@@ -54,10 +54,10 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2 flex h-full flex-col px-8 pt-16 pb-16">
+	<main class="col-span-2 flex h-full flex-col px-8 pt-16">
 		{@render children()}
 
-		<footer class="mt-auto p-4 text-center font-mono">
+		<footer class="mt-auto pt-16 pb-8 text-center font-mono">
 			<p>
 				© 2026 krausc2.<span class="hidden lg:inline">
 					Source available at <a
