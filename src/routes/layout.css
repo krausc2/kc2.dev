@@ -125,4 +125,7 @@
 	li a {
 		@apply text-blue-900 underline underline-offset-3;
 	}
+	/*html {
+		overscroll-behavior: none;
+	}*/
 }
