@@ -57,9 +57,10 @@
 	<main class="col-span-2 flex h-full flex-col overflow-y-auto px-8 pt-16">
 		{@render children()}
 
-		<footer class="mt-auto pt-16 pb-8 text-center font-mono">
-			<p>
-				© 2026 krausc2.<span class="hidden lg:inline">
+		<footer class="mt-auto pb-4 pt-4 border-t">
+			<p>📍 Currently in Sydney.</p>
+			<p class="font-mono text-center pt-8">
+				© 2026 krausc2. <span class="hidden lg:inline">
 					Source available at <a
 						href="https://github.com/krausc2/kc2.dev"
 						target="_blank"
