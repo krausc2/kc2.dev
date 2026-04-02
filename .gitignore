@@ -26,3 +26,4 @@ vite.config.ts.timestamp-*
 .vscode
 /README-default.md
 /todo.md
+status-project.md
