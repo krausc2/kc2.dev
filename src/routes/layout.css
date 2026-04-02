@@ -125,6 +125,12 @@
 	li a {
 		@apply text-blue-900 underline underline-offset-3;
 	}
+	p {
+		/*
+			Reassess how this affects padding/layout
+		*/
+		@apply leading-loose;
+	}
 	/*html {
 		overscroll-behavior: none;
 	}*/
