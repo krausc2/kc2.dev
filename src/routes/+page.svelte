@@ -2,21 +2,23 @@
 	import { getSplash } from "$lib/splashes";
 </script>
 
-<section class="flex flex-col gap-8">
+<section class="flex flex-col gap-8 mb-32">
 	<p class="text-5xl font-bold">krausc2</p>
-	<p class="font-mono text-stone-400">// {@html getSplash("day")} <span class="cursor">|</span></p>
+	<p class="font-mono text-custom-coral">// {@html getSplash("day")} <span class="cursor">|</span></p>
 
-	<div class="flex flex-col gap-8 lg:flex-row">
+	<div class="flex flex-col gap-8 lg:flex-row lg:items-start">
 		<div class="flex flex-1 flex-col gap-8">
 			<p>
-				G'day, I'm Curtis, a Cyber Security Specialist and Undergraduate Student at Macquarie
-				University, Sydney.
+				G'day, I'm <b>Curtis</b>, a <b>Cyber Security Specialist</b> and <b>Undergraduate</b> at Macquarie University, Sydney.
 			</p>
 			<p>
-				Test of second paragraph.
+				My current role is as a Cyber Security Engineer (internal consulting), with a background in Systems Administration and IT Support for large independent schools, alongside roles as an Electronics Repair Technician and Systems Integrator.
+			</p>
+			<p>
+
 			</p>
 		</div>
-		<div class="flex aspect-3/4 w-full flex-1 items-center justify-center bg-stone-400">
+		<div class="flex aspect-3/4 flex-1 items-center justify-center bg-stone-400">
 			<p class="text-stone-500">Placeholder Image</p>
 		</div>
 	</div>
