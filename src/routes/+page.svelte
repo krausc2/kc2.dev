@@ -1,10 +1,14 @@
 <script lang="ts">
-	import { getSplash } from "$lib/splashes";
+	import { createSplash } from "$lib/splashes.svelte";
+
+	// #TODO Test for hydration error based on client/server timezones.
+	const hour = new Date().getHours();
+	const splash = createSplash(hour >= 21 || hour < 3 ? "night" : "day");
 </script>
 
 <section class="flex flex-col mb-32">
 	<p class="text-5xl font-bold leading-none mb-4">krausc2</p>
-	<p class="font-mono text-custom-coral mb-12">// {@html getSplash("day")} <span class="cursor">|</span></p>
+	<p class="font-mono text-custom-coral mb-12">// {@html splash.value} <span class="cursor">|</span></p>
 
 	<div class="flex flex-col lg:block">
 		<div class="order-last flex aspect-3/4 items-center justify-center bg-stone-400 lg:float-right lg:ml-8 lg:mb-4 lg:w-1/2">

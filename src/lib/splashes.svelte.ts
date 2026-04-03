@@ -1,4 +1,4 @@
-const MS_PER_DAY = 86400000; // 24 * 60 * 60 * 1000
+const MS_PER_SPLASH = 10000;
 
 const SPLASHES = {
 	day: [
@@ -23,14 +23,24 @@ const SPLASHES = {
 		"The glowies are asleep.",
 		"#TODO Go to sleep.",
 		"Were you expecting a dark mode?",
-		"The edge of oblivion. A soul-crushing weight. I drown in the radiance."
+		"At the edge of oblivion."
 	]
 };
 
 export type SplashType = keyof typeof SPLASHES;
 
-export function getSplash(type: SplashType): string {
-	const items = SPLASHES[type];
-	const daysSinceEpoch = Math.floor(Date.now() / MS_PER_DAY);
-	return items[daysSinceEpoch % items.length];
+export function createSplash(type: SplashType) {
+	let tick = $state(Math.floor(Math.random() * 100));
+
+	$effect(() => {
+		const interval = setInterval(() => tick++, MS_PER_SPLASH);
+		return () => clearInterval(interval);
+	});
+
+	return {
+		get value() {
+			const splashes = SPLASHES[type];
+			return splashes[tick % splashes.length];
+		}
+	};
 }
