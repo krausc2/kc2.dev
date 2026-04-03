@@ -110,6 +110,8 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 
+	--color-custom-coral: #FF8559;
+
 	--font-sans: "Inter Variable", sans-serif;
 	--font-mono: "JetBrains Mono Variable", monospace;
 }
@@ -123,11 +125,11 @@
 	}
 	p a,
 	li a {
-		@apply text-blue-900 underline underline-offset-3;
+		@apply text-custom-coral underline underline-offset-3;
 	}
 	p {
 		/*
-			Reassess how this affects padding/layout
+			This causes weird spacing on some elements, but it looks nice so who cares
 		*/
 		@apply leading-loose;
 	}
