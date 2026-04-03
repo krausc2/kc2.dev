@@ -60,7 +60,7 @@
 		{@render children()}
 
 		<footer class="mt-auto pb-4 pt-4 border-t">
-			<p>📍 Currently in Sydney. ( )</p> <!-- Add local time here-->
+			<p>📍 Currently in Sydney. ( )</p> <!-- #TODO Add my current time -->
 			<p class="font-mono text-center pt-8">
 				© 2026 krausc2 <span class="hidden lg:inline">
 					| Source available at <a
@@ -73,7 +73,7 @@
 	</main>
 
 	<section class="col-span-1 hidden border-l lg:block">
-		<!-- [Optional future sidebar for blog?] -->
+		<!-- #TODO Add right sidebar content -->
 	</section>
 </div>
 
