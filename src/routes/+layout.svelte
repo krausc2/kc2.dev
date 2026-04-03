@@ -4,6 +4,7 @@
 	import { Button } from "$lib/components/ui/button";
 	import "@fontsource-variable/jetbrains-mono";
 	import "@fontsource/inter";
+	import { page } from "$app/state";
 
 	let { children } = $props();
 
@@ -43,7 +44,7 @@
 					></div>
 					<Button
 						variant="ghost"
-						class="relative z-10 w-full hover:bg-transparent"
+						class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href? 'text-custom-coral': ''} {page.url.pathname === item.href? 'hover:text-custom-coral': ''}"
 						href={item.href}
 					>
 						{item.label}
@@ -60,13 +61,12 @@
 		<footer class="mt-auto pb-4 pt-4 border-t">
 			<p>📍 Currently in Sydney.</p>
 			<p class="font-mono text-center pt-8">
-				© 2026 krausc2. <span class="hidden lg:inline">
-					Source available at <a
+				© 2026 krausc2 <span class="hidden lg:inline">
+					| Source available at <a
 						href="https://github.com/krausc2/kc2.dev"
 						target="_blank"
 						rel="noreferrer">GitHub</a
-					>.</span
-				>
+					></span>
 			</p>
 		</footer>
 	</main>
