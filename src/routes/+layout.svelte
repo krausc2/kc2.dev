@@ -5,6 +5,7 @@
 	import "@fontsource-variable/jetbrains-mono";
 	import "@fontsource/inter";
 	import { page } from "$app/state";
+	import { SvelteDate } from 'svelte/reactivity';
 
 	let { children } = $props();
 
@@ -59,7 +60,7 @@
 		{@render children()}
 
 		<footer class="mt-auto pb-4 pt-4 border-t">
-			<p>📍 Currently in Sydney.</p>
+			<p>📍 Currently in Sydney. ( )</p> <!-- Add local time here-->
 			<p class="font-mono text-center pt-8">
 				© 2026 krausc2 <span class="hidden lg:inline">
 					| Source available at <a
