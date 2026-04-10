@@ -41,7 +41,7 @@
 			{#each navItems as item}
 				<div class="group relative font-mono">
 					<div
-						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
+						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200 {page.url.pathname === item.href ? 'opacity-100' : 'opacity-0'}"
 					></div>
 					<Button
 						variant="ghost"
