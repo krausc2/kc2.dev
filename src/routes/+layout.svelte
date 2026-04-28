@@ -5,7 +5,7 @@
 	import "@fontsource-variable/jetbrains-mono";
 	import "@fontsource/inter";
 	import { page } from "$app/state";
-	import { SvelteDate } from 'svelte/reactivity';
+	// import { SvelteDate } from 'svelte/reactivity';
 
 	let { children } = $props();
 
@@ -38,14 +38,19 @@
 			z-0 (the gradient <div>)
 		-->
 		<nav class="flex flex-col">
-			{#each navItems as item}
+			{#each navItems as item (item.href)}
 				<div class="group relative font-mono">
 					<div
-						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200 {page.url.pathname === item.href ? 'opacity-100' : 'opacity-0'}"
+						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200 {page
+							.url.pathname === item.href
+							? 'opacity-100'
+							: 'opacity-0'}"
 					></div>
 					<Button
 						variant="ghost"
-						class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href? 'text-custom-coral': ''} {page.url.pathname === item.href? 'hover:text-custom-coral': ''}"
+						class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href
+							? 'text-custom-coral'
+							: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
 						href={item.href}
 					>
 						{item.label}
@@ -59,15 +64,17 @@
 	<main class="col-span-2 flex h-full flex-col overflow-y-auto px-8 pt-16">
 		{@render children()}
 
-		<footer class="mt-auto pb-4 pt-4 border-t">
-			<p>📍 Currently in Sydney. ( )</p> <!-- #TODO Add my current time -->
-			<p class="font-mono text-center pt-8">
+		<footer class="mt-auto border-t pt-4 pb-4">
+			<p>📍 Currently in Sydney. ( )</p>
+			<!-- #TODO Add my current time -->
+			<p class="pt-8 text-center font-mono">
 				© 2026 krausc2 <span class="hidden lg:inline">
 					| Source available at <a
 						href="https://github.com/krausc2/kc2.dev"
 						target="_blank"
 						rel="noreferrer">GitHub</a
-					></span>
+					></span
+				>
 			</p>
 		</footer>
 	</main>
