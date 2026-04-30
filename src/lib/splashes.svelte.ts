@@ -10,6 +10,7 @@ const SPLASHES = {
 		"Any computer is a laptop if you're strong enough.",
 		"Clippy just wanted to help.",
 		"See my latest project at localhost:5173/",
+		"To err is human; to forgive, divine.",
 		"Hello world!",
 		"<s>Vibe coding?</s> Prompt engineering.",
 		"git push --force",
@@ -25,6 +26,9 @@ const SPLASHES = {
 	night: [
 		"8 hours of sleep is recommended for optimal performance.",
 		"The best code is written at 2am.",
+		/* #TODO re-join Shakespeare quotes when layout is fixed in page.svelte */
+		"Cowards die many times before their deaths.", // #1
+		"The valiant never taste of death but once.", // #2
 		"The glowies are asleep.",
 		"Were you expecting a dark mode?",
 		"#TODO Go to sleep.",
