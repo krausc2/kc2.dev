@@ -1,5 +1,10 @@
 const MS_PER_SPLASH = 10000;
 
+/*
+	#TODO Fix page resume animation. Browser optimisation causes animation
+	to sleep or slow down when inactive (?)
+*/
+
 const SPLASHES = {
 	day: [
 		"Any computer is a laptop if you're strong enough.",
@@ -21,8 +26,8 @@ const SPLASHES = {
 		"8 hours of sleep is recommended for optimal performance.",
 		"The best code is written at 2am.",
 		"The glowies are asleep.",
-		"#TODO Go to sleep.",
 		"Were you expecting a dark mode?",
+		"#TODO Go to sleep.",
 		"At the edge of oblivion."
 	]
 };
@@ -30,17 +35,25 @@ const SPLASHES = {
 export type SplashType = keyof typeof SPLASHES;
 
 export function createSplash(type: SplashType) {
-	let tick = $state(Math.floor(Math.random() * 100));
+	let value = $state("");
 
 	$effect(() => {
-		const interval = setInterval(() => tick++, MS_PER_SPLASH);
+		const splashes = SPLASHES[type];
+		let tick = Math.floor(Math.random() * splashes.length);
+
+		value = splashes[tick];
+
+		const interval = setInterval(() => {
+			tick++;
+			value = splashes[tick % splashes.length];
+		}, MS_PER_SPLASH);
+
 		return () => clearInterval(interval);
 	});
 
 	return {
 		get value() {
-			const splashes = SPLASHES[type];
-			return splashes[tick % splashes.length];
+			return value;
 		}
 	};
 }
