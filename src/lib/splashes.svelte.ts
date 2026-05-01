@@ -12,7 +12,7 @@ const SPLASHES = {
 		"See my latest project at localhost:5173/",
 		"To err is human; to forgive, divine.",
 		"Hello world!",
-		"<s>Vibe coding?</s> Prompt engineering.",
+		"Vibe coding? Prompt engineering.",
 		"git push --force",
 		"Made with Svelte ♥",
 		"3000? All my homies use 5173.",
