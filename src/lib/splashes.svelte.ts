@@ -25,12 +25,15 @@ const SPLASHES = {
 	],
 	night: [
 		"8 hours of sleep is recommended for optimal performance.",
+		"I have no plans to fit in.",
 		"The best code is written at 2am.",
 		/* #TODO re-join Shakespeare quotes when layout is fixed in page.svelte */
 		"Cowards die many times before their deaths.", // #1
 		"The valiant never taste of death but once.", // #2
+		"Later Than You Think.",
 		"The glowies are asleep.",
 		"Were you expecting a dark mode?",
+		"Memento mori",
 		"#TODO Go to sleep.",
 		"At the edge of oblivion."
 	]
