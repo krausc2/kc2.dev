@@ -3,6 +3,7 @@ const MS_PER_SPLASH = 10000;
 /*
 	#TODO Fix page resume animation. Browser optimisation causes animation
 	to sleep or slow down when inactive (?)
+	#TODO Set quote height to fixed size so page doesn't jump when quote changes
 */
 
 const SPLASHES = {
@@ -27,13 +28,12 @@ const SPLASHES = {
 		"8 hours of sleep is recommended for optimal performance.",
 		"I have no plans to fit in.",
 		"The best code is written at 2am.",
-		/* #TODO re-join Shakespeare quotes when layout is fixed in page.svelte */
-		"Cowards die many times before their deaths.", // #1
-		"The valiant never taste of death but once.", // #2
+		"Cowards die many times before their deaths.", // S1
+		"The valiant never taste of death but once.", // S2
 		"Later Than You Think.",
 		"The glowies are asleep.",
 		"Were you expecting a dark mode?",
-		"Memento mori",
+		"Memento mori.",
 		"#TODO Go to sleep.",
 		"At the edge of oblivion."
 	]
