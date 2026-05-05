@@ -1,4 +1,4 @@
-const MS_PER_SPLASH = 10000;
+const MS_PER_SPLASH = 12000;
 
 /*
 	#TODO Fix page resume animation. Browser optimisation causes animation
@@ -15,8 +15,10 @@ const SPLASHES = {
 		"Hello world!",
 		"Vibe coding? Prompt engineering.",
 		"git push --force",
+		"Underestimation never stopped a pigeon from unlatching itself or being old.",
 		"Made with Svelte ♥",
 		"3000? All my homies use 5173.",
+		"As you start to walk on the way, the way appears.",
 		"Don't touch the CSS, it's still wet.",
 		"640x480. Just as God intended.",
 		"'The Cloud' is just someone else's computer.",

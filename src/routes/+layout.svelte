@@ -28,7 +28,7 @@
 	];
 </script>
 
-<div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-4">
+<div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5">
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 
@@ -61,7 +61,7 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2 flex h-full flex-col overflow-y-auto px-8 pt-16">
+	<main class="col-span-2 lg:col-span-3 flex h-full flex-col overflow-y-auto px-8 pt-16">
 		{@render children()}
 
 		<footer class="mt-auto border-t pt-4 pb-4">
