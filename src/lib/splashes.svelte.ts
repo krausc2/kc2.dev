@@ -3,7 +3,10 @@ const MS_PER_SPLASH = 12000;
 /*
 	#TODO Fix page resume animation. Browser optimisation causes animation
 	to sleep or slow down when inactive (?)
-	#TODO Set quote height to fixed size so page doesn't jump when quote changes
+*/
+
+/*
+	Unclassified
 */
 
 const SPLASHES = {
@@ -14,30 +17,33 @@ const SPLASHES = {
 		"To err is human; to forgive, divine.",
 		"Hello world!",
 		"Vibe coding? Prompt engineering.",
-		"git push --force",
 		"Underestimation never stopped a pigeon from unlatching itself or being old.",
+		"git push --force",
 		"Made with Svelte ♥",
+		"An idiot admires complexity. A genius admires simplicity.",
 		"3000? All my homies use 5173.",
+		"Real things are messy and living.",
 		"As you start to walk on the way, the way appears.",
 		"Don't touch the CSS, it's still wet.",
 		"640x480. Just as God intended.",
+		"I can and I will.",
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
 		"To understand recursion, one must first understand recursion.",
-		"Orwell was an optimist."
 	],
 	night: [
-		"8 hours of sleep is recommended for optimal performance.",
-		"I have no plans to fit in.",
 		"The best code is written at 2am.",
 		"Cowards die many times before their deaths.", // S1
 		"The valiant never taste of death but once.", // S2
 		"Later Than You Think.",
+		"Never run down the clock.",
+		"8 hours of sleep is recommended for optimal performance.",
+		"Orwell was an optimist.",
 		"The glowies are asleep.",
+		"Inequality is required to motivate men to action.",
 		"Were you expecting a dark mode?",
-		"Memento mori.",
 		"#TODO Go to sleep.",
-		"At the edge of oblivion."
+		"Memento mori.",
 	]
 };
 
