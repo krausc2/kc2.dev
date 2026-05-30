@@ -9,7 +9,7 @@
 
 <section class="mb-32 flex flex-col">
 	<p class="mb-4 text-5xl leading-none font-bold">krausc2</p>
-	<p class="mb-12 font-mono text-custom-coral">
+	<p class="mb-12 w-full bg-stone-900 px-4 py-2 font-mono text-custom-coral">
 		<!-- #TODO Fix layout reserving space so page does not jump when splash changes -->
 		// {splash.value}<span class="cursor">|</span>
 	</p>
