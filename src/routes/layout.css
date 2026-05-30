@@ -133,7 +133,12 @@
 		*/
 		@apply leading-loose;
 	}
-	/*html {
-		overscroll-behavior: none;
-	}*/
+	html {
+		font-size: 16px;
+	}
+	@media (min-width: 1024px) {
+		html {
+			font-size: 20px;
+		}
+	}
 }
