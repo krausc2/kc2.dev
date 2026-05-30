@@ -22,7 +22,7 @@ export function createScramble(source: { value: string }) {
 		const tick = () => {
 			if (isDeleting) { // Delete block
 				deleteFrameIndex--;
-				liveSplash = startText.slice(0, deleteFrameIndex); // delete(start, end)
+				liveSplash = startText.slice(0, deleteFrameIndex); // keep(start, end)
 
 				if (deleteFrameIndex <= 0) {
 					isDeleting = false;
