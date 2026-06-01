@@ -1,4 +1,4 @@
-# kc2.dev
+# krausc2.dev
 
 This is my personal site and corner of the internet. Contains projects, articles, and whatever else I'm currently working on.
 
