@@ -5,6 +5,7 @@
 	import "@fontsource-variable/jetbrains-mono";
 	import "@fontsource/inter";
 	import { page } from "$app/state";
+	import { fade } from "svelte/transition";
 	// import { SvelteDate } from 'svelte/reactivity';
 
 	let { children } = $props();
@@ -61,22 +62,33 @@
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2 lg:col-span-3 flex h-full flex-col overflow-y-auto px-8 pt-16">
-		{@render children()}
-
-		<footer class="mt-auto border-t pt-4 pb-4">
-			<p>📍 Currently in Sydney. ( )</p>
-			<!-- #TODO Add my current time -->
-			<p class="pt-8 text-center font-mono">
-				© 2026 krausc2 <span class="hidden lg:inline">
-					| Source available at <a
-						href="https://github.com/krausc2/kc2.dev"
-						target="_blank"
-						rel="noreferrer">GitHub</a
-					></span
+	<main class="col-span-2 flex h-full flex-col overflow-y-auto lg:col-span-3">
+		<div class="grid flex-1">
+			{#key page.url.pathname}
+				<div
+					class="col-start-1 row-start-1 flex flex-col px-8 pt-16"
+					in:fade={{ duration: 150, delay: 150 }}
+					out:fade={{ duration: 150 }}
 				>
-			</p>
-		</footer>
+					{@render children()}
+
+					<footer class="mt-auto border-t pt-4 pb-4">
+						<p>📍 Currently in Sydney. ( )</p>
+						<!-- #TODO Add a little blink animation to ":" -->
+						<!-- #TODO Add my current time -->
+						<p class="pt-8 text-center font-mono">
+							© 2026 krausc2 <span class="hidden lg:inline">
+								| Source available at <a
+									href="https://github.com/krausc2/kc2.dev"
+									target="_blank"
+									rel="noreferrer">GitHub</a
+								></span
+							>
+						</p>
+					</footer>
+				</div>
+			{/key}
+		</div>
 	</main>
 
 	<section class="col-span-1 hidden border-l lg:block">
