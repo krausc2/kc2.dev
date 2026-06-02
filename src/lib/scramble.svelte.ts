@@ -4,7 +4,7 @@ import { untrack } from "svelte";
 	#TODO Fix "catch-up" animation on page resume by listening for visibilitychange
 */
 
-export function createScramble(source: { value: string }) {
+export function createScramble(source: { value: string; longestValue: string }) {
 	const SCRAMBLE_CHARS = "!-_\\/[]{}—=+*^?#_";
 	let liveSplash = $state(source.value);
 
@@ -69,6 +69,9 @@ export function createScramble(source: { value: string }) {
 	return {
 		get value() {
 			return liveSplash;
+		},
+		get longestValue() {
+			return source.longestValue;
 		}
 	};
 }

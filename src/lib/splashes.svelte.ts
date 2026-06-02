@@ -35,12 +35,13 @@ const SPLASHES = {
 		"The best code is written at 2am.",
 		"Cowards die many times before their deaths.", // S1
 		"The valiant never taste of death but once.", // S2
-		"Later Than You Think.",
+		"\"It's later than you think, therefore hasten to do the work of god.\"",
 		"Never run down the clock.",
+		"It is not enough to be industrious; so are the ants.",
 		"8 hours of sleep is recommended for optimal performance.",
 		"Orwell was an optimist.",
 		"The glowies are asleep.",
-		"Inequality is required to motivate men to action.",
+		"Inequality is required to motivate men to greatness.",
 		"Were you expecting a dark mode?",
 		"#TODO Go to sleep.",
 		"Memento mori.",
@@ -51,9 +52,10 @@ export type SplashType = keyof typeof SPLASHES;
 
 export function createSplash(type: SplashType) {
 	let value = $state("");
+	const splashes = SPLASHES[type];
+	const longestValue = splashes.reduce((a, b) => (a.length > b.length ? a : b));
 
 	$effect(() => {
-		const splashes = SPLASHES[type];
 		let tick = Math.floor(Math.random() * splashes.length);
 
 		value = splashes[tick];
@@ -69,6 +71,9 @@ export function createSplash(type: SplashType) {
 	return {
 		get value() {
 			return value;
+		},
+		get longestValue() {
+			return longestValue;
 		}
 	};
 }
