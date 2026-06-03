@@ -29,13 +29,13 @@ const SPLASHES = {
 		"I can and I will.",
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
-		"To understand recursion, one must first understand recursion.",
+		"To understand recursion, one must first understand recursion."
 	],
 	night: [
 		"The best code is written at 2am.",
 		"Cowards die many times before their deaths.", // S1
 		"The valiant never taste of death but once.", // S2
-		"\"It's later than you think, therefore hasten to do the work of god.\"",
+		'"It\'s later than you think, therefore hasten to do the work of god."',
 		"Never run down the clock.",
 		"It is not enough to be industrious; so are the ants.",
 		"8 hours of sleep is recommended for optimal performance.",
@@ -44,7 +44,7 @@ const SPLASHES = {
 		"Inequality is required to motivate men to greatness.",
 		"Were you expecting a dark mode?",
 		"#TODO Go to sleep.",
-		"Memento mori.",
+		"Memento mori."
 	]
 };
 

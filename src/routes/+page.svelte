@@ -53,8 +53,8 @@
 			sound engineering, and medical humanities.
 		</p>
 		<p class="lg:mb-8">
-			Steeping solely in wistful thinking can leave the mind without physical grounding, so I also
-			spend a lot of time doing top-rope climbing, bouldering, and weight lifting.
+			Spending too much time lost in thought can leave the mind without physical grounding, so I
+			also enjoy top-rope climbing, bouldering, and weight lifting.
 		</p>
 		<p class="lg:mb-8">
 			Most of my professional time in spent buried in the security tools (Defender, Sentinel, Entra

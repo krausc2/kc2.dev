@@ -16,21 +16,23 @@ export function createScramble(source: { value: string; longestValue: string }) 
 		let deleteFrameIndex = startText.length;
 		let drawFrameIndex = 0;
 		const targetLength = newSplash.length;
-		
+
 		let scrambleTimer: ReturnType<typeof setTimeout>;
 
 		const tick = () => {
-			if (isDeleting) { // Delete block
+			if (isDeleting) {
+				// Delete block
 				deleteFrameIndex--;
 				liveSplash = startText.slice(0, deleteFrameIndex); // keep(start, end)
 
 				if (deleteFrameIndex <= 0) {
 					isDeleting = false;
-					scrambleTimer = setTimeout(tick, 30); 
+					scrambleTimer = setTimeout(tick, 30);
 				} else {
-					scrambleTimer = setTimeout(tick, 20); 
+					scrambleTimer = setTimeout(tick, 20);
 				}
-			} else { // Draw block
+			} else {
+				// Draw block
 				/*
 					Selects the largest of two values to determine how many characters to "settle":
 						* settleCount is defined with -4 to allow a sliding window of up to 5 
@@ -39,7 +41,7 @@ export function createScramble(source: { value: string; longestValue: string }) 
 				*/
 				const settledCount = Math.max(0, drawFrameIndex - 4);
 				const settledText = newSplash.slice(0, settledCount);
-				
+
 				/*
 					Selects the smallest of 3 values to determine how many characters to scramble:
 					* 5 characters at most
@@ -51,12 +53,12 @@ export function createScramble(source: { value: string; longestValue: string }) 
 				for (let i = 0; i < scrambleLength; i++) {
 					scrambledPart += SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
 				}
-				
+
 				liveSplash = settledText + scrambledPart;
 				drawFrameIndex++;
 
 				if (settledCount < targetLength) {
-					scrambleTimer = setTimeout(tick, 30); 
+					scrambleTimer = setTimeout(tick, 30);
 				}
 			}
 		};
