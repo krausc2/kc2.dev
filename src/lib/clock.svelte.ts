@@ -18,9 +18,25 @@ export function createClock(timeZone = "Australia/Sydney") {
 			hour12: false
 		});
 		const parts = formatter.formatToParts(time);
+		
+		const hours = parts.find((p) => p.type === "hour")?.value || "00";
+		const minutes = parts.find((p) => p.type === "minute")?.value || "00";
+
+		const hourNum = parseInt(hours, 10);
+
+		let emoji;
+
+		if (hourNum >= 19 || hourNum < 5) {
+			emoji = "🌑";
+		}
+		else{
+			emoji = "☀️";
+		}
+
 		return {
-			hours: parts.find((p) => p.type === "hour")?.value || "00",
-			minutes: parts.find((p) => p.type === "minute")?.value || "00"
+			hours,
+			minutes,
+			emoji
 		};
 	});
 
@@ -30,6 +46,9 @@ export function createClock(timeZone = "Australia/Sydney") {
 		},
 		get minutes() {
 			return timeDisplay.minutes;
+		},
+		get emoji() {
+			return timeDisplay.emoji;
 		}
 	};
 }

@@ -28,7 +28,7 @@
 		{ label: "Projects", href: "/projects" }
 	];
 
-	const timeDisplay = createClock();
+	const clock = createClock();
 </script>
 
 <div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5">
@@ -76,8 +76,8 @@
 
 					<footer class="mt-auto border-t pt-4 pb-4 font-mono">
 						<p>
-							📍 Currently in Sydney ({timeDisplay.hours}<span class="blink">:</span
-							>{timeDisplay.minutes})
+							📍 Currently in Sydney ({clock.hours}<span class="blink">:</span
+							>{clock.minutes} {clock.emoji})
 						</p>
 						<p class="pt-8 text-center font-mono">
 							© 2026 krausc2 <span class="hidden lg:inline">
