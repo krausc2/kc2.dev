@@ -3,38 +3,44 @@
 	import { createScramble } from "$lib/scramble.svelte";
 
 	/* #TODO Test for hydration error based on client/server timezones. */
+
 	const hour = new Date().getHours();
 	const splash = createScramble(createSplash(hour >= 19 || hour < 5 ? "night" : "day"));
 </script>
 
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
-<section class="mb-32 flex flex-col">
-	<p class="mb-4 text-5xl leading-none font-bold">krausc2</p>
-	<div class="mb-20 grid w-full bg-stone-900 px-4 py-2 font-mono text-custom-coral">
-		<!-- Ghost element to set dynamic height based on longest quote -->
-		<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
-			root@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
-		</div>
-		<!-- Visible splash text -->
-		<div class="col-start-1 row-start-1">
-			root@system:~# {splash.value}<span class="cursor">|</span>
+
+<section class="mb-32">
+	<div class="flex flex-col justify-center lg:min-h-[calc(100vh-4rem)]">
+		<div class="lg:-mt-16">
+			<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
+			<div
+				class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0"
+			>
+				<!-- Ghost element to set dynamic height based on longest quote -->
+				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
+					root@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+				</div>
+				<!-- Visible splash text -->
+				<div class="col-start-1 row-start-1">
+					root@system:~# {splash.value}<span class="cursor">|</span>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="flex flex-col gap-8 lg:block">
-		<div class="flex flex-col gap-8 lg:mb-8 lg:flex-row lg:items-center">
-			<p class="lg:flex-1">
-				G'day, <b>I'm Curtis</b>, <b>a Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
-				studies at Macquarie University.
-			</p>
-
-			<div
-				class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:mx-0 lg:w-2/6 lg:max-w-none"
-			>
-				<p class="text-stone-500">Placeholder Image</p>
-			</div>
+		<div
+			class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-1/3 lg:max-w-none"
+		>
+			<p class="text-stone-500">Placeholder Image</p>
 		</div>
+
+		<p class="order-first lg:mb-8">
+			G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
+			studies at Macquarie University.
+		</p>
 
 		<p class="lg:mb-8">
 			I've spent the last six years building a foundation in IT operations, hybrid infrastructure,
@@ -44,7 +50,7 @@
 			actually function (and break), which I now use to manage security posture and aligned with
 			frameworks such as the ACSC Essential Eight.
 		</p>
-		<p class="lg:mb-8">You are not your job though, so what am I?</p>
+		<p class="lg:mb-8">You are not your job though, so who am I?</p>
 		<p class="lg:mb-8">
 			Well when I'm not neck deep in vulnerability reports, my interests are <b>very</b> broad. I enjoy
 			building software (though would not consider myself a software engineer) and am currently learning

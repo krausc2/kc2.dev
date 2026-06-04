@@ -10,12 +10,7 @@
 
 	let { children } = $props();
 
-	/*
-	console.log(
-		"%cWell aren't you clever! Here's your reward: aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==",
-		'color: #a3a3a3'
-	);
-	*/
+	/* #TODO Add console.log easter egg here */
 
 	/*
 		Array of items for the navigation menu.
@@ -80,7 +75,9 @@
 							{clock.emoji})
 						</p>
 						<p class="pt-8 text-center font-mono">
-							© 2026 krausc2 <span class="hidden lg:inline">
+							<!-- #TODO Change this to a live year not fixed -->
+							© 2026 krausc2
+							<span class="hidden lg:inline">
 								| Source available at <a
 									href="https://github.com/krausc2/kc2.dev"
 									target="_blank"
