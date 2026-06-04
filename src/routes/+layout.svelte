@@ -63,7 +63,7 @@
 		<div class="grid flex-1">
 			{#key page.url.pathname}
 				<div
-					class="col-start-1 row-start-1 flex flex-col px-8 pt-16"
+					class="col-start-1 row-start-1 mx-auto flex w-full max-w-[115ch] flex-col px-8 pt-16"
 					in:fade={{ duration: 150, delay: 150 }}
 					out:fade={{ duration: 150 }}
 				>
