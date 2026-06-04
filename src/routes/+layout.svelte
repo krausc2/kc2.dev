@@ -6,7 +6,7 @@
 	import "@fontsource/inter";
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
-	// import { SvelteDate } from 'svelte/reactivity';
+	import { createClock } from "$lib/clock.svelte";
 
 	let { children } = $props();
 
@@ -27,6 +27,8 @@
 		{ label: "Articles", href: "/articles" },
 		{ label: "Projects", href: "/projects" }
 	];
+
+	const timeDisplay = createClock();
 </script>
 
 <div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5">
@@ -72,10 +74,11 @@
 				>
 					{@render children()}
 
-					<footer class="mt-auto border-t pt-4 pb-4">
-						<p>📍 Currently in Sydney. ( )</p>
-						<!-- #TODO Add a little blink animation to ":" -->
-						<!-- #TODO Add my current time -->
+					<footer class="mt-auto border-t pt-4 pb-4 font-mono">
+						<p>
+							📍 Currently in Sydney ({timeDisplay.hours}<span class="blink">:</span
+							>{timeDisplay.minutes})
+						</p>
 						<p class="pt-8 text-center font-mono">
 							© 2026 krausc2 <span class="hidden lg:inline">
 								| Source available at <a
@@ -97,3 +100,19 @@
 </div>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
+
+<style>
+	.blink {
+		animation: blink 1s step-end infinite;
+	}
+
+	@keyframes blink {
+		from,
+		to {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+	}
+</style>
