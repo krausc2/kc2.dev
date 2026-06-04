@@ -131,7 +131,7 @@
 		/*
 			This causes weird spacing on some elements, but it looks nice so who cares
 		*/
-		@apply leading-loose;
+		@apply leading-loose text-justify;
 	}
 	html {
 		font-size: 14px;

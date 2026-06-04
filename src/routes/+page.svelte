@@ -32,7 +32,7 @@
 
 	<div class="flex flex-col gap-8 lg:block">
 		<div
-			class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-1/3 lg:max-w-none"
+			class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
 		>
 			<p class="text-stone-500">Placeholder Image</p>
 		</div>
