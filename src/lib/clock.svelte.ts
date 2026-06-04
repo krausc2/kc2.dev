@@ -18,7 +18,7 @@ export function createClock(timeZone = "Australia/Sydney") {
 			hour12: false
 		});
 		const parts = formatter.formatToParts(time);
-		
+
 		const hours = parts.find((p) => p.type === "hour")?.value || "00";
 		const minutes = parts.find((p) => p.type === "minute")?.value || "00";
 
@@ -28,8 +28,7 @@ export function createClock(timeZone = "Australia/Sydney") {
 
 		if (hourNum >= 19 || hourNum < 5) {
 			emoji = "🌑";
-		}
-		else{
+		} else {
 			emoji = "☀️";
 		}
 

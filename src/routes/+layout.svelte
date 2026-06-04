@@ -76,8 +76,8 @@
 
 					<footer class="mt-auto border-t pt-4 pb-4 font-mono">
 						<p>
-							📍 Currently in Sydney ({clock.hours}<span class="blink">:</span
-							>{clock.minutes} {clock.emoji})
+							📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
+							{clock.emoji})
 						</p>
 						<p class="pt-8 text-center font-mono">
 							© 2026 krausc2 <span class="hidden lg:inline">

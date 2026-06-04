@@ -11,7 +11,7 @@
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 <section class="mb-32 flex flex-col">
 	<p class="mb-4 text-5xl leading-none font-bold">krausc2</p>
-	<div class="mb-12 grid w-full bg-stone-900 px-4 py-2 font-mono text-custom-coral">
+	<div class="mb-20 grid w-full bg-stone-900 px-4 py-2 font-mono text-custom-coral">
 		<!-- Ghost element to set dynamic height based on longest quote -->
 		<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
 			root@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
@@ -23,15 +23,17 @@
 	</div>
 
 	<div class="flex flex-col gap-8 lg:block">
-		<p class="lg:mb-8">
-			G'day, <b>I'm Curtis</b>. I'm currently working as <b>a Cyber Security Engineer</b> in Sydney, whilst
-			finishing my undergraduate studies at Macquarie University.
-		</p>
+		<div class="flex flex-col gap-8 lg:mb-8 lg:flex-row lg:items-center">
+			<p class="lg:flex-1">
+				G'day, <b>I'm Curtis</b>, <b>a Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
+				studies at Macquarie University.
+			</p>
 
-		<div
-			class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-1/2 lg:max-w-none"
-		>
-			<p class="text-stone-500">Placeholder Image</p>
+			<div
+				class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:mx-0 lg:w-2/6 lg:max-w-none"
+			>
+				<p class="text-stone-500">Placeholder Image</p>
+			</div>
 		</div>
 
 		<p class="lg:mb-8">
