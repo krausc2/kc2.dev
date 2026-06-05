@@ -26,7 +26,7 @@
 	const clock = createClock();
 </script>
 
-<div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5">
+<div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5 fade-in">
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 
@@ -63,7 +63,7 @@
 		<div class="grid flex-1">
 			{#key page.url.pathname}
 				<div
-					class="col-start-1 row-start-1 mx-auto flex w-full max-w-[115ch] flex-col px-8 pt-16"
+					class="col-start-1 row-start-1 mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16"
 					in:fade={{ duration: 150, delay: 150 }}
 					out:fade={{ duration: 150 }}
 				>
@@ -110,6 +110,20 @@
 		}
 		50% {
 			opacity: 0;
+		}
+	}
+
+	.fade-in {
+		animation: fadeIn 300ms ease-in forwards;
+		opacity: 0;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 </style>
