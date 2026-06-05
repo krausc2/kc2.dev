@@ -26,7 +26,8 @@ export function createClock(timeZone = "Australia/Sydney") {
 
 		let emoji;
 
-		if (hourNum >= 19 || hourNum < 5) {
+		// #TODO Find out what actually works because of daylight savings >:C
+		if (hourNum >= 18 || hourNum < 5) {
 			emoji = "🌑";
 		} else {
 			emoji = "☀️";
