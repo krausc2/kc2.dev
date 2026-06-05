@@ -12,7 +12,7 @@
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 
 <section class="mb-32">
-	<div class="flex flex-col justify-center lg:min-h-[calc(100vh-4rem)]">
+	<div class="mb-8 flex flex-col justify-center border-b lg:mb-32 lg:min-h-[calc(100vh-4rem)]">
 		<div class="lg:-mt-16">
 			<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
 			<div
