@@ -71,7 +71,7 @@
 		</p>
 		<!-- #TODO Insert email -->
 		<p>
-			Check out my <a href="/things">Things</a> page for a living document of what I've found insightful,
+			Check out my <a href="/things">things</a> page for a living document of what I've found insightful,
 			a reading (and listening) list of sorts. Feel free to reach out if you'd like to chat about tech,
 			security, or anything in between: X@X(dot)X
 		</p>

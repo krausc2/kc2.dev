@@ -21,6 +21,7 @@ const SPLASHES = {
 		"git push --force",
 		"Made with Svelte ♥",
 		"An idiot admires complexity. A genius admires simplicity.",
+		"AI is a statistical mirror; It is the ultimate conformist.",
 		"3000? All my homies use 5173.",
 		"Real things are messy and living.",
 		"As you start to walk on the way, the way appears.",
