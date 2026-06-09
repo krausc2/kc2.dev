@@ -27,3 +27,4 @@ vite.config.ts.timestamp-*
 /README-default.md
 /todo.md
 status-project.md
+src/routes/articles/articles.md
