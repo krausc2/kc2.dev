@@ -1,3 +1,4 @@
+# Build stage
 FROM node:26-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
@@ -6,6 +7,7 @@ COPY . .
 RUN npm run build
 RUN npm prune --omit=dev
 
+# Production image
 FROM node:26-alpine
 WORKDIR /app
 COPY --from=builder /app/build build/
