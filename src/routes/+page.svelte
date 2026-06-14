@@ -15,9 +15,7 @@
 	<div class="mb-8 flex flex-col justify-center border-b lg:mb-32 lg:min-h-[calc(100vh-4rem)]">
 		<div class="lg:-mt-16">
 			<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
-			<div
-				class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0"
-			>
+			<div class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0">
 				<!-- Ghost element to set dynamic height based on longest quote -->
 				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
 					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
