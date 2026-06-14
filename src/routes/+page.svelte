@@ -20,11 +20,11 @@
 			>
 				<!-- Ghost element to set dynamic height based on longest quote -->
 				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
-					root@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
 				</div>
 				<!-- Visible splash text -->
 				<div class="col-start-1 row-start-1">
-					root@system:~# {splash.value}<span class="cursor">|</span>
+					motd@system:~# {splash.value}<span class="cursor">|</span>
 				</div>
 			</div>
 		</div>

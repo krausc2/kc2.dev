@@ -75,8 +75,7 @@
 							{clock.emoji})
 						</p>
 						<p class="pt-8 text-center font-mono">
-							<!-- #TODO Change this to a live year not fixed -->
-							© 2026 krausc2
+							© {new Date().getFullYear()} krausc2
 							<span class="hidden lg:inline">
 								| Source available at <a
 									href="https://github.com/krausc2/kc2.dev"
