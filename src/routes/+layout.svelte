@@ -26,7 +26,7 @@
 	const clock = createClock();
 </script>
 
-<div class="grid h-screen grid-cols-3 overflow-hidden lg:grid-cols-5 fade-in">
+<div class="grid h-screen grid-cols-3 overflow-hidden fade-in lg:grid-cols-5">
 	<aside class="col-span-1 flex flex-col justify-center border-r">
 		<!-- [Logo and stuff goes here] -->
 
