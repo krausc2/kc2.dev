@@ -2,7 +2,7 @@
 
 This is my personal site and corner of the internet. It contains projects, articles, and whatever else I'm currently working on.
 
-You can view the live site at either [kc2.dev](kc2.dev) or [krausc2.dev](krausc2.dev).
+You can view the live site at either [kc2.dev](https://kc2.dev) or [krausc2.dev](https://krausc2.dev).
 
 Fundamentally, creating it was a project to teach myself Svelte 5, and practice web development.
 
