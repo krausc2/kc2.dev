@@ -1,0 +1,11 @@
+Contact: mailto:postmaster@kraus.au
+Expires: 2027-06-15T13:59:00.000Z
+Preferred-Languages: en
+
+# --- POLICIES ---
+# Ethical security research and disclosure is welcome, but please respect the infrastructure :)
+# 1. Do not use computationally expensive automated scanners.
+# 2. Do not use brute-force attacks that could induce DOS conditions.
+# 3. Be advised: This site is protected by a Cloudflare WAF.
+#    Automated scanning and brute-force attacks will result in Managed Challenges,
+#    aggressive rate limiting, and IP bans. Test responsibly.
