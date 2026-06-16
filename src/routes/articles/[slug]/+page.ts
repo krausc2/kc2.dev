@@ -10,7 +10,8 @@ export async function load({ params }) {
 			// Spread metadata, but convert date
 			meta: {
 				...article.metadata,
-				date: new Date(article.metadata.date)
+				date: new Date(article.metadata.date),
+				lastModified: new Date(article.metadata.lastModified || article.metadata.date)
 			}
 		};
 		// For resource that is not found, display 404

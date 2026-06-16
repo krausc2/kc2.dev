@@ -1,5 +1,4 @@
 import * as path from "node:path";
-import * as fs from "node:fs";
 
 // Define Article interface, similar to a struct
 interface Article {
@@ -18,14 +17,11 @@ export const load = () => {
 		const slug = path.parse(articleName).name;
 		const { metadata } = contents as { metadata: any };
 
-		// Pull stats from file
-		const stats = fs.statSync(`src/lib/articles/${slug}.md`);
-
 		return {
 			slug,
 			title: metadata.title,
 			date: new Date(metadata.date),
-			lastModified: stats.mtime,
+			lastModified: new Date(metadata.lastModified || metadata.date),
 			tags: metadata.tags || []
 		};
 	});
