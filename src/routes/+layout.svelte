@@ -63,13 +63,20 @@
 		<div class="grid flex-1">
 			{#key page.url.pathname}
 				<div
-					class="col-start-1 row-start-1 mx-auto flex w-full max-w-[110ch] flex-col px-8 pt-16"
+					class="col-start-1 row-start-1 flex h-full flex-col"
 					in:fade={{ duration: 150, delay: 150 }}
 					out:fade={{ duration: 150 }}
 				>
-					{@render children()}
+					{#if page.url.pathname === '/'}
+						{@render children()}
+					{:else}
+						<div class="mx-auto flex w-full max-w-[110ch] flex-col px-8 pt-16">
+							{@render children()}
+						</div>
+					{/if}
 
-					<footer class="mt-auto border-t pt-4 pb-4 font-mono">
+					<div class="mx-auto mt-auto w-full max-w-[110ch] px-8">
+						<footer class="border-t pb-4 pt-4 font-mono">
 						<p>
 							📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
 							{clock.emoji})
@@ -84,7 +91,8 @@
 								></span
 							>
 						</p>
-					</footer>
+						</footer>
+					</div>
 				</div>
 			{/key}
 		</div>
