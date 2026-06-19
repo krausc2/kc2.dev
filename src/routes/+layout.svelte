@@ -67,7 +67,7 @@
 					in:fade={{ duration: 150, delay: 150 }}
 					out:fade={{ duration: 150 }}
 				>
-					{#if page.url.pathname === '/'}
+					{#if page.url.pathname === "/"}
 						{@render children()}
 					{:else}
 						<div class="mx-auto flex w-full max-w-[110ch] flex-col px-8 pt-16">
@@ -76,21 +76,21 @@
 					{/if}
 
 					<div class="mx-auto mt-auto w-full max-w-[110ch] px-8">
-						<footer class="border-t pb-4 pt-4 font-mono">
-						<p>
-							📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
-							{clock.emoji})
-						</p>
-						<p class="pt-8 text-center font-mono">
-							© {new Date().getFullYear()} krausc2
-							<span class="hidden lg:inline">
-								| Source available at <a
-									href="https://github.com/krausc2/kc2.dev"
-									target="_blank"
-									rel="noreferrer">GitHub</a
-								></span
-							>
-						</p>
+						<footer class="border-t pt-4 pb-4 font-mono">
+							<p>
+								📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
+								{clock.emoji})
+							</p>
+							<p class="pt-8 text-center font-mono">
+								© {new Date().getFullYear()} krausc2
+								<span class="hidden lg:inline">
+									| Source available at <a
+										href="https://github.com/krausc2/kc2.dev"
+										target="_blank"
+										rel="noreferrer">GitHub</a
+									></span
+								>
+							</p>
 						</footer>
 					</div>
 				</div>
