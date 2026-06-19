@@ -3,7 +3,7 @@
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
 	import { env } from "$env/dynamic/public";
-	/* import BinaryCanvas from "$lib/BinaryCanvas.svelte"; */
+	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
@@ -22,11 +22,11 @@
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 
-<section class="relative mb-8 flex flex-col pt-16 lg:mb-32 lg:min-h-screen lg:pt-0">
+<section class="relative mb-8 flex flex-col pt-16 lg:mb-32 lg:min-h-screen lg:pt-0 border-b border-t">
 	<!-- <BinaryCanvas /> -->
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
-	<div class="mx-auto flex w-full max-w-[110ch] flex-1 flex-col justify-center border-b px-8">
+	<div class="mx-auto flex w-full max-w-[110ch] flex-1 flex-col justify-center px-8">
 		<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
 		<div class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0">
 			<!-- Ghost element to set dynamic height based on longest quote -->
