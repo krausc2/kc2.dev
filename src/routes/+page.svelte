@@ -16,7 +16,7 @@
 	/* #TODO Test for hydration error based on client/server timezones. */
 
 	const hour = new Date().getHours();
-	const splash = createScramble(createSplash(hour >= 18 || hour < 5 ? "night" : "day"));
+	const splash = createScramble(createSplash(hour >= 18 || hour < 5));
 </script>
 
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->

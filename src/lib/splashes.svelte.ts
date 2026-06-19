@@ -54,11 +54,9 @@ const SPLASHES = {
 	]
 };
 
-export type SplashType = keyof typeof SPLASHES;
-
-export function createSplash(type: SplashType) {
+export function createSplash(includeNight: boolean = false) {
 	let value = $state("");
-	const splashes = SPLASHES[type];
+	const splashes = includeNight ? [...SPLASHES.day, ...SPLASHES.night] : SPLASHES.day;
 	const longestValue = splashes.reduce((a, b) => (a.length > b.length ? a : b));
 
 	$effect(() => {
