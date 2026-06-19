@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
+	import { PUBLIC_EMAIL } from "$env/static/public";
 	/* import BinaryCanvas from "$lib/BinaryCanvas.svelte"; */
 
 	/* #TODO Test for hydration error based on client/server timezones. */
@@ -14,8 +15,8 @@
 
 <section class="relative mb-8 flex flex-col pt-16 lg:mb-32 lg:min-h-screen lg:pt-0">
 	<!-- <BinaryCanvas /> -->
-	<div class="pointer-events-none absolute inset-0 -z-10 bg-hero-gradient" aria-hidden="true"></div>
-	
+	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
+
 	<div class="mx-auto flex w-full max-w-[110ch] flex-1 flex-col justify-center border-b px-8">
 		<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
 		<div class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0">
@@ -32,51 +33,51 @@
 </section>
 
 <section class="mx-auto mb-32 flex w-full max-w-[110ch] flex-col gap-8 px-8 lg:block">
-		<div
-			class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
-		>
-			<p class="text-stone-500">Placeholder Image</p>
-		</div>
+	<div
+		class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
+	>
+		<p class="text-stone-500">Placeholder Image</p>
+	</div>
 
-		<p class="order-first lg:mb-8">
-			G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
-			studies at Macquarie University.
-		</p>
+	<p class="order-first lg:mb-8">
+		G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
+		studies at Macquarie University.
+	</p>
 
-		<p class="lg:mb-8">
-			I've spent the last six years building a foundation in IT operations, hybrid infrastructure,
-			and cyber risk management. I spent a significant amount of time as a Systems Administrator and
-			Support Technician for large independent schools, was an Electronics Repair Technician, and
-			also a Systems Integrator. This hands-on background gave me an understanding of how systems
-			actually function (and break), which I now use to manage security posture and aligned with
-			frameworks such as the ACSC Essential Eight.
-		</p>
-		<p class="lg:mb-8">You are not your job though, so who am I?</p>
-		<p class="lg:mb-8">
-			Well when I'm not neck deep in vulnerability reports, my interests are <b>very</b> broad. I enjoy
-			building software (though would not consider myself a software engineer) and am currently learning
-			Svelte, Tauri, Rust, and C for a variety of cross-platform projects. Analogue hardware is another
-			big interest of mine, CRTs and tube amplifiers in particular, along with hardware design and repair
-			more generally. I collect physical media (especially vinyl), and am always reading books that challenge
-			my perception of the world. At university I studied cyber security, but also took electives in philosophy,
-			sound engineering, and medical humanities.
-		</p>
-		<p class="lg:mb-8">
-			Spending too much time lost in thought can leave the mind without physical grounding, so I
-			also enjoy top-rope climbing, bouldering, and weight lifting.
-		</p>
-		<p class="lg:mb-8">
-			Most of my professional time in spent buried in the security tools (Defender, Sentinel, Entra
-			ID, Azure), but my favorite element of the job is the human part: translating complex
-			technical risks into actionable mitigation strategies that actually make sense for businesses.
-		</p>
-		<!-- #TODO Insert email -->
-		<p>
-			Check out my <a href="/things">things</a> page for a living document of what I've found insightful,
-			a reading (and listening) list of sorts. Feel free to reach out if you'd like to chat about tech,
-			security, or anything in between: X@X(dot)X
-		</p>
-	</section>
+	<p class="lg:mb-8">
+		I've spent the last six years building a foundation in IT operations, hybrid infrastructure, and
+		cyber risk management. I spent a significant amount of time as a Systems Administrator and
+		Support Technician for large independent schools, was an Electronics Repair Technician, and also
+		a Systems Integrator. This hands-on background gave me an understanding of how systems actually
+		function (and break), which I now use to manage security posture and aligned with frameworks
+		such as the ACSC Essential Eight.
+	</p>
+	<p class="lg:mb-8">You are not your job though, so who am I?</p>
+	<p class="lg:mb-8">
+		Well when I'm not neck deep in vulnerability reports, my interests are <b>very</b> broad. I enjoy
+		building software (though would not consider myself a software engineer) and am currently learning
+		Svelte, Tauri, Rust, and C for a variety of cross-platform projects. Analogue hardware is another
+		big interest of mine, CRTs and tube amplifiers in particular, along with hardware design and repair
+		more generally. I collect physical media (especially vinyl), and am always reading books that challenge
+		my perception of the world. At university I studied cyber security, but also took electives in philosophy,
+		sound engineering, and medical humanities.
+	</p>
+	<p class="lg:mb-8">
+		Spending too much time lost in thought can leave the mind without physical grounding, so I also
+		enjoy top-rope climbing, bouldering, and weight lifting.
+	</p>
+	<p class="lg:mb-8">
+		Most of my professional time in spent buried in the security tools (Defender, Sentinel, Entra
+		ID, Azure), but my favorite element of the job is the human part: translating complex technical
+		risks into actionable mitigation strategies that actually make sense for businesses.
+	</p>
+	<p>
+		Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a
+		living document of what I've found insightful, a reading (and listening) list of sorts. For
+		business enquiries, or even just to say hi, feel free to reach out at:
+		<a href="mailto:{PUBLIC_EMAIL}" class="text-custom-coral hover:underline">{PUBLIC_EMAIL}</a>
+	</p>
+</section>
 
 <style>
 	.cursor {
