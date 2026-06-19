@@ -1,4 +1,4 @@
-Contact: mailto:postmaster@kraus.au
+Contact:
 Expires: 2027-06-15T13:59:00.000Z
 Preferred-Languages: en
 
