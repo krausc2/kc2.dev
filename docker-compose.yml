@@ -9,6 +9,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+      - PUBLIC_EMAIL=${PUBLIC_EMAIL}
 
   tunnel:
     image: cloudflare/cloudflared:latest
