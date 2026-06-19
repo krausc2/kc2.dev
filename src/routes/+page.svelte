@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
-	import { PUBLIC_EMAIL } from "$env/static/public";
+	import { env } from "$env/dynamic/public";
 	/* import BinaryCanvas from "$lib/BinaryCanvas.svelte"; */
 
 	/* #TODO Test for hydration error based on client/server timezones. */
@@ -71,12 +71,11 @@
 		ID, Azure), but my favorite element of the job is the human part: translating complex technical
 		risks into actionable mitigation strategies that actually make sense for businesses.
 	</p>
-	<p>
-		Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a
-		living document of what I've found insightful, a reading (and listening) list of sorts. For
-		business enquiries, or even just to say hi, feel free to reach out at:
-		<a href="mailto:{PUBLIC_EMAIL}" class="text-custom-coral hover:underline">{PUBLIC_EMAIL}</a>
-	</p>
+		<p>
+			Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a living document of what I've found insightful,
+			a reading (and listening) list of sorts. Feel free to reach out if you'd like to chat about tech,
+			security, or anything in between: <a href="mailto:{env.PUBLIC_EMAIL}" class="text-custom-coral hover:underline">{env.PUBLIC_EMAIL}</a>
+		</p>
 </section>
 
 <style>
