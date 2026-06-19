@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
-	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
+	/* import BinaryCanvas from "$lib/BinaryCanvas.svelte"; */
 
 	/* #TODO Test for hydration error based on client/server timezones. */
 
