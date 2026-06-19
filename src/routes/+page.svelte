@@ -1,8 +1,17 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
 	import { env } from "$env/dynamic/public";
 	/* import BinaryCanvas from "$lib/BinaryCanvas.svelte"; */
+
+	let emailAddress = $state("[EMAIL PROTECTED]");
+	let emailHref = $state("");
+
+	onMount(() => {
+		emailAddress = env.PUBLIC_EMAIL;
+		emailHref = `mailto:${env.PUBLIC_EMAIL}`;
+	});
 
 	/* #TODO Test for hydration error based on client/server timezones. */
 
@@ -74,7 +83,7 @@
 		<p>
 			Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a living document of what I've found insightful,
 			a reading (and listening) list of sorts. Feel free to reach out if you'd like to chat about tech,
-			security, or anything in between: <a href="mailto:{env.PUBLIC_EMAIL}" class="text-custom-coral hover:underline">{env.PUBLIC_EMAIL}</a>
+			security, or anything in between: <a href={emailHref} class="text-custom-coral hover:underline">{emailAddress}</a>
 		</p>
 </section>
 
