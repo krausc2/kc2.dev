@@ -3,7 +3,7 @@
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
 	import { env } from "$env/dynamic/public";
-	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
+	// import BinaryCanvas from "$lib/BinaryCanvas.svelte";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
