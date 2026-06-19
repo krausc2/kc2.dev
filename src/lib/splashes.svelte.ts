@@ -67,8 +67,8 @@ export function createSplash(type: SplashType) {
 		value = splashes[tick];
 
 		const interval = setInterval(() => {
-			tick++;
-			value = splashes[tick % splashes.length];
+			tick = Math.floor(Math.random() * splashes.length);
+			value = splashes[tick];
 		}, MS_PER_SPLASH);
 
 		return () => clearInterval(interval);
