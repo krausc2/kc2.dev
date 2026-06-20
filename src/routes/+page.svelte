@@ -3,7 +3,7 @@
 	import { createSplash } from "$lib/splashes.svelte";
 	import { createScramble } from "$lib/scramble.svelte";
 	import { env } from "$env/dynamic/public";
-	// import BinaryCanvas from "$lib/BinaryCanvas.svelte";
+	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
@@ -22,8 +22,10 @@
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 
-<section class="relative mb-8 flex flex-col pt-16 lg:mb-32 lg:min-h-screen lg:pt-0 border-b border-t">
-	<!-- <BinaryCanvas /> -->
+<section
+	class="relative mb-8 flex flex-col border-t border-b pt-16 lg:mb-32 lg:min-h-screen lg:pt-0"
+>
+	<BinaryCanvas />
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
 	<div class="mx-auto flex w-full max-w-[110ch] flex-1 flex-col justify-center px-8">
@@ -80,11 +82,12 @@
 		ID, Azure), but my favorite element of the job is the human part: translating complex technical
 		risks into actionable mitigation strategies that actually make sense for businesses.
 	</p>
-		<p>
-			Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a living document of what I've found insightful,
-			a reading (and listening) list of sorts. Feel free to reach out if you'd like to chat about tech,
-			security, or anything in between: <a href={emailHref} class="text-custom-coral hover:underline">{emailAddress}</a>
-		</p>
+	<p>
+		Check out my <a href="/things" class="text-custom-coral hover:underline">things</a> page for a
+		living document of what I've found insightful, a reading (and listening) list of sorts. Feel
+		free to reach out if you'd like to chat about tech, security, or anything in between:
+		<a href={emailHref} class="text-custom-coral hover:underline">{emailAddress}</a>
+	</p>
 </section>
 
 <style>
