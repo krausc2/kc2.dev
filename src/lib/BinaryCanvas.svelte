@@ -2,6 +2,7 @@
 	let canvas: HTMLCanvasElement;
 	let canvasWidth = $state(0);
 	let canvasHeight = $state(0);
+	let offscreen: HTMLCanvasElement;
 
 	$effect(() => {
 		const ctx = canvas.getContext("2d");
@@ -28,27 +29,29 @@
 		/*
 			Create offscreen canvas to create sprites.
 		*/
-		const offscreen = document.createElement("canvas");
-		const oCtx = offscreen.getContext("2d");
-		if (!oCtx) return;
+		if (!offscreen) {
+			offscreen = document.createElement("canvas");
+			const oCtx = offscreen.getContext("2d");
+			if (!oCtx) return;
 
-		/*
-			Print sprites on canvas. 
-		*/
-		// TODO Increase to 4 sprites for orange variant
-		offscreen.width = spriteWidth * 2 * dpr;
-		offscreen.height = lineHeight * dpr;
-		oCtx.scale(dpr, dpr);
-		oCtx.font = `${fontSize}px monospace`;
-		oCtx.textBaseline = "top";
-		oCtx.fillStyle = "rgba(0, 0, 0, 0.25)";
-		oCtx.fillText("0", 0, 0);
-		oCtx.fillText("1", spriteWidth, 0);
+			/*
+				Print sprites on canvas. 
+			*/
+			// TODO Increase to 4 sprites for orange variant
+			offscreen.width = spriteWidth * 2 * dpr;
+			offscreen.height = lineHeight * dpr;
+			oCtx.scale(dpr, dpr);
+			oCtx.font = `${fontSize}px monospace`;
+			oCtx.textBaseline = "top";
+			oCtx.fillStyle = "rgba(0, 0, 0, 0.25)";
+			oCtx.fillText("0", 0, 0);
+			oCtx.fillText("1", spriteWidth, 0);
 
-		// TODO Future animation sprites
-		// oCtx.fillStyle = "rgba(255, 165, 0, 1)"; // Glowing Orange
-		// oCtx.fillText("0", spriteWidth * 2, 0);  // Glowing '0'
-		// oCtx.fillText("1", spriteWidth * 3, 0);  // Glowing '1'
+			// TODO Future animation sprites
+			// oCtx.fillStyle = "rgba(255, 165, 0, 1)"; // Glowing Orange
+			// oCtx.fillText("0", spriteWidth * 2, 0);  // Glowing '0'
+			// oCtx.fillText("1", spriteWidth * 3, 0);  // Glowing '1'
+		}
 
 		/*
 			Calculate grid for sprite to draw.
