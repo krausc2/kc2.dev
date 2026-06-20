@@ -45,6 +45,7 @@ const SPLASHES = {
 		"Never run down the clock.",
 		"It is not enough to be industrious; so are the ants.",
 		"Gleep glorp gloop glurp gleep. - The Aliens, probably.",
+		"You're gonna die either way, so hurry up.",
 		"8 hours of sleep is recommended for optimal performance.",
 		"Orwell was an optimist.",
 		"The glowies are asleep.",
