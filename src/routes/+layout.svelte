@@ -70,12 +70,12 @@
 					{#if page.url.pathname === "/"}
 						{@render children()}
 					{:else}
-						<div class="mx-auto flex w-full max-w-[110ch] flex-col px-8 pt-16">
+						<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
 							{@render children()}
 						</div>
 					{/if}
 
-					<div class="mx-auto mt-auto w-full max-w-[110ch] px-8">
+					<div class="mx-auto mt-auto w-full max-w-[100ch] px-8">
 						<footer class="border-t pt-4 pb-4 font-mono">
 							<p>
 								📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}

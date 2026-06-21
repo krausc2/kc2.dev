@@ -28,7 +28,7 @@
 	<BinaryCanvas />
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
-	<div class="mx-auto flex w-full max-w-[110ch] flex-1 flex-col justify-center px-8">
+	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
 		<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
 		<div class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0">
 			<!-- Ghost element to set dynamic height based on longest quote -->
@@ -43,7 +43,7 @@
 	</div>
 </section>
 
-<section class="mx-auto mb-32 flex w-full max-w-[110ch] flex-col gap-8 px-8 lg:block">
+<section class="mx-auto mb-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
 	<div
 		class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
 	>
