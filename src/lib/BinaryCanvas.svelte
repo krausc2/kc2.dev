@@ -10,12 +10,13 @@
 
 		const dpr = window.devicePixelRatio || 1; // Fix blurriness on high-DPR screens
 
-		canvas.width = canvasWidth * dpr;
-		canvas.height = canvasHeight * dpr;
+		const width = canvasWidth;
+		const height = canvasHeight;
+
+		canvas.width = width * dpr;
+		canvas.height = height * dpr;
 
 		ctx.scale(dpr, dpr);
-
-		ctx.clearRect(0, 0, canvasWidth, canvasHeight); // Clear canvas before drawing
 
 		/*
 			Font declaration and measurement for sprite sheet.
@@ -50,43 +51,52 @@
 		/*
 			Calculate grid for sprite to draw.
 		*/
-		const cols = Math.ceil(canvasWidth / spriteWidth) + 2; // + 2 for page edges
-		const rows = Math.ceil(canvasHeight / lineHeight) + 2;
-		const offsetX = (canvasWidth - cols * spriteWidth) / 2; // Offset to center the grid
+		const cols = Math.ceil(width / spriteWidth) + 2; // + 2 for page edges
+		const rows = Math.ceil(height / lineHeight) + 2;
+		const offsetX = (width - cols * spriteWidth) / 2; // Offset to center the grid
 
-		/* 
-			Draw Grid using Sprite Sheet.
-		*/
-		for (let r = 0; r < rows; r++) {
-			// For each row
-			for (let c = 0; c < cols; c++) {
-				// For each column
-				const isOne = Math.random() > 0.5; // Set 1 or 0
+		const draw = () => {
+			ctx.clearRect(0, 0, width, height); // Clear canvas before drawing
 
-				// TODO: If this cell is "glowing", add (spriteWidth * 2) to the sx coordinate
-				const sx = isOne ? spriteWidth : 0; // Select sprite "1" (true) or "0" (false)
+			/* 
+				Draw grid using sprite sheet.
+			*/
+			for (let r = 0; r < rows; r++) {
+				// For each row
+				for (let c = 0; c < cols; c++) {
+					// For each column
+					const isOne = Math.random() > 0.5; // Set 1 or 0
 
-				const dx = offsetX + c * spriteWidth; // Destination x coordinate
-				const dy = r * lineHeight; // Destination y coordinate
+					// TODO: If this cell is "glowing", add (spriteWidth * 2) to the sx coordinate
+					const sx = isOne ? spriteWidth : 0; // Select sprite "1" (true) or "0" (false)
 
-				/*
-					drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
-					Source coordinates must be multiplied by DPR because offscreen canvas 
-					pixel dimensions are physically larger.
-				*/
-				ctx.drawImage(
-					offscreen,
-					sx * dpr,
-					0,
-					spriteWidth * dpr,
-					lineHeight * dpr,
-					dx,
-					dy,
-					spriteWidth,
-					lineHeight // Destination (CSS units)
-				);
+					const dx = offsetX + c * spriteWidth; // Destination x coordinate
+					const dy = r * lineHeight; // Destination y coordinate
+
+					/*
+						drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+						Source coordinates must be multiplied by DPR because offscreen canvas 
+						pixel dimensions are physically larger.
+					*/
+					ctx.drawImage(
+						offscreen,
+						sx * dpr,
+						0,
+						spriteWidth * dpr,
+						lineHeight * dpr,
+						dx,
+						dy,
+						spriteWidth,
+						lineHeight // Destination (CSS units)
+					);
+				}
 			}
-		}
+		};
+
+		draw();
+		const interval = setInterval(draw, 250);
+
+		return () => clearInterval(interval);
 	});
 </script>
 
