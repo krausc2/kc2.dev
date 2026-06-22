@@ -109,10 +109,10 @@
 		/* Solid band at center, gradient above and below */
 		background-image: linear-gradient(
 			to bottom,
-			rgba(245, 245, 244, 0.6) 0%,
-			#f5f5f4 30%,
-			#f5f5f4 70%,
-			rgba(245, 245, 244, 0.6) 100%
+			rgba(245, 245, 244, 0.15) 0%,
+			#f5f5f4 25%,
+			#f5f5f4 75%,
+			rgba(245, 245, 244, 0.15) 100%
 		);
 	}
 </style>

@@ -37,20 +37,14 @@
 			/*
 				Print sprites on canvas. 
 			*/
-			// TODO Increase to 4 sprites for orange variant
 			offscreen.width = spriteWidth * 2 * dpr;
 			offscreen.height = lineHeight * dpr;
 			oCtx.scale(dpr, dpr);
 			oCtx.font = `${fontSize}px monospace`;
 			oCtx.textBaseline = "top";
-			oCtx.fillStyle = "rgba(0, 0, 0, 0.25)";
+			oCtx.fillStyle = "rgba(0, 0, 0, 0.10)";
 			oCtx.fillText("0", 0, 0);
 			oCtx.fillText("1", spriteWidth, 0);
-
-			// TODO Future animation sprites
-			// oCtx.fillStyle = "rgba(255, 165, 0, 1)"; // Glowing Orange
-			// oCtx.fillText("0", spriteWidth * 2, 0);  // Glowing '0'
-			// oCtx.fillText("1", spriteWidth * 3, 0);  // Glowing '1'
 		}
 
 		/*
@@ -63,7 +57,6 @@
 		/* 
 			Draw Grid using Sprite Sheet.
 		*/
-		// TODO For animation, wrap drawing logic in a requestAnimationFrame loop and track an array of active "glowing" coordinates to pick the glowing sprites.
 		for (let r = 0; r < rows; r++) {
 			// For each row
 			for (let c = 0; c < cols; c++) {
