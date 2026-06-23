@@ -21,6 +21,7 @@ const SPLASHES = {
 		"Underestimation never stopped a pigeon from unlatching itself or being old.",
 		"git push --force",
 		"Tyranny exercised for the good of its victims may be the most oppressive.",
+		"You finished it, and that's all that matters.",
 		"Made with Svelte ♥",
 		"An idiot admires complexity. A genius admires simplicity.",
 		"Knowing what is to come does not prevent it from coming.",
