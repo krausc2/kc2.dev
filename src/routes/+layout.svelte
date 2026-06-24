@@ -85,7 +85,7 @@
 								© {new Date().getFullYear()} krausc2
 								<span class="hidden lg:inline">
 									| Source available at <a
-										href="https://github.com/krausc2/kc2.dev"
+										href="https://github.com/krausc2/krausc2.dev"
 										target="_blank"
 										rel="noreferrer">GitHub</a
 									></span
