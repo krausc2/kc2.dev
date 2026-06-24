@@ -15,7 +15,14 @@ export const load = () => {
 
 	const articles: Article[] = Object.entries(imports).map(([articleName, contents]) => {
 		const slug = path.parse(articleName).name;
-		const { metadata } = contents as { metadata: any };
+		const { metadata } = contents as {
+			metadata: {
+				title: string;
+				date: string;
+				lastModified?: string;
+				tags?: string[];
+			};
+		};
 
 		return {
 			slug,
