@@ -75,11 +75,12 @@
 	</p>
 	<p class="lg:mb-8">
 		Spending too much time lost in thought can leave the mind without physical grounding, so I also
-		enjoy top-rope climbing, bouldering, and weight lifting.
+		enjoy top-rope climbing, bouldering (yeah yeah, really playing into the trope there), and weight
+		lifting.
 	</p>
 	<p class="lg:mb-8">
-		Most of my professional time in spent buried in the security tools (Defender, Sentinel, Entra
-		ID, Azure), but my favorite element of the job is the human part: translating complex technical
+		Most of my professional time in spent buried in security tools (Defender, Sentinel, Entra ID,
+		Azure), but my favorite part of the job is the human element: translating complex technical
 		risks into actionable mitigation strategies that actually make sense for businesses.
 	</p>
 	<p>

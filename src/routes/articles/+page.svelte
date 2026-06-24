@@ -3,7 +3,7 @@
 </script>
 
 <section class="mb-32 flex flex-col">
-	<p class="mb-4 text-5xl leading-none font-bold border-b pb-4">articles</p>
+	<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
 	<div>
 		{#each data.articles as article (article.slug)}
