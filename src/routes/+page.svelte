@@ -19,6 +19,10 @@
 	const splash = createScramble(createSplash(hour >= 18 || hour < 5));
 </script>
 
+<!-- #TODO Backlink on every page -->
+<!-- #TODO Sidebar links and metadata -->
+<!-- #TODO Random icons rotating at bottom for easter eggs (?) -->
+<!-- #TODO Mailing list that runs away from the cursor before giving up -->
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 
