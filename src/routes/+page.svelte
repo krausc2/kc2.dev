@@ -41,6 +41,7 @@
 			</div>
 			<!-- Visible splash text -->
 			<div class="col-start-1 row-start-1">
+				<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
 				motd@system:~# {splash.value}<span class="cursor">|</span>
 			</div>
 		</div>
