@@ -69,6 +69,7 @@
 		}
 	};
 
+	// #TODO Explore restricting effect trigger speed for rapid window resizing (poor perf)
 	// Reactive effect for window resize
 	$effect(() => {
 		if (!canvas) return;

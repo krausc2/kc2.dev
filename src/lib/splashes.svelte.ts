@@ -2,7 +2,8 @@ const MS_PER_SPLASH = 12000;
 
 /*
 	#TODO Fix page resume animation. Browser optimisation causes animation
-	to sleep or slow down when inactive (?)
+	to sleep or slow down when inactive (?).
+	#TODO Add check for selection of the same splash twice in a row.
 */
 
 /*
