@@ -3,12 +3,15 @@
 	let canvasWidth = $state(0);
 	let canvasHeight = $state(0);
 	let offscreen: HTMLCanvasElement;
+	let offscreenDpr = 0;
+	let currentDpr = $state(typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1);
+
 
 	$effect(() => {
 		const ctx = canvas.getContext("2d");
 		if (!ctx) return;
 
-		const dpr = window.devicePixelRatio || 1; // Fix blurriness on high-DPR screens
+		const dpr = currentDpr; // Fix blurriness on high-DPR screens
 
 		const width = canvasWidth;
 		const height = canvasHeight;
@@ -30,8 +33,9 @@
 		/*
 			Create offscreen canvas to create sprites.
 		*/
-		if (!offscreen) {
+		if (!offscreen || offscreenDpr !== dpr) {
 			offscreen = document.createElement("canvas");
+			offscreenDpr = dpr;
 			const oCtx = offscreen.getContext("2d");
 			if (!oCtx) return;
 
@@ -99,6 +103,9 @@
 		return () => clearInterval(interval);
 	});
 </script>
+
+<!-- Listen to the device pixel ratio -->
+<svelte:window bind:devicePixelRatio={currentDpr} />
 
 <div
 	class="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
