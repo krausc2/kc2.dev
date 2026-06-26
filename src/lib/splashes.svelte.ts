@@ -17,6 +17,7 @@ const SPLASHES = {
 		"See my latest project at localhost:5173/",
 		"To err is human; to forgive, divine.",
 		"Hello world!",
+		"Why not build a digital garden? It's quite fun.",
 		"As you start to walk on the way, the way appears.",
 		"Vibe coding? Prompt engineering.",
 		"Underestimation never stopped a pigeon from unlatching itself or being old.",
