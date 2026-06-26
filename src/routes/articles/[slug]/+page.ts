@@ -1,17 +1,19 @@
 import { error } from "@sveltejs/kit";
+import type { Article } from "../+page.server";
 
 export async function load({ params }) {
 	try {
-		// Dynamically import files from lib based on the slug parameter
 		const article = await import(`$lib/articles/${params.slug}.md`);
+		const meta = (article.metadata as Partial<Article>) || {};
 
 		return {
 			content: article.default,
-			// Spread metadata, but convert date
 			meta: {
-				...article.metadata,
-				date: new Date(article.metadata.date),
-				lastModified: new Date(article.metadata.lastModified || article.metadata.date)
+				...meta,
+				title: meta.title || "UNDEFINED",
+				date: (meta.date || "UNDEFINED").slice(0, 10),
+				lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
+				tags: meta.tags || []
 			}
 		};
 		// For resource that is not found, display 404
