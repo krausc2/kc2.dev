@@ -22,9 +22,11 @@ const SPLASHES = {
 		"Underestimation never stopped a pigeon from unlatching itself or being old.",
 		"git push --force",
 		"Tyranny exercised for the good of its victims may be the most oppressive.",
+		"He who awaits the perfect JavaScript framework shall never ship a project.",
 		"You finished it, and that's all that matters.",
 		"Made with Svelte ♥",
 		"An idiot admires complexity. A genius admires simplicity.",
+		"Gleep glorp gloop glurp gleep. - The Aliens, probably.",
 		"Knowing what is to come does not prevent it from coming.",
 		"AI is a statistical mirror; It is the ultimate conformist.",
 		"3000? All my homies use 5173.",
@@ -32,30 +34,31 @@ const SPLASHES = {
 		"...and then? The world.",
 		"Don't touch the CSS, it's still wet.",
 		"Is it better for a man to have chosen evil than to have good imposed upon him?",
+		"The truth is... the game was rigged from the start.",
+		"It is not enough to be industrious; so are the ants.",
+		"Memento mori.",
+		"The valiant never taste of death but once.", // S2
+		"Cowards die many times before their deaths.", // S1
 		"Be the tree, whose shade you shall never live to sit in.",
 		"640x480. Just as God intended.",
 		"I can and I will.",
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
+		"LARP like your life depends on it.",
+		"Orwell was an optimist.",
 		"To understand recursion, one must first understand recursion."
 	],
 	night: [
 		"The best code is written at 2am.",
-		"Cowards die many times before their deaths.", // S1
-		"The valiant never taste of death but once.", // S2
 		"No one is more stressed than a 20y/o who thinks they're out of time.",
 		'"It\'s later than you think, therefore hasten to do the work of god."',
 		"Never run down the clock.",
-		"It is not enough to be industrious; so are the ants.",
-		"Gleep glorp gloop glurp gleep. - The Aliens, probably.",
 		"You're gonna die either way, so hurry up.",
 		"8 hours of sleep is recommended for optimal performance.",
-		"Orwell was an optimist.",
 		"The glowies are asleep.",
 		"Inequality is required to motivate men to greatness.",
 		"Were you expecting a dark mode?",
 		"#TODO Go to sleep.",
-		"Memento mori."
 	]
 };
 
