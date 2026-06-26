@@ -71,7 +71,7 @@
 	</p>
 	<p class="lg:mb-8">You are not your job though, so who am I?</p>
 	<p class="lg:mb-8">
-		I'm <span class="font-mono text-custom-coral tabular-nums">{age.value}</span> years old, and have
+		I'm <span class="select-none pointer-events-none font-mono text-custom-coral tabular-nums">{age.value}</span> years old, and have
 		been tinkering with tech since a young age. I enjoy building software (though would not consider myself
 		a software engineer) and am currently learning Svelte, Tauri, Rust, and C for a variety of cross-platform
 		projects. Analogue hardware is another big interest of mine, CRTs and tube amplifiers in particular,
