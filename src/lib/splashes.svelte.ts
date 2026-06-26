@@ -47,7 +47,7 @@ const SPLASHES = {
 	night: [
 		"The best code is written at 2am.",
 		"No one is more stressed than a 20y/o who thinks they're out of time.",
-		'"It\'s later than you think, therefore hasten to do the work of god."',
+		"It's later than you think, therefore hasten to do the work of god.",
 		"Never run down the clock.",
 		"Tyranny exercised for the good of its victims may be the most oppressive.",
 		"The valiant never taste of death but once.", // S2
