@@ -86,6 +86,7 @@
 								<span class="hidden lg:inline">
 									| Source available at <a
 										href="https://github.com/krausc2/krausc2.dev"
+										class="no-underline hover:underline"
 										target="_blank"
 										rel="noreferrer">GitHub</a
 									></span

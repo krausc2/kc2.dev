@@ -71,13 +71,15 @@
 	</p>
 	<p class="lg:mb-8">You are not your job though, so who am I?</p>
 	<p class="lg:mb-8">
-		I'm <span class="select-none pointer-events-none font-mono text-custom-coral tabular-nums">{age.value}</span> years old, and have
-		been tinkering with tech since a young age. I enjoy building software (though would not consider myself
-		a software engineer) and am currently learning Svelte, Tauri, Rust, and C for a variety of cross-platform
-		projects. Analogue hardware is another big interest of mine, CRTs and tube amplifiers in particular,
-		along with hardware design and repair more generally. I collect physical media (especially vinyl),
-		and am always reading books that challenge my perception of the world. At university I studied cyber
-		security, but also took electives in philosophy, sound engineering, and medical humanities.
+		I'm <span class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
+			>{age.value}</span
+		> years old, and have been tinkering with tech since a young age. I enjoy building software (though
+		would not consider myself a software engineer) and am currently learning Svelte, Tauri, Rust, and
+		C for a variety of cross-platform projects. Analogue hardware is another big interest of mine, CRTs
+		and tube amplifiers in particular, along with hardware design and repair more generally. I collect
+		physical media (especially vinyl), and am always reading books that challenge my perception of the
+		world. At university I studied cyber security, but also took electives in philosophy, sound engineering,
+		and medical humanities.
 	</p>
 	<p class="lg:mb-8">
 		Spending too much time lost in thought can leave the mind without physical grounding, so I also
@@ -90,7 +92,9 @@
 		risks into actionable mitigation strategies for businesses.
 	</p>
 	<p>
-		Check out my <a href="/things" class="font-mono text-custom-coral hover:underline">things</a>
+		Check out my <a href="/things" class="font-mono text-custom-coral no-underline hover:underline"
+			>things</a
+		>
 		page for a living document of what I've found insightful, a reading (and listening) list of sorts.
 		Feel free to reach out if you'd like to chat about tech, security, or anything in between:
 		<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}</a>
