@@ -55,6 +55,8 @@ const SPLASHES = {
 		"Memento mori.",
 		"...and then? The world.",
 		"You're gonna die either way, so hurry up.",
+		"He who has a 'why' to live for can bear almost any 'how'.",
+		"Life is a war against entropy.",
 		"8 hours of sleep is recommended for optimal performance.",
 		"The glowies are asleep.",
 		"Inequality is required to motivate men to greatness.",
