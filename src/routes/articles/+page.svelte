@@ -10,17 +10,13 @@
 			<a href="/articles/{article.slug}">
 				<h1>{article.title}</h1>
 
-				<p>Date created: {article.date.toLocaleDateString(undefined, { dateStyle: "long" })}</p>
+				<p>Date created: {article.date}</p>
 
-				<p>
-					Last modified: {article.lastModified.toLocaleDateString(undefined, { dateStyle: "long" })}
-				</p>
+				<p>Last modified: {article.lastModified}</p>
 
-				{#if article.tags.length > 0}
-					{#each article.tags as tag (tag)}
-						<h2>{tag}</h2>
-					{/each}
-				{/if}
+				{#each article.tags as tag (tag)}
+					<h2>{tag}</h2>
+				{/each}
 			</a>
 		{/each}
 	</div>

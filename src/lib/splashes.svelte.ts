@@ -58,7 +58,7 @@ const SPLASHES = {
 		"The glowies are asleep.",
 		"Inequality is required to motivate men to greatness.",
 		"Were you expecting a dark mode?",
-		"#TODO Go to sleep.",
+		"#TODO Go to sleep."
 	]
 };
 
