@@ -41,6 +41,7 @@ const SPLASHES = {
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
 		"LARP like your life depends on it.",
+		"Look up, it's free.",
 		"Orwell was an optimist.",
 		"To understand recursion, one must first understand recursion."
 	],
