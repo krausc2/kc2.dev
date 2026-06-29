@@ -47,7 +47,7 @@
 </section>
 
 <section class="mx-auto mb-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
-	<section class="mb-8 flex flex-col">
+	<section class="flex flex-col">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</section>
 	<div
