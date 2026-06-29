@@ -28,7 +28,7 @@ Add search by tags and keyword on server cache.
 		<!-- Await articles and display throbber -->
 		{#await data.articles}
 			<div class="col-start-1 row-start-1 animate-pulse" out:fade={{ duration: 300 }}>
-				Loading articles...
+				There is no server error. Your internet just genuinely sucks...
 			</div>
 		<!-- Then display streamed articles -->
 		{:then articles}
