@@ -7,6 +7,7 @@
 	let offscreen: HTMLCanvasElement;
 	let offscreenDpr = 0;
 	let currentDpr = $state(typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1);
+	let ready = $state(false);
 
 	const fontSize = 16;
 	const lineHeight = 16;
@@ -67,6 +68,7 @@
 				);
 			}
 		}
+		ready = true;
 	};
 
 	// #TODO Explore restricting effect trigger speed for rapid window resizing (poor perf) (debounce?)
@@ -108,7 +110,7 @@
 <svelte:window bind:devicePixelRatio={currentDpr} />
 
 <div
-	class="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+	class="pointer-events-none absolute inset-0 -z-10 overflow-hidden transition-opacity duration-700 {ready ? 'opacity-100' : 'opacity-0'}"
 	bind:clientWidth={canvasWidth}
 	bind:clientHeight={canvasHeight}
 	aria-hidden="true"
