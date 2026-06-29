@@ -1,3 +1,20 @@
+/*
+#TODO:
+
+When article loading becomes prohibitively slow, consider converting setup to pagination and a server-side lazy load cache singleton. Create `src/lib/server/articles.ts` file 
+
+Keep the throbber for UX and initial cache miss.
+
+Add search by tags and keyword on server cache.
+
+* let articleCache = null;
+* ...
+* const imports = import.meta.glob("$lib/articles/*.md");
+* ... sort articles etc
+* articleCache = loadedArticles;
+* return articleCache;
+*/
+
 import * as path from "node:path";
 
 // Define Article interface with optional fields
@@ -11,28 +28,38 @@ export interface Article {
 	tags?: string[];
 }
 
+// Trigger streaming of articles from the server
 export const load = () => {
-	const imports = import.meta.glob("$lib/articles/*.md", { eager: true });
+	const articles = (async () => {
+		const imports = import.meta.glob("$lib/articles/*.md");
 
-	const articles: Article[] = Object.entries(imports).map(([articleName, contents]) => {
-		const slug = path.parse(articleName).name;
-		const meta = (contents as { metadata?: Partial<Article> }).metadata || {};
+		const loadedArticles: Article[] = await Promise.all(
+			Object.entries(imports).map(async ([articleName, resolver]) => {
+				const contents = (await resolver()) as { metadata?: Partial<Article> };
+				const slug = path.parse(articleName).name;
+				const meta = contents.metadata || {};
 
-		return {
-			slug,
-			title: meta.title || "UNDEFINED",
-			date: (meta.date || "UNDEFINED").slice(0, 10),
-			lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
-			tags: meta.tags || []
-		};
-	});
+				return {
+					slug,
+					title: meta.title || "UNDEFINED",
+					date: (meta.date || "UNDEFINED").slice(0, 10),
+					lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
+					tags: meta.tags || []
+				};
+			})
+		);
 
-	/*
-		#TODO Investigate a better way to sort the articles by date without creating
-		new objects every single sort; this is kinda dookie.
-		#TODO Add custom display limit of 20 articles before pagination.
-	*/
-	articles.sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
+		/*
+			#TODO Investigate a better way to sort the articles by date without creating
+			new objects every single sort; this is kinda dookie.
+			#TODO Add custom display limit of 20 articles before pagination.
+		*/
+		loadedArticles.sort(
+			(a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
+		);
+
+		return loadedArticles;
+	})();
 
 	return { articles };
 };
