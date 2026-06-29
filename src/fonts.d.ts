@@ -1,2 +1,2 @@
 declare module "@fontsource-variable/jetbrains-mono";
-declare module "@fontsource/inter";
+declare module "@fontsource-variable/inter";

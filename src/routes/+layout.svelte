@@ -2,8 +2,6 @@
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
 	import { Button } from "$lib/components/ui/button";
-	import "@fontsource-variable/jetbrains-mono";
-	import "@fontsource/inter";
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
