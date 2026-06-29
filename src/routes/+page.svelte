@@ -8,10 +8,12 @@
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
+	let splashReady = $state(false);
 
 	onMount(() => {
 		emailAddress = env.PUBLIC_EMAIL;
 		emailHref = `mailto:${env.PUBLIC_EMAIL}`;
+		splashReady = true;
 	});
 
 	/* #TODO Test for hydration error based on client/server timezones. */
@@ -38,9 +40,9 @@
 				motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
 			</div>
 			<!-- Visible splash text -->
-			<div class="col-start-1 row-start-1">
+			<div class="col-start-1 row-start-1 {!splashReady ? 'animate-pulse' : ''}">
 				<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
-				motd@system:~# {splash.value}<span class="cursor">|</span>
+				motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
 			</div>
 		</div>
 	</div>
