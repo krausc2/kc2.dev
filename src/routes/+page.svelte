@@ -26,15 +26,13 @@
 <!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
 <!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
 
-<section
-	class="relative mb-8 flex flex-col border-t border-b pt-16 lg:mb-32 lg:min-h-screen lg:pt-0"
->
+<section class="relative flex min-h-screen flex-col border-b border-t">
 	<BinaryCanvas />
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
-	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
-		<h1 class="mb-4 text-5xl font-bold">krausc2</h1>
-		<div class="mb-8 grid bg-stone-900 px-6 py-4 font-mono text-custom-coral lg:mb-0">
+	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center gap-4 px-8">
+		<h1 class="text-5xl font-bold">krausc2</h1>
+		<div class="grid bg-stone-900 px-6 py-4 font-mono text-custom-coral">
 			<!-- Ghost element to set dynamic height based on longest quote -->
 			<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
 				motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
@@ -48,7 +46,7 @@
 	</div>
 </section>
 
-<section class="mx-auto mb-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
+<section class="mx-auto pb-32 pt-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
 	<section class="flex flex-col">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</section>
