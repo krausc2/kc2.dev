@@ -7,12 +7,16 @@
 	import { createClock } from "$lib/clock.svelte";
 
 	let { children } = $props();
+	let isMobileMenuOpen = $state(false);
+
+	$effect(() => {
+		// When url changes, close the mobile menu if it's open.
+		if (page.url.pathname) {
+			isMobileMenuOpen = false;
+		}
+	});
 
 	/* #TODO Add console.log easter egg here */
-
-	/*
-		Array of items for the navigation menu.
-	*/
 	const navItems = [
 		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
@@ -24,40 +28,67 @@
 	const clock = createClock();
 </script>
 
-<div class="grid h-screen grid-cols-3 overflow-hidden fade-in lg:grid-cols-5">
-	<aside class="col-span-1 flex flex-col justify-center border-r">
-		<!-- [Logo and stuff goes here] -->
+<!-- #TODO Add logo to sidebar/nav -->
 
+{#snippet navMenu()}
+	<nav class="flex flex-col">
 		<!--
 			For each item in array, creates a button with hover effect.
 			z-10 (the <Button>)
 			z-0 (the gradient <div>)
 		-->
-		<nav class="flex flex-col">
-			{#each navItems as item (item.href)}
-				<div class="group relative font-mono">
-					<div
-						class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200 {page
-							.url.pathname === item.href
-							? 'opacity-100'
-							: 'opacity-0'}"
-					></div>
-					<Button
-						variant="ghost"
-						class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href
-							? 'text-custom-coral'
-							: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
-						href={item.href}
-					>
-						{item.label}
-					</Button>
-				</div>
-			{/each}
-		</nav>
+		{#each navItems as item (item.href)}
+			<div class="group relative font-mono">
+				<div
+					class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-stone-100 to-white transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200 {page
+						.url.pathname === item.href
+						? 'opacity-100'
+						: 'opacity-0'}"
+				></div>
+				<Button
+					variant="ghost"
+					class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href
+						? 'text-custom-coral'
+						: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
+					href={item.href}
+				>
+					{item.label}
+				</Button>
+			</div>
+		{/each}
+	</nav>
+{/snippet}
+
+<div class="grid h-screen grid-cols-1 overflow-hidden fade-in md:grid-cols-3 lg:grid-cols-5">
+	<aside class="col-span-1 hidden flex-col justify-center border-r md:flex">
+		{@render navMenu()}
 	</aside>
 
 	<!-- Main Content -->
-	<main class="col-span-2 flex h-full flex-col overflow-y-auto lg:col-span-3">
+	<main
+		class="relative col-span-1 flex h-full flex-col overflow-y-auto md:col-span-2 lg:col-span-3"
+	>
+		{#key `${page.url.pathname}-${isMobileMenuOpen}`}
+			<button
+				in:fade={{ duration: 150, delay: 150 }}
+				out:fade={{ duration: 150 }}
+				onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
+				class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+			>
+				{isMobileMenuOpen ? "✕" : "☰"}
+			</button>
+		{/key}
+
+		{#if isMobileMenuOpen}
+			<div
+				in:fade={{ duration: 150 }}
+				out:fade={{ duration: 150, delay: 150 }}
+				class="fixed inset-0 z-40 flex flex-col justify-center bg-stone-100 md:hidden"
+			>
+				{@render navMenu()}
+			</div>
+		{/if}
+
 		<div class="grid flex-1">
 			{#key page.url.pathname}
 				<div
