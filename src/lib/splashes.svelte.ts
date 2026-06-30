@@ -38,7 +38,7 @@ const SPLASHES = {
 		"Be the tree, whose shade you shall never live to sit in.",
 		"640x480. Just as God intended.",
 		"I can and I will.",
-		"If an article contains \"let that sink in\", it's probably not worth reading.",
+		'If an article contains "let that sink in", it\'s probably not worth reading.',
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
 		"LARP like your life depends on it.",

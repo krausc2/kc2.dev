@@ -110,7 +110,9 @@
 <svelte:window bind:devicePixelRatio={currentDpr} />
 
 <div
-	class="pointer-events-none absolute inset-0 -z-10 overflow-hidden transition-opacity duration-700 {ready ? 'opacity-100' : 'opacity-0'}"
+	class="pointer-events-none absolute inset-0 -z-10 overflow-hidden transition-opacity duration-700 {ready
+		? 'opacity-100'
+		: 'opacity-0'}"
 	bind:clientWidth={canvasWidth}
 	bind:clientHeight={canvasHeight}
 	aria-hidden="true"
