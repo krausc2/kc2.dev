@@ -13,6 +13,11 @@ Add search by tags and keyword on server cache.
 * ... sort articles etc
 * articleCache = loadedArticles;
 * return articleCache;
+
+# Possible fix?
+(?) Eager glob import.
+(?) Server parse and sort the markdown files when it boots up and return cached array to users.
+(?) Essentially move the article sort logic to build/startup stage.
 */
 
 import * as path from "node:path";
@@ -42,7 +47,7 @@ export const load = () => {
 				return {
 					slug,
 					title: meta.title || "UNDEFINED",
-					date: (meta.date || "UNDEFINED").slice(0, 10),
+					date: (meta.date || "UNDEFINED").slice(0, 10), // #TODO .slice is fragile so remove this eventually
 					lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
 					tags: meta.tags || []
 				};
