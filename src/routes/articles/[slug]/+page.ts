@@ -17,6 +17,7 @@ export async function load({ params }) {
 			}
 		};
 		// For resource that is not found, display 404
+		// #TODO: Create a custom set of error message pages
 	} catch {
 		throw error(404, `Could not find ${params.slug}`);
 	}
