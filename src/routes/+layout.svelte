@@ -68,16 +68,16 @@
 	<main
 		class="relative col-span-1 flex h-full flex-col overflow-y-auto md:col-span-2 lg:col-span-3"
 	>
-		{#key `${page.url.pathname}-${isMobileMenuOpen}`}
+		{#if !isMobileMenuOpen}
 			<button
 				in:fade={{ duration: 150, delay: 150 }}
 				out:fade={{ duration: 150 }}
-				onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
+				onclick={() => (isMobileMenuOpen = true)}
 				class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
 			>
-				{isMobileMenuOpen ? "✕" : "☰"}
+				<span class="translate-y-[1.5px]">☰</span>
 			</button>
-		{/key}
+		{/if}
 
 		{#if isMobileMenuOpen}
 			<div
@@ -85,6 +85,14 @@
 				out:fade={{ duration: 150, delay: 150 }}
 				class="fixed inset-0 z-40 flex flex-col justify-center bg-stone-100 md:hidden"
 			>
+				<button
+					in:fade={{ duration: 150, delay: 150 }}
+					out:fade={{ duration: 150 }}
+					onclick={() => (isMobileMenuOpen = false)}
+					class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+				>
+					✕
+				</button>
 				{@render navMenu()}
 			</div>
 		{/if}
