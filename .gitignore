@@ -28,3 +28,4 @@ vite.config.ts.timestamp-*
 /todo.md
 status-project.md
 src/routes/articles/articles.md
+maintenance-worker.js
