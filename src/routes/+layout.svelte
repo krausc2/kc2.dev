@@ -8,6 +8,7 @@
 
 	let { children } = $props();
 	let isMobileMenuOpen = $state(false);
+	let md = 768; //
 
 	$effect(() => {
 		// When url changes, close the mobile menu if it's open.
@@ -68,78 +69,90 @@
 	<main
 		class="relative col-span-1 flex h-full flex-col overflow-y-auto md:col-span-2 lg:col-span-3"
 	>
-		{#if !isMobileMenuOpen}
-			<button
-				in:fade={{ duration: 150, delay: 150 }}
-				out:fade={{ duration: 150 }}
-				onclick={() => (isMobileMenuOpen = true)}
-				class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
-			>
-				<span class="translate-y-[-1.5px]">☰</span>
-			</button>
-		{/if}
-
 		{#if isMobileMenuOpen}
 			<div
-				in:fade={{ duration: 150 }}
-				out:fade={{ duration: 150, delay: 150 }}
+				in:fade={{ duration: 150, delay: 150 }}
+				out:fade={{ duration: 150 }}
 				class="fixed inset-0 z-40 flex flex-col justify-center bg-stone-100 md:hidden"
 			>
 				<button
-					in:fade={{ duration: 150, delay: 150 }}
-					out:fade={{ duration: 150 }}
 					onclick={() => (isMobileMenuOpen = false)}
 					class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
 				>
 					✕
 				</button>
-				{@render navMenu()}
+				<div class="w-full">
+					{@render navMenu()}
+				</div>
+			</div>
+		{:else}
+			<div
+				class="flex h-full flex-col"
+				in:fade={{ duration: 150, delay: 150 }}
+				out:fade={{ duration: 150 }}
+			>
+				<button
+					onclick={() => (isMobileMenuOpen = true)}
+					class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+				>
+					<span class="translate-y-[-1.5px]">☰</span>
+				</button>
+
+				<div class="grid flex-1">
+					{#key page.url.pathname}
+						<div
+							class="col-start-1 row-start-1 flex h-full flex-col"
+							in:fade={{ duration: 150, delay: 150 }}
+							out:fade={{ duration: 150 }}
+						>
+							{#if page.url.pathname === "/"}
+								{@render children()}
+							{:else}
+								<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
+									{@render children()}
+								</div>
+							{/if}
+
+							<div class="mx-auto mt-auto w-full max-w-[100ch] px-8">
+								<footer class="border-t pt-4 pb-4 font-mono">
+									<p>
+										📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
+										{clock.emoji})
+									</p>
+									<p class="pt-8 text-center font-mono">
+										© {new Date().getFullYear()} krausc2
+										<span class="hidden lg:inline">
+											| Source available at <a
+												href="https://github.com/krausc2/krausc2.dev"
+												class="no-underline hover:underline"
+												target="_blank"
+												rel="noreferrer">GitHub</a
+											></span
+										>
+									</p>
+								</footer>
+							</div>
+						</div>
+					{/key}
+				</div>
 			</div>
 		{/if}
-
-		<div class="grid flex-1">
-			{#key page.url.pathname}
-				<div
-					class="col-start-1 row-start-1 flex h-full flex-col"
-					in:fade={{ duration: 150, delay: 150 }}
-					out:fade={{ duration: 150 }}
-				>
-					{#if page.url.pathname === "/"}
-						{@render children()}
-					{:else}
-						<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
-							{@render children()}
-						</div>
-					{/if}
-
-					<div class="mx-auto mt-auto w-full max-w-[100ch] px-8">
-						<footer class="border-t pt-4 pb-4 font-mono">
-							<p>
-								📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
-								{clock.emoji})
-							</p>
-							<p class="pt-8 text-center font-mono">
-								© {new Date().getFullYear()} krausc2
-								<span class="hidden lg:inline">
-									| Source available at <a
-										href="https://github.com/krausc2/krausc2.dev"
-										class="no-underline hover:underline"
-										target="_blank"
-										rel="noreferrer">GitHub</a
-									></span
-								>
-							</p>
-						</footer>
-					</div>
-				</div>
-			{/key}
-		</div>
 	</main>
 
 	<section class="col-span-1 hidden border-l lg:block">
 		<!-- #TODO Add right sidebar content -->
 	</section>
 </div>
+
+<svelte:window
+	/*
+		If a user has the mobile view open and then resizes the window...
+		#TODO Maybe add debounce if it causes performance issues(?)
+	*/
+	onresize={() => {
+		if (window.innerWidth >= md && isMobileMenuOpen) isMobileMenuOpen = false;
+	}}
+/>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
