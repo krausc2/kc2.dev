@@ -1,10 +1,8 @@
 ---
-title: Test Article
+title: This is a test article
 date: 2026-03-02
-lastModified: 2026-06-16
-tags: [test, test2]
+lastModified: 2026-07-01
+tags: [Article]
 ---
 
-This is a test article for the blog function.
-
-Hi :)
+No really, this is just a test article, nothing to see here.
