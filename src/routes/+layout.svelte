@@ -5,10 +5,11 @@
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
+	import pkg from "../../package.json";
 
 	let { children } = $props();
 	let isMobileMenuOpen = $state(false);
-	let md = 768; //
+	let md = 768; // The cutoff for mobile view from tailwindcss.
 
 	$effect(() => {
 		// When url changes, close the mobile menu if it's open.
@@ -126,9 +127,9 @@
 												href="https://github.com/krausc2/krausc2.dev"
 												class="no-underline hover:underline"
 												target="_blank"
-												rel="noreferrer">GitHub</a
-											></span
-										>
+												rel="noreferrer">GitHub</a>
+											| v{pkg.version}
+										</span>
 									</p>
 								</footer>
 							</div>
