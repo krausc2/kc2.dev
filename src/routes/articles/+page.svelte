@@ -24,6 +24,12 @@ Add search by tags and keyword on server cache.
 <section class="mb-32 flex flex-col">
 	<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
+	<div class="flex flex-col gap-8 pt-8 pb-16 border-b border-stone-300">
+		<p>Here lies a collection of miscellaneous articles I've written on a wide variety of topics including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.</p>
+
+		<p>Eventually, search by tags, keywords, or dates will be added. For now, use 'ctrl/cmd+f' like the genius you are.</p>
+	</div>
+
 	<div class="grid">
 		<!-- Await articles and display throbber -->
 		{#await data.articles}
@@ -32,18 +38,14 @@ Add search by tags and keyword on server cache.
 			</div>
 		<!-- Then display streamed articles -->
 		{:then articles}
-			<div class="col-start-1 row-start-1">
+			<div class="col-start-1 row-start-1 pt-8">
 				{#each articles as article, i (article.slug)}
-					<div in:fade|global={{ duration: 300, delay: 300 + i * 150 }}>
+					<div class="" in:fade|global={{ duration: 300, delay: 300 + i * 150 }}>
 						<a href="/articles/{article.slug}">
-							<h1>{article.title}</h1>
-
-							<p>Date created: {article.date}</p>
-
-							<p>Last modified: {article.lastModified}</p>
-
+							<p>{article.title}</p>
+							<p class="text-sm">Date created: {article.date}</p>
 							{#each article.tags as tag (tag)}
-								<h2>{tag}</h2>
+								<p class="text-sm font-mono">#{tag}</p>
 							{/each}
 						</a>
 					</div>
