@@ -2,6 +2,8 @@ import { untrack } from "svelte";
 
 /* 
 	#TODO Fix "catch-up" animation on page resume by listening for visibilitychange
+	#TODO Remove splash text from mobile layout due to text thrashing (?).
+	#TODO Fix line breaks from shifting text up and down.
 */
 
 export function createScramble(source: { value: string; longestValue: string }) {
