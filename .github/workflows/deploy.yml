@@ -14,7 +14,6 @@ jobs:
       
     steps:
       - name: Fetch & Deploy
-        # Update this path to your project folder on the Mac Mini
         run: |
           cd /Users/krausc2/Development/krausc2.dev
           
