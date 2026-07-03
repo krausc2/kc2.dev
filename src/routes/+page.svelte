@@ -47,16 +47,12 @@
 </section>
 
 <section class="mx-auto pb-32 pt-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
-	<section class="flex flex-col">
+	<section class="order-first flex flex-col">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</section>
-	<div
-		class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
-	>
-		<p class="text-stone-500">Placeholder Image</p>
-	</div>
 
-	<p class="order-first lg:mb-8">
+
+	<p class="lg:mb-8">
 		G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
 		studies at Macquarie University.
 	</p>
@@ -69,7 +65,16 @@
 		work (and break), which I now use to manage security posture aligned with frameworks such as the
 		ACSC Essential Eight.
 	</p>
+
+
+	<div
+		class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
+	>
+		<p class="text-stone-500">Placeholder Image</p>
+	</div>
+
 	<p class="lg:mb-8">You are not your job though, so who am I?</p>
+
 	<p class="lg:mb-8">
 		I'm <span class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
 			>{age.value}</span
