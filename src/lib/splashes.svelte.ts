@@ -37,7 +37,9 @@ const SPLASHES = {
 		"It is not enough to be industrious; so are the ants.",
 		"Be the tree, whose shade you shall never live to sit in.",
 		"640x480. Just as God intended.",
+		"I'm still gonna try, if only 'cause I like the way it feels.",
 		"I can and I will.",
+		"To be cringe is to be free.",
 		'If an article contains "let that sink in", it\'s probably not worth reading.',
 		"'The Cloud' is just someone else's computer.",
 		"Your smart fridge is spying on you.",
@@ -56,6 +58,8 @@ const SPLASHES = {
 		"The valiant never taste of death but once.", // S2
 		"Cowards die many times before their deaths.", // S1
 		"Memento mori.",
+		"All my life I've been young, so I never get a turn.",
+		"As if I'm ever gonna change.",
 		"...and then? The world.",
 		"You're gonna die either way, so hurry up.",
 		"He who has a 'why' to live for can bear almost any 'how'.",
