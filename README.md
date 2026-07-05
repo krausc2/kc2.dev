@@ -2,9 +2,9 @@
 
 This is my personal site and corner of the internet. It contains projects, articles, and whatever else I'm currently working on.
 
-**You can view the live site now at either [kc2.dev](https://kc2.dev) or [krausc2.dev](https://krausc2.dev)!**
+**You can view the live site now at either [krausc2.dev](https://krausc2.dev) or [krausc2.com](https://krausc2.com)!**
 
-This site was originally a project to teach myself Svelte 5 and web infrastructure.
+This repository was originally a project to teach myself Svelte 5 and web infrastructure.
 
 ---
 
@@ -22,22 +22,22 @@ npm run dev
 
 ### Hosting your own site
 
-If you want to try something similar, a proper tutorial will be published on my site soon.
+A proper tutorial will be published on my site soon.
 
 In short, you'll need the following:
 
 - Any device compatible with running a small docker container
 - A domain (preferably with Cloudflare Registrar)
 - A free Cloudflare account
-- A network connection with a _fair_ or better upload speed (>10mbps should be fine)
+- A network connection with a _fair_ or better upload speed (>10mbps)
 
 #### Steps
 
-1. Create your own Svelte repo using the `@sveltejs/adapter-node` adapter; the full [Svelte and SveleteKit tutorial](https://svelte.dev/tutorial/svelte/welcome-to-svelte) is a great starting point.
+1. If you wish to make your own Svelte website, you must first invent the universe... or just follow the [Svelte and SveleteKit tutorial](https://svelte.dev/tutorial/svelte/welcome-to-svelte). Ensure to use the `@sveltejs/adapter-node` adapter.
 2. Set up your device (server) with appropriate power settings so that it does not power off randomly.
 3. Install `Docker Desktop`, or any docker-compatible manager like `OrbStack`, or your specific Linux variant of the `docker engine` and `docker compose` on your server.
 4. Install `cloudflared` on your server.
-5. Set up the Cloudflare Tunnel using `cloudflared` (this protects your local IP and stops you from having to expose ports).
+5. Set up the Cloudflare Tunnel using `cloudflared`.
 6. Copy my `Dockerfile` and `docker-compose.yml` file, then add **your own** `PORT=` and `CLOUDFLARE_TUNNEL_TOKEN=` to a **private** `.env` file.
 7. Run the site! Some useful `docker compose` commands include:
    - Build and launch your web server: `docker compose up -d --build`
