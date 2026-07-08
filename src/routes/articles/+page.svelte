@@ -16,9 +16,16 @@ Add search by tags and keyword on server cache.
 -->
 
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
+	import type { Article } from "./data/+server";
 
-	let { data } = $props();
+	let articles: Article[] | null = $state(null); // null until fetched from server
+
+	onMount(async () => {
+		const res = await fetch("/articles/data");
+		articles = await res.json();
+	});
 </script>
 
 <section class="mb-32 flex flex-col">
@@ -32,12 +39,12 @@ Add search by tags and keyword on server cache.
 
 	<div class="grid">
 		<!-- Await articles and display throbber -->
-		{#await data.articles}
+		{#if !articles}
 			<div class="col-start-1 row-start-1 animate-pulse" out:fade={{ duration: 300 }}>
 				There is no server error. Your internet just genuinely sucks...
 			</div>
 		<!-- Then display streamed articles -->
-		{:then articles}
+		{:else}
 			<div class="col-start-1 row-start-1 pt-8">
 				{#each articles as article, i (article.slug)}
 					<div class="" in:fade|global={{ duration: 300, delay: 300 + i * 150 }}>
@@ -51,6 +58,6 @@ Add search by tags and keyword on server cache.
 					</div>
 				{/each}
 			</div>
-		{/await}
+		{/if}
 	</div>
 </section>

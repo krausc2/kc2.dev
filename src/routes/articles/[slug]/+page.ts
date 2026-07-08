@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import type { Article } from "../+page.server";
+import type { Article } from "../data/+server";
 
 export async function load({ params }) {
 	try {
