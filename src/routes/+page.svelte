@@ -9,6 +9,7 @@
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
 	let splashReady = $state(false);
+	let aboutSection = $state<HTMLElement>();
 
 	onMount(() => {
 		emailAddress = env.PUBLIC_EMAIL;
@@ -29,30 +30,35 @@
 	<BinaryCanvas />
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
-	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center gap-4 px-8">
-		<h1 class="text-7xl md:text-5xl font-bold text-center md:text-left">krausc2</h1>
-		<div class="md:grid bg-stone-900 px-6 py-4 font-mono text-custom-coral hidden">
-			<!-- Ghost element to set dynamic height based on longest quote -->
-			<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
-				motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
+		<div class="relative flex flex-col gap-4">
+			<h1 class="text-7xl md:text-5xl font-bold text-center md:text-left">krausc2</h1>
+			<div class="md:grid bg-stone-900 px-6 py-4 font-mono text-custom-coral hidden">
+				<!-- Ghost element to set dynamic height based on longest quote -->
+				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
+					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+				</div>
+				<!-- Visible splash text -->
+				<div class="col-start-1 row-start-1 {!splashReady ? 'animate-pulse' : ''}">
+					<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
+					motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
+				</div>
 			</div>
-			<!-- Visible splash text -->
-			<div class="col-start-1 row-start-1 {!splashReady ? 'animate-pulse' : ''}">
-				<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
-				motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
-			</div>
-		</div>
 
-		<!-- -mb-24 to trick justify-center -->
-		<div class="self-center mt-4 -mb-24 animate-pulse text-stone-600">
-			<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
-				<path d="M5 9l7 7 7-7" />
-			</svg>
+			<button
+				onclick={() => aboutSection?.scrollIntoView({ behavior: 'smooth' })}
+				class="absolute top-full mt-6 left-1/2 -translate-x-1/2 animate-pulse text-stone-600 hover:text-stone-300 hover:duration-200 duration-700 transition-colors cursor-pointer"
+				aria-label="Scroll to about section"
+			>
+				<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+					<path d="M5 9l7 7 7-7" />
+				</svg>
+			</button>
 		</div>
 	</div>
 </section>
 
-<section class="mx-auto pb-32 pt-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
+<section bind:this={aboutSection} class="mx-auto pb-32 pt-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
 	<section class="order-first flex flex-col">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</section>
