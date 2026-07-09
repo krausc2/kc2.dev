@@ -5,16 +5,25 @@
 	import { createAgeCounter } from "$lib/age.svelte";
 	import { env } from "$env/dynamic/public";
 	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
+	import childhoodPhoto from "$lib/assets/childhood_photo.jpg?enhanced";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
 	let splashReady = $state(false);
 	let aboutSection = $state<HTMLElement>();
+	let photoLoaded = $state(false);
+	let photo = $state<HTMLElement>();
 
 	onMount(() => {
 		emailAddress = env.PUBLIC_EMAIL;
 		emailHref = `mailto:${env.PUBLIC_EMAIL}`;
 		splashReady = true;
+
+		// photo = <img> (dev) or <picture> (prod)
+		const img = photo instanceof HTMLImageElement ? photo : photo?.querySelector("img");
+		if (img?.complete) {
+			photoLoaded = true;
+		}
 	});
 
 	/* #TODO Test for hydration error based on client/server timezones. */
@@ -26,14 +35,14 @@
 
 <!-- #TODO Fix layout issues where elements draw outside their bounds on small window sizes -->
 
-<section class="relative flex min-h-screen flex-col border-b border-t">
+<section class="relative flex min-h-screen flex-col border-t border-b">
 	<BinaryCanvas />
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
 	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
 		<div class="relative flex flex-col gap-4">
-			<h1 class="text-7xl md:text-5xl font-bold text-center md:text-left">krausc2</h1>
-			<div class="md:grid bg-stone-900 px-6 py-4 font-mono text-custom-coral hidden">
+			<h1 class="text-center text-7xl font-bold md:text-left md:text-5xl">krausc2</h1>
+			<div class="hidden bg-stone-900 px-6 py-4 font-mono text-custom-coral md:grid">
 				<!-- Ghost element to set dynamic height based on longest quote -->
 				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
 					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
@@ -46,11 +55,19 @@
 			</div>
 
 			<button
-				onclick={() => aboutSection?.scrollIntoView({ behavior: 'smooth' })}
-				class="absolute top-full mt-8 md:mt-4 left-1/2 -translate-x-1/2 animate-pulse text-stone-600 hover:text-stone-300 hover:duration-200 duration-700 transition-colors cursor-pointer"
+				onclick={() => aboutSection?.scrollIntoView({ behavior: "smooth" })}
+				class="absolute top-full left-1/2 mt-8 -translate-x-1/2 animate-pulse cursor-pointer text-stone-600 transition-colors duration-700 hover:text-stone-300 hover:duration-200 md:mt-4"
 				aria-label="Scroll to about section"
 			>
-				<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+				<svg
+					class="size-12"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="0.8"
+					stroke-linecap="square"
+					stroke-linejoin="miter"
+				>
 					<path d="M5 9l7 7 7-7" />
 				</svg>
 			</button>
@@ -58,11 +75,13 @@
 	</div>
 </section>
 
-<section bind:this={aboutSection} class="mx-auto pb-32 pt-32 flex w-full max-w-[100ch] flex-col gap-8 px-8 lg:block">
+<section
+	bind:this={aboutSection}
+	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block"
+>
 	<section class="order-first flex flex-col">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</section>
-
 
 	<p class="lg:mb-8">
 		G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
@@ -78,11 +97,19 @@
 		ACSC Essential Eight.
 	</p>
 
-
 	<div
-		class="mx-auto flex aspect-3/4 w-2/3 max-w-sm items-center justify-center bg-stone-400 lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
+		class="relative mx-auto aspect-3/4 w-2/3 max-w-sm overflow-hidden lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none [&_picture]:relative [&_picture]:z-10 [&_picture]:block [&_picture]:size-full"
 	>
-		<p class="text-stone-500">Placeholder Image</p>
+		<div class="absolute inset-0 animate-pulse bg-stone-300" aria-hidden="true"></div>
+		<enhanced:img
+			bind:this={photo}
+			src={childhoodPhoto}
+			alt="Photo of me circa 2014."
+			onload={() => (photoLoaded = true)}
+			class="size-full object-cover transition-opacity duration-700 {photoLoaded
+				? 'opacity-100'
+				: 'opacity-0'}"
+		/>
 	</div>
 
 	<p class="lg:mb-8">You are not your job though, so who am I?</p>
@@ -114,7 +141,7 @@
 		>
 		page for a living document of what I've found insightful, a reading (and listening) list of sorts.
 		Feel free to reach out if you'd like to chat about tech, security, or anything in between:
-		<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}</a>
+		<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}.</a>
 	</p>
 </section>
 
