@@ -97,20 +97,27 @@
 		ACSC Essential Eight.
 	</p>
 
-	<div
-		class="relative mx-auto aspect-3/4 w-2/3 max-w-sm overflow-hidden lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none [&_picture]:relative [&_picture]:z-10 [&_picture]:block [&_picture]:size-full"
+	<figure
+		class="mx-auto w-2/3 max-w-sm lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
 	>
-		<div class="absolute inset-0 animate-pulse bg-stone-300" aria-hidden="true"></div>
-		<enhanced:img
-			bind:this={photo}
-			src={childhoodPhoto}
-			alt="Photo of me circa 2014."
-			onload={() => (photoLoaded = true)}
-			class="size-full object-cover transition-opacity duration-700 {photoLoaded
-				? 'opacity-100'
-				: 'opacity-0'}"
-		/>
-	</div>
+		<div
+			class="relative aspect-3/4 w-full overflow-hidden [&_picture]:relative [&_picture]:z-10 [&_picture]:block [&_picture]:size-full"
+		>
+			<div class="absolute inset-0 animate-pulse bg-stone-300" aria-hidden="true"></div>
+			<enhanced:img
+				bind:this={photo}
+				src={childhoodPhoto}
+				alt="Photo of me circa 2014."
+				onload={() => (photoLoaded = true)}
+				class="size-full object-cover transition-opacity duration-700 {photoLoaded
+					? 'opacity-100'
+					: 'opacity-0'}"
+			/>
+		</div>
+		<figcaption class="mt-4 text-center font-mono text-base text-custom-coral">
+			Stylish as always, circa 2014.
+		</figcaption>
+	</figure>
 
 	<p class="lg:mb-8">You are not your job though, so who am I?</p>
 
