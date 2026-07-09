@@ -119,10 +119,10 @@
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50 text-stone-900;
+		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-stone-900;
 	}
 	p a,
 	li a {
