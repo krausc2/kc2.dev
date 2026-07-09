@@ -52,9 +52,7 @@ export const GET: RequestHandler = async () => {
 		new objects every single sort; this is kinda dookie.
 		#TODO Add custom display limit of 20 articles before pagination.
 	*/
-	loadedArticles.sort(
-		(a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
-	);
+	loadedArticles.sort((a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime());
 
 	return json(loadedArticles);
 };

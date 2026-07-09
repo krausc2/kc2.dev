@@ -127,7 +127,8 @@
 												href="https://github.com/krausc2/krausc2.dev"
 												class="no-underline hover:underline"
 												target="_blank"
-												rel="noreferrer">GitHub</a>
+												rel="noreferrer">GitHub</a
+											>
 											| v{pkg.version}
 										</span>
 									</p>

@@ -31,10 +31,16 @@ Add search by tags and keyword on server cache.
 <section class="mb-32 flex flex-col">
 	<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
-	<div class="flex flex-col gap-8 pt-8 pb-16 border-b border-stone-300">
-		<p>Here lies a collection of miscellaneous articles I've written on a wide variety of topics including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.</p>
+	<div class="flex flex-col gap-8 border-b border-stone-300 pt-8 pb-16">
+		<p>
+			Here lies a collection of miscellaneous articles I've written on a wide variety of topics
+			including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.
+		</p>
 
-		<p>Eventually, search by tags, keywords, or dates will be added. For now, use 'ctrl/cmd+f' like the genius you are.</p>
+		<p>
+			Eventually, search by tags, keywords, or dates will be added. For now, use 'ctrl/cmd+f' like
+			the genius you are.
+		</p>
 	</div>
 
 	<div class="grid">
@@ -43,7 +49,7 @@ Add search by tags and keyword on server cache.
 			<div class="col-start-1 row-start-1 animate-pulse" out:fade={{ duration: 300 }}>
 				There is no server error. Your internet just genuinely sucks...
 			</div>
-		<!-- Then display streamed articles -->
+			<!-- Then display streamed articles -->
 		{:else}
 			<div class="col-start-1 row-start-1 pt-8">
 				{#each articles as article, i (article.slug)}
@@ -52,7 +58,7 @@ Add search by tags and keyword on server cache.
 							<p>{article.title}</p>
 							<p class="text-sm">Date created: {article.date}</p>
 							{#each article.tags as tag (tag)}
-								<p class="text-sm font-mono">#{tag}</p>
+								<p class="font-mono text-sm">#{tag}</p>
 							{/each}
 						</a>
 					</div>

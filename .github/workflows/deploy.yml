@@ -3,26 +3,26 @@ name: Webserver Deployment
 on:
   push:
     tags:
-      - 'v*' # Trigger action on any tag beginning with "v"
+      - "v*" # Trigger action on any tag beginning with "v"
 
 jobs:
   deploy:
-    runs-on: self-hosted 
-    environment: 
+    runs-on: self-hosted
+    environment:
       name: production
       url: https://krausc2.dev/
-      
+
     steps:
       - name: Fetch & Deploy
         run: |
           cd /Users/krausc2/Development/krausc2.dev
-          
+
           # 1. Fetch all tags from GitHub
           git fetch --all --tags
-          
+
           # 2. Checkout the version tag that triggered this workflow
           git checkout ${{ github.ref_name }}
-          
+
           # 3. Rebuild and restart Docker containers
           docker compose down
           docker compose up -d --build
