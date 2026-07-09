@@ -23,6 +23,8 @@ const SPLASHES = {
 		"Underestimation never stopped a pigeon from unlatching itself or being old.",
 		"git push --force",
 		"He who awaits the perfect JavaScript framework shall never ship a project.",
+		"A commissioner wearing his sash is no longer a man but a statue of the law.",
+		"Don't dream of things that will make reality even more terrible to you.",
 		"You finished it, and that's all that matters.",
 		"Made with Svelte ♥",
 		"An idiot admires complexity. A genius admires simplicity.",
