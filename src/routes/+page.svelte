@@ -114,7 +114,7 @@
 					: 'opacity-0'}"
 			/>
 		</div>
-		<figcaption class="mt-4 text-center font-mono text-base text-custom-coral">
+		<figcaption class="mt-4 text-center font-mono text-base">
 			Stylish as always, circa 2014.
 		</figcaption>
 	</figure>
