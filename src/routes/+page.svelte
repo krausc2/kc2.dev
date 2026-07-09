@@ -43,6 +43,13 @@
 				motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
 			</div>
 		</div>
+
+		<!-- -mb-24 to trick justify-center -->
+		<div class="self-center mt-4 -mb-24 animate-pulse text-stone-600">
+			<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+				<path d="M5 9l7 7 7-7" />
+			</svg>
+		</div>
 	</div>
 </section>
 
