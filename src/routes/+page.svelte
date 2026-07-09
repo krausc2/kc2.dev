@@ -31,8 +31,8 @@
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
 	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center gap-4 px-8">
-		<h1 class="text-5xl font-bold">krausc2</h1>
-		<div class="grid bg-stone-900 px-6 py-4 font-mono text-custom-coral">
+		<h1 class="text-7xl md:text-5xl font-bold text-center md:text-left">krausc2</h1>
+		<div class="md:grid bg-stone-900 px-6 py-4 font-mono text-custom-coral hidden">
 			<!-- Ghost element to set dynamic height based on longest quote -->
 			<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
 				motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
