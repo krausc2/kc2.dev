@@ -23,8 +23,7 @@
 	const age = createAgeCounter();
 </script>
 
-<!-- #TODO Change formatting to ensure correct proportions on huge screen sizes -->
-<!-- #TODO Redo this section formatting to be more of a hero section then blurb below, too many elements to land on -->
+<!-- #TODO Fix layout issues where elements draw outside their bounds on small window sizes -->
 
 <section class="relative flex min-h-screen flex-col border-b border-t">
 	<BinaryCanvas />
