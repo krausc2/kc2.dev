@@ -40,8 +40,8 @@
 	<div class="bg-hero-gradient pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
 	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
-		<div class="relative flex flex-col gap-4">
-			<h1 class="text-center text-7xl font-bold md:text-left md:text-5xl">krausc2</h1>
+		<div class="relative">
+			<h1 class="text-center text-7xl font-bold md:mb-4 md:text-left md:text-5xl">krausc2</h1>
 			<div class="hidden bg-stone-900 px-6 py-4 font-mono text-custom-coral md:grid">
 				<!-- Ghost element to set dynamic height based on longest quote -->
 				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
@@ -81,14 +81,14 @@
 	bind:this={aboutSection}
 	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block"
 >
-	<section class="order-first flex flex-col">
+	<div class="order-first">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
-	</section>
 
-	<p class="lg:mb-8">
+		<p class="lg:mb-8">
 		G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
 		studies at Macquarie University.
-	</p>
+		</p>
+	</div>
 
 	<p class="lg:mb-8">
 		I've spent the last six years building a foundation in IT operations, hybrid infrastructure, and
