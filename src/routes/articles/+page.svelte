@@ -33,12 +33,12 @@ Add search by tags and keyword on server cache.
 
 	<div class="flex flex-col gap-8 border-b border-stone-300 pt-8 pb-16">
 		<p>
-			Here lies a collection of miscellaneous articles I've written on a wide variety of topics
+			This is a collection of miscellaneous articles I've written on a wide variety of topics
 			including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.
 		</p>
 
 		<p>
-			Eventually, search by tags, keywords, or dates will be added. For now, use 'ctrl/cmd+f' like
+			Eventually, search by tags, keywords, and dates will be added. For now, use 'ctrl/cmd+f' like
 			the genius you are.
 		</p>
 	</div>
@@ -46,7 +46,7 @@ Add search by tags and keyword on server cache.
 	<div class="grid">
 		<!-- Await articles and display throbber -->
 		{#if !articles}
-			<div class="col-start-1 row-start-1 animate-pulse" out:fade={{ duration: 300 }}>
+			<div class="col-start-1 row-start-1 animate-pulse pt-8" out:fade={{ duration: 300 }}>
 				There is no server error. Your internet just genuinely sucks...
 			</div>
 			<!-- Then display streamed articles -->
