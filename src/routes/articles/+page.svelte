@@ -53,7 +53,7 @@ Add search by tags and keyword on server cache.
 		<!-- Await articles and display throbber -->
 		{#if !articles}
 			<div
-				class="col-start-1 row-start-1 mx-auto max-w-[100ch] animate-pulse px-8 pt-8"
+				class="col-start-1 row-start-1 mx-auto max-w-[100ch] animate-pulse px-8 pt-12"
 				out:fade={{ duration: 300 }}
 			>
 				There is no server error. Your internet just genuinely sucks...
