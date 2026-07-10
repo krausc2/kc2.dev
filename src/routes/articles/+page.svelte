@@ -43,6 +43,10 @@ Add search by tags and keyword on server cache.
 		</p>
 	</div>
 
+	<!-- #TODO Add read time estimates: "• 5 min read" -->
+	<!-- #TODO Add search function -->
+	<!-- #TODO Add tag pill buttons -->
+	<!-- #TODO Colours for each tag based on vibes -->
 	<div class="grid">
 		<!-- Await articles and display throbber -->
 		{#if !articles}
@@ -58,7 +62,7 @@ Add search by tags and keyword on server cache.
 							<p>{article.title}</p>
 							<div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
 								<p class="text-sm">Date created: {article.date}</p>
-								<p class="font-mono text-sm">#{article.tag}</p>
+								<p class="font-mono text-sm text-custom-coral">#{article.tag}</p>
 							</div>
 						</a>
 					</div>
