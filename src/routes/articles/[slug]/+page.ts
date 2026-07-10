@@ -13,7 +13,7 @@ export async function load({ params }) {
 				title: meta.title || "UNDEFINED",
 				date: (meta.date || "UNDEFINED").slice(0, 10),
 				lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
-				tags: meta.tags || []
+				tag: meta.tag || "UNDEFINED"
 			}
 		};
 		// For resource that is not found, display 404

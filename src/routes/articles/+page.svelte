@@ -29,9 +29,9 @@ Add search by tags and keyword on server cache.
 </script>
 
 <section class="mb-32 flex flex-col">
-	<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">articles</p>
+	<p class="border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
-	<div class="flex flex-col gap-8 border-b border-stone-300 pt-8 pb-16">
+	<div class="flex flex-col gap-8 border-b border-stone-300 pt-4 pb-4">
 		<p>
 			This is a collection of miscellaneous articles I've written on a wide variety of topics
 			including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.
@@ -51,15 +51,15 @@ Add search by tags and keyword on server cache.
 			</div>
 			<!-- Then display streamed articles -->
 		{:else}
-			<div class="col-start-1 row-start-1 pt-8">
+			<div class="col-start-1 row-start-1 flex flex-col gap-8 pt-8">
 				{#each articles as article, i (article.slug)}
 					<div class="" in:fade|global={{ duration: 300, delay: 300 + i * 150 }}>
 						<a href="/articles/{article.slug}">
 							<p>{article.title}</p>
-							<p class="text-sm">Date created: {article.date}</p>
-							{#each article.tags as tag (tag)}
-								<p class="font-mono text-sm">#{tag}</p>
-							{/each}
+							<div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
+								<p class="text-sm">Date created: {article.date}</p>
+								<p class="font-mono text-sm">#{article.tag}</p>
+							</div>
 						</a>
 					</div>
 				{/each}

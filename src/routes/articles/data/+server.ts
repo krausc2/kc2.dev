@@ -23,9 +23,7 @@ export interface Article {
 	title?: string;
 	date?: string;
 	lastModified?: string;
-
-	// #TODO Add a way to handle more than 1 tag, including in layout
-	tags?: string[];
+	tag?: string;
 }
 
 export const GET: RequestHandler = async () => {
@@ -36,13 +34,12 @@ export const GET: RequestHandler = async () => {
 			const contents = (await resolver()) as { metadata?: Partial<Article> };
 			const slug = path.parse(articleName).name;
 			const meta = contents.metadata || {};
-
 			return {
 				slug,
 				title: meta.title || "UNDEFINED",
 				date: (meta.date || "UNDEFINED").slice(0, 10), // #TODO .slice is fragile so remove this eventually
 				lastModified: (meta.lastModified || meta.date || "UNDEFINED").slice(0, 10),
-				tags: meta.tags || []
+				tag: meta.tag || "UNDEFINED"
 			};
 		})
 	);
