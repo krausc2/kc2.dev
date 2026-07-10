@@ -29,7 +29,7 @@ Add search by tags and keyword on server cache.
 </script>
 
 <section class="mb-32 flex flex-col">
-	<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
+	<div class="mx-auto flex max-w-[100ch] flex-col px-8 pt-16">
 		<p class="border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
 		<div class="flex flex-col gap-8 border-b border-stone-300 pt-4 pb-4">
@@ -49,17 +49,18 @@ Add search by tags and keyword on server cache.
 	<!-- #TODO Add search function -->
 	<!-- #TODO Add tag pill buttons -->
 	<!-- #TODO Colours for each tag based on vibes -->
-	<div class="grid w-full">
+	<div class="grid">
 		<!-- Await articles and display throbber -->
 		{#if !articles}
-			<div class="mx-auto w-full max-w-[100ch] px-8">
-				<div class="col-start-1 row-start-1 animate-pulse pt-8" out:fade={{ duration: 300 }}>
-					There is no server error. Your internet just genuinely sucks...
-				</div>
+			<div
+				class="col-start-1 row-start-1 mx-auto max-w-[100ch] animate-pulse px-8 pt-8"
+				out:fade={{ duration: 300 }}
+			>
+				There is no server error. Your internet just genuinely sucks...
 			</div>
 			<!-- Then display streamed articles -->
 		{:else}
-			<div class="col-start-1 row-start-1 flex flex-col pt-8">
+			<div class="col-start-1 row-start-1 pt-8">
 				{#each articles as article, i (article.slug)}
 					<a
 						href="/articles/{article.slug}"
@@ -69,7 +70,7 @@ Add search by tags and keyword on server cache.
 						<div
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 						></div>
-						<div class="relative z-10 mx-auto flex w-full max-w-[100ch] flex-col px-8">
+						<div class="relative z-10 mx-auto max-w-[100ch] px-8">
 							<p>{article.title}</p>
 							<div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
 								<p class="text-sm">Date created: {article.date}</p>
