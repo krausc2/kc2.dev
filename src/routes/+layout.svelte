@@ -106,7 +106,7 @@
 							in:fade={{ duration: 150, delay: 150 }}
 							out:fade={{ duration: 150 }}
 						>
-							{#if page.url.pathname === "/"}
+							{#if page.url.pathname === "/" || page.url.pathname === "/articles"}
 								{@render children()}
 							{:else}
 								<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
