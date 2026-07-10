@@ -48,7 +48,9 @@
 					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
 				</div>
 				<!-- Visible splash text -->
-				<div class="text-custom-coral col-start-1 row-start-1 {!splashReady ? 'animate-pulse' : ''}">
+				<div
+					class="col-start-1 row-start-1 text-custom-coral {!splashReady ? 'animate-pulse' : ''}"
+				>
 					<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
 					motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
 				</div>
