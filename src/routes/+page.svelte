@@ -58,7 +58,7 @@
 
 			<button
 				onclick={() => aboutSection?.scrollIntoView({ behavior: "smooth" })}
-				class="absolute top-full left-1/2 mt-8 -translate-x-1/2 animate-pulse cursor-pointer text-stone-600 transition-colors duration-700 hover:text-stone-300 hover:duration-200 md:mt-4"
+				class="absolute top-full left-1/2 mt-8 -translate-x-1/2 animate-pulse cursor-pointer text-stone-900 transition-colors duration-700 hover:text-stone-300 hover:duration-200 md:mt-4"
 				aria-label="Scroll to about section"
 			>
 				<svg
