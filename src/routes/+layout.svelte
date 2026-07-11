@@ -32,7 +32,7 @@
 
 <!-- #TODO Add logo to sidebar/nav -->
 
-{#snippet navMenu()}
+{#snippet navMenu(isMobile = false)}
 	<nav class="flex flex-col">
 		<!--
 			For each item in array, creates a button with hover effect.
@@ -49,7 +49,9 @@
 				></div>
 				<Button
 					variant="ghost"
-					class="relative z-10 w-full hover:bg-transparent {page.url.pathname === item.href
+					class="relative z-10 w-full hover:bg-transparent {isMobile
+						? 'h-auto py-4'
+						: ''} {page.url.pathname === item.href
 						? 'text-custom-coral'
 						: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
 					href={item.href}
@@ -83,7 +85,7 @@
 					✕
 				</button>
 				<div class="w-full">
-					{@render navMenu()}
+					{@render navMenu(true)}
 				</div>
 			</div>
 		{:else}
