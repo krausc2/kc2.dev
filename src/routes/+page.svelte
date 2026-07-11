@@ -66,7 +66,7 @@
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					stroke-width="0.8"
+					stroke-width="0.6"
 					stroke-linecap="square"
 					stroke-linejoin="miter"
 				>
