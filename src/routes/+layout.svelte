@@ -80,7 +80,7 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = false)}
-					class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-14 w-14 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
 				>
 					✕
 				</button>
@@ -96,7 +96,7 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = true)}
-					class="absolute top-16 right-8 z-50 flex h-12 w-12 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-14 w-14 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
 				>
 					<span class="translate-y-[-1.5px]">☰</span>
 				</button>
