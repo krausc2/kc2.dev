@@ -22,8 +22,8 @@
 	const navItems = [
 		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
-		{ label: "Influences", href: "/influences" },
 		{ label: "Articles", href: "/articles" },
+		{ label: "Influences", href: "/influences" },
 		{ label: "Projects", href: "/projects" }
 	];
 
