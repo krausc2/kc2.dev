@@ -22,7 +22,7 @@
 	const navItems = [
 		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
-		{ label: "Things", href: "/things" },
+		{ label: "Influences", href: "/influences" },
 		{ label: "Articles", href: "/articles" },
 		{ label: "Projects", href: "/projects" }
 	];
