@@ -52,6 +52,7 @@ const SPLASHES = {
 		"You are the common denominator in every endeavour through life.",
 		"We can be a little too rough on our hearts; It’s all for nothing.",
 		"I’m exactly where I wanna be, but I’m a long way from home.",
+		"The pursuit of excellence needs no explanation.",
 		'If an article contains "let that sink in", it\'s probably not worth reading.',
 		"'The Cloud' is just someone else's computer.",
 		"You can't engineer solutions for a team that only wants to go shopping.",
