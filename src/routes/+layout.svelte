@@ -108,6 +108,7 @@
 							in:fade={{ duration: 150, delay: 150 }}
 							out:fade={{ duration: 150 }}
 						>
+							<!-- Convert this to multiple +layout.svelte files, current way is not idiomatic for Svelte -->
 							{#if page.url.pathname === "/" || page.url.pathname === "/articles"}
 								{@render children()}
 							{:else}
