@@ -34,13 +34,13 @@ Add search by tags and keyword on server cache.
 
 		<div class="flex flex-col gap-8 border-b border-stone-300 pt-4 pb-4">
 			<p>
-				This is a collection of articles I've written on a wide variety of topics
-				including: tutorials, book (and album) reviews, philosophy, and other shower thoughts.
+				This is a collection of articles I've written on a wide variety of topics including:
+				tutorials, book (and album) reviews, philosophy, and other shower thoughts.
 			</p>
 
 			<p>
-				Eventually searching by tags, keywords, and dates will be added, but for now use 'ctrl/cmd+f' like
-				the genius you are.
+				Eventually searching by tags, keywords, and dates will be added, but for now use
+				'ctrl/cmd+f' like the genius you are.
 			</p>
 		</div>
 	</div>

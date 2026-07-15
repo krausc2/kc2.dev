@@ -85,8 +85,8 @@
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 
 		<p class="lg:mb-8">
-		G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
-		studies at Macquarie University.
+			G'day, <b>I'm Curtis</b>, a <b>Cyber Security Engineer</b> in Sydney, currently finishing my undergraduate
+			studies at Macquarie University.
 		</p>
 	</div>
 
@@ -145,8 +145,9 @@
 		risks into actionable mitigation strategies for businesses.
 	</p>
 	<p>
-		Check out my <a href="/influences" class="font-mono text-custom-coral no-underline hover:underline"
-			>influences</a
+		Check out my <a
+			href="/influences"
+			class="font-mono text-custom-coral no-underline hover:underline">influences</a
 		>
 		page for a living document of what I've found insightful, a reading (and listening) list of sorts.
 		Feel free to reach out if you'd like to chat about tech, security, or anything in between:
