@@ -59,6 +59,7 @@ const SPLASHES = {
 		"Your smart fridge is spying on you.",
 		"LARP like your life depends on it.",
 		"Look up, it's free.",
+		"【=◈︿◈=】",
 		"Society has become far too okay with accepting preventable tragedies.",
 		"Orwell was an optimist.",
 		"To understand recursion, one must first understand recursion."
