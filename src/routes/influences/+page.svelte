@@ -28,7 +28,7 @@
 	{#each influenceCategories as category (category.type)}
 		<section class="pt-16">
 			<div class="border-b pb-4">
-				<span class="text-xl font-bold">{category.type === "music" ? "music" : `${category.type}`}</span>
+				<span class="text-xl font-bold">{category.type}</span>
 			</div>
 			<ul>
 				{#each category.items as item (item.title)}
