@@ -32,7 +32,7 @@
 			</div>
 			<ul>
 				{#each category.items as item (item.title)}
-					<li class="pt-4 pb-4">
+					<li class="pt-4">
 						<p>{item.title} - {item.creator}</p>
 						<p class="text-sm">{item.year}</p>
 					</li>
