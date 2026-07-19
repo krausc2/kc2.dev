@@ -23,7 +23,7 @@
 		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
 		{ label: "Articles", href: "/articles" },
-		{ label: "Influences", href: "/influences" },
+		// { label: "Influences", href: "/influences" },
 		{ label: "Projects", href: "/projects" }
 	];
 

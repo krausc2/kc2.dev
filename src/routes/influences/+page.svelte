@@ -33,8 +33,9 @@
 			<ul>
 				{#each category.items as item (item.title)}
 					<li class="pt-4">
-						<p>{item.title} - {item.creator}</p>
-						<p class="text-sm">{item.year}</p>
+						<p>{item.creator} - {item.title}</p>
+						<p class="pb-4 text-sm">{item.year}</p>
+						<p class="text-sm">{item.reflection}</p>
 					</li>
 				{/each}
 			</ul>
