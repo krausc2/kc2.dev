@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { influenceCategories } from "./data";
+</script>
+
 <section class="mb-32 flex flex-col">
 	<p class="border-b pb-4 text-5xl leading-none font-bold">influences</p>
 
@@ -21,15 +25,20 @@
 		</p>
 	</div>
 
-	<section class="gap-8 pt-16">
-		<span class="border-b text-xl font-bold">books</span>
-	</section>
-
-	<section class="gap-8 pt-16">
-		<span class="border-b text-xl font-bold">music</span>
-	</section>
-
-	<section class="gap-8 pt-16">
-		<span class="border-b text-xl font-bold">games</span>
-	</section>
+	{#each influenceCategories as category (category.type)}
+		<section class="pt-16">
+			<div class="border-b pb-4">
+				<span class="text-xl font-bold">{category.type}</span>
+			</div>
+			<ul>
+				{#each category.items as item (item.title)}
+					<li class="pt-4">
+						<p>{item.creator} - {item.title}</p>
+						<p class="pb-4 text-sm">{item.year}</p>
+						<p class="text-sm">{item.reflection}</p>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/each}
 </section>
