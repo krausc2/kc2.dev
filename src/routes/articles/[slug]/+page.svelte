@@ -10,7 +10,9 @@ can never clip the mobile layout.
 	let { data } = $props();
 </script>
 
-<article>
+<p class="pb-4 text-5xl leading-none font-bold invisible">articles</p>
+
+<article class="border-t pt-4">
 	<h1>
 		{data.meta.title}
 	</h1>
