@@ -142,11 +142,4 @@
 			font-size: 16px;
 		}
 	}
-
-	/* 
-		ARTICLE BODY FORMATTING 
-	*/
-	.article-body h1 {
-		@apply text-3xl;
-	}
 }
