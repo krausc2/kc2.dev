@@ -35,7 +35,7 @@ Add search by tags and keyword on server cache.
 		<div class="flex flex-col gap-8 border-b border-stone-300 pt-4 pb-4">
 			<p>
 				This is a collection of articles I've written on a wide variety of topics including:
-				tutorials, book (and album) reviews, philosophy, and other shower thoughts.
+				tutorials, reviews for books (and albums), philosophy, and other shower thoughts.
 			</p>
 
 			<p>
