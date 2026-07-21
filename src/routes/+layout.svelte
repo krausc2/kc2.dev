@@ -79,9 +79,9 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = false)}
-					class="absolute top-16 right-8 z-50 flex h-14 w-14 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
 				>
-					✕
+					<span class="-translate-y-px">x</span>
 				</button>
 				<div class="w-full">
 					{@render navMenu(true)}
@@ -95,7 +95,7 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = true)}
-					class="absolute top-16 right-8 z-50 flex h-14 w-14 items-center justify-center border border-stone-300 bg-stone-100 font-mono text-lg md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
 				>
 					<span class="translate-y-[-1.5px]">☰</span>
 				</button>
