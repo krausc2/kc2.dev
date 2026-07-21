@@ -55,24 +55,6 @@
 					motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
 				</div>
 			</div>
-
-			<button
-				onclick={() => aboutSection?.scrollIntoView({ behavior: "smooth" })}
-				class="absolute top-full left-1/2 mt-8 -translate-x-1/2 cursor-pointer text-stone-900 transition-colors duration-700 hover:text-stone-300 hover:duration-200 md:mt-4"
-				aria-label="Scroll to about section"
-			>
-				<svg
-					class="size-12"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="0.6"
-					stroke-linecap="square"
-					stroke-linejoin="miter"
-				>
-					<path d="M5 9l7 7 7-7" />
-				</svg>
-			</button>
 		</div>
 	</div>
 </section>
@@ -160,9 +142,9 @@
 			href="/articles"
 			class="font-mono text-custom-coral no-underline hover:underline">articles</a
 		>
-		page for a list of things I've found insightful: tutorials, books (and albums), philosophy, and other
-		shower thoughts. Feel free to reach out if you'd like to chat about tech, cyber security, or anything in
-		between:
+		page for a list of things I've found insightful: tutorials, reviews for books (and albums), philosophy,
+		and other shower thoughts. Feel free to reach out if you'd like to chat about tech, cyber security,
+		or anything in between:
 		<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}.</a>
 	</p>
 </section>
