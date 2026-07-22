@@ -49,7 +49,7 @@
 				></div>
 				<Button
 					variant="ghost"
-					class="relative z-10 w-full hover:bg-transparent {isMobile ? 'h-auto py-4' : ''} {page.url
+					class="relative z-10 w-full hover:bg-transparent {isMobile ? 'h-auto py-2' : ''} {page.url
 						.pathname === item.href
 						? 'text-custom-coral'
 						: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
@@ -79,7 +79,7 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = false)}
-					class="absolute top-16 right-8 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
 				>
 					<span class="-translate-y-px">x</span>
 				</button>
@@ -95,7 +95,7 @@
 			>
 				<button
 					onclick={() => (isMobileMenuOpen = true)}
-					class="absolute top-16 right-8 z-50 flex h-14 w-14 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
+					class="absolute top-16 right-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center border bg-stone-100 font-mono text-lg text-stone-900 transition-colors duration-700 hover:text-stone-500 hover:duration-200 md:hidden"
 				>
 					<span class="translate-y-[-1.5px]">☰</span>
 				</button>
