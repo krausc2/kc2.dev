@@ -61,7 +61,7 @@
 
 <section
 	bind:this={aboutSection}
-	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 text-sm lg:block"
+	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block"
 >
 	<div class="order-first">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
@@ -73,10 +73,10 @@
 		</p>
 	</div>
 
-	<p class="lg:mb-8">
+	<p class="text-sm lg:mb-8">
 		My focus area for the past few years has been on IT operations, hybrid infrastructure, and cyber
 		risk management. I spent a significant amount of time as a Systems Administrator and Support
-		Technician for independent schools, supported small business clients at an MSP, and was also a
+		Technician for independent schools, assisted small business clients at an MSP, and was also a
 		Sales Engineer at a hardware retailer. This hands-on background gave me an understanding of how
 		systems work (and break), which I now use to manage security posture aligned with models such as
 		the ACSC Essential Eight.
@@ -106,12 +106,12 @@
 
 	<p class="text-base lg:mb-8">You are not your job though, so who are you?</p>
 
-	<p class="lg:mb-8">
+	<p class="text-sm lg:mb-8">
 		I'm <span class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
 			>{age.value}</span
 		> years old, and have been tinkering with tech since a young age. I enjoy building software (though
 		would not consider myself a software engineer) and am currently learning Svelte, Tauri, Rust, and
-		C for a variety of cross-platform projects. Analogue hardware is another interest of mine, CRTs and
+		C for a variety of cross-platform projects. Analogue hardware is another big interest of mine, CRTs and
 		tube amplifiers in particular, along with hardware design and repair more generally. I collect physical
 		media (especially vinyl), and am always reading books that challenge my perception of the world. At
 		university I studied cyber security, but also took electives in philosophy, sound engineering, and
@@ -120,7 +120,7 @@
 
 	<p class="text-base lg:mb-8">Do you play sportsball?</p>
 
-	<p class="lg:mb-8">
+	<p class="text-sm lg:mb-8">
 		Spending too much time lost in thought can leave the mind without physical grounding, so I also
 		enjoy top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
 		weight lifting.
@@ -128,7 +128,7 @@
 
 	<p class="text-base lg:mb-8">Are you annoying to work with?</p>
 
-	<p class="lg:mb-8">
+	<p class="text-sm lg:mb-8">
 		Most of my professional time is spent buried in security tools (Defender, Sentinel, Entra ID,
 		Azure), but my favorite part of the job is the human element: translating complex technical
 		risks into actionable mitigation strategies for businesses. I work best in environments where
@@ -137,7 +137,7 @@
 
 	<p class="text-base lg:mb-8">Why are you like this?</p>
 
-	<p>
+	<p class="text-sm">
 		Check out my <a
 			href="/articles"
 			class="font-mono text-custom-coral no-underline hover:underline">articles</a
