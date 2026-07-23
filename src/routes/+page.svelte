@@ -111,11 +111,11 @@
 			>{age.value}</span
 		> years old, and have been tinkering with tech since a young age. I enjoy building software (though
 		would not consider myself a software engineer) and am currently learning Svelte, Tauri, Rust, and
-		C for a variety of cross-platform projects. Analogue hardware is another big interest of mine, CRTs and
-		tube amplifiers in particular, along with hardware design and repair more generally. I collect physical
-		media (especially vinyl), and am always reading books that challenge my perception of the world. At
-		university I studied cyber security, but also took electives in philosophy, sound engineering, and
-		medical humanities.
+		C for a variety of cross-platform projects. Analogue hardware is another big interest of mine, CRTs
+		and tube amplifiers in particular, along with hardware design and repair more generally. I collect
+		physical media (especially vinyl), and am always reading books that challenge my perception of the
+		world. At university I studied cyber security, but also took electives in philosophy, sound engineering,
+		and medical humanities.
 	</p>
 
 	<p class="text-base lg:mb-8">Do you play sportsball?</p>
