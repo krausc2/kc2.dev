@@ -39,8 +39,8 @@ Add search by tags and keyword on server cache.
 			</p>
 
 			<p>
-				Eventually searching by tags, keywords, and dates will be added, but for now use
-				'ctrl/cmd+f' like the genius you are.
+				Eventually search by tags, keywords, and dates will be added, but for now use 'ctrl/cmd+f'
+				like the genius you are. 😉
 			</p>
 		</div>
 	</div>
