@@ -121,8 +121,8 @@
 	<p class="text-base lg:mb-8">Do you play sportsball?</p>
 
 	<p class="text-sm lg:mb-8">
-		Spending too much time lost in thought can leave the mind without physical grounding, so I
-		enjoy doing top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
+		Spending too much time lost in thought can leave the mind without physical grounding, so I enjoy
+		doing top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
 		weight lifting.
 	</p>
 

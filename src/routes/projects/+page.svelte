@@ -26,7 +26,10 @@
 				href="https://github.com/krausc2?tab=repositories"
 				target="_blank"
 				class="font-mono text-custom-coral hover:underline">GitHub</a
-			> or send an email to <a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}</a> and I'll gladly credit your contribution.
+			>
+			or send an email to
+			<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}</a> and I'll
+			gladly credit your contribution.
 		</p>
 	</div>
 </section>
