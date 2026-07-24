@@ -53,10 +53,12 @@
 				></div>
 				<Button
 					variant="ghost"
-					class="relative z-10 w-full hover:bg-transparent {isMobile ? 'h-auto py-2' : ''} {page.url
+					class="relative z-10 flex w-full items-center justify-center hover:bg-transparent {isMobile
+						? 'h-16 py-4'
+						: ''} {page.url.pathname === item.href ? 'text-custom-coral' : ''} {page.url
 						.pathname === item.href
-						? 'text-custom-coral'
-						: ''} {page.url.pathname === item.href ? 'hover:text-custom-coral' : ''}"
+						? 'hover:text-custom-coral'
+						: ''}"
 					href={item.href}
 				>
 					{item.label}
