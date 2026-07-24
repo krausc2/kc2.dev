@@ -57,6 +57,7 @@ const SPLASHES = {
 		"'The Cloud' is just someone else's computer.",
 		"You can't engineer solutions for a team that only wants to go shopping.",
 		"Your smart fridge is spying on you.",
+		"The ego is a terrible master, but an excellent servant.",
 		"LARP like your life depends on it.",
 		"Look up, it's free.",
 		"【=◈︿◈=】",
