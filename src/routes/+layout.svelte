@@ -9,12 +9,16 @@
 
 	let { children } = $props();
 	let isMobileMenuOpen = $state(false);
+	let mainElement = $state<HTMLElement>();
 	let md = 768; // The cutoff for mobile view from tailwindcss.
 
 	$effect(() => {
-		// When url changes, close the mobile menu if it's open.
+		// When url changes, close the mobile menu if it's open and scroll to top.
 		if (page.url.pathname) {
 			isMobileMenuOpen = false;
+			setTimeout(() => {
+				mainElement?.scrollTo({ top: 0, behavior: "smooth" });
+			}, 300); // Wait for page animation
 		}
 	});
 
@@ -69,6 +73,7 @@
 
 	<!-- Main Content -->
 	<main
+		bind:this={mainElement}
 		class="relative col-span-1 flex h-full flex-col overflow-y-auto md:col-span-2 lg:col-span-3"
 	>
 		{#if isMobileMenuOpen}
