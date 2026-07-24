@@ -74,10 +74,10 @@
 	</div>
 
 	<p class="text-sm lg:mb-8">
-		My focus area for the past few years has been on IT operations, hybrid infrastructure, and cyber
+		My focus area for the past few years has been IT operations, hybrid infrastructure, and cyber
 		risk management. I spent a significant amount of time as a Systems Administrator and Support
 		Technician for independent schools, assisted small business clients at an MSP, and was also a
-		Sales Engineer at a hardware retailer. This hands-on background gave me an understanding of how
+		Sales Engineer for a hardware retailer. This hands-on background gave me an understanding of how
 		systems work (and break), which I now use to manage security posture aligned with models such as
 		the ACSC Essential Eight.
 	</p>
@@ -121,8 +121,8 @@
 	<p class="text-base lg:mb-8">Do you play sportsball?</p>
 
 	<p class="text-sm lg:mb-8">
-		Spending too much time lost in thought can leave the mind without physical grounding, so I also
-		enjoy top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
+		Spending too much time lost in thought can leave the mind without physical grounding, so I
+		enjoy doing top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
 		weight lifting.
 	</p>
 
