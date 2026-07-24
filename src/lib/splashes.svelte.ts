@@ -78,6 +78,7 @@ const SPLASHES = {
 		"You're gonna die either way, so hurry up.",
 		"8 hours of sleep is recommended for optimal performance.",
 		"The glowies are asleep.",
+		"Unequal efforts mandate unequal rewards.",
 		"Inequality is required to motivate men to greatness.",
 		"Were you expecting a dark mode?",
 		"#TODO Go to sleep."
