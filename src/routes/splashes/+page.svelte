@@ -1,14 +1,40 @@
 <script lang="ts">
-    import { createSplash } from '$lib/splashes.svelte'
+	import { SPLASHES_DATA } from "$lib/splashes.svelte";
+
+	const daySplashes = [...SPLASHES_DATA.day].sort((a, b) => a[0].localeCompare(b[0]));
+	const nightSplashes = [...SPLASHES_DATA.night].sort((a, b) => a[0].localeCompare(b[0]));
 </script>
 
-<section class="mb-32 flex flex-col">
+<section class="mb-24 flex flex-col md:mb-32">
 	<p class="border-b pb-4 text-5xl leading-none font-bold">splashes</p>
-	<div class="pt-4 gap-8 flex flex-col border-b pb-4">
-		<p>What is a splash? Well, to me it's a short concept or excerpt from a larger piece of writing; not quite a quote, though it <span class="italic">can</span> be one. Its true origin more likely comes from the early web where webmasters would add an MOTD to the top of a page.</p>
+	<div class="flex flex-col gap-8 border-b pt-4 pb-4">
+		<p>What is a splash?</p>
 
-		<p>My first exposure to the idea was in 2012 where they existed as short, punchy messages on the title screen of the video game Minecraft. I later saw the idea in the title bar of the video game Terraria, where they were called "Intro Messages".</p>
+		<p>
+			I first discovered the concept in 2012 where they existed as a short, punchy message on the
+			title screen of the video game Minecraft. I then later saw them in the title bar of the video
+			game Terraria, where they were called "Intro Messages".
+		</p>
 
-		<p>In all of this, my idea was to collect provocative, memorable, and motivating phrases from the media I come across. For this reason, I don't endorse all of them, but they're all useful for something. Spend some time watching them tick by, or scroll down to cheat your way through.</p>
-    </div>
+		<p>
+			In all of this, my idea was to collect a set of provocative, memorable, and motivating phrases
+			from the media I consume. For this reason, I don't endorse all of them, but they're still
+			useful nonetheless. Spend some time watching them tick by, or scroll down to cheat your way
+			through.
+		</p>
+	</div>
+	<p class="border-b pt-16 pb-4 text-xl font-bold">Daytime</p>
+	<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8">
+		{#each daySplashes as splash (splash[0])}
+			<p class="pt-4 pb-4 font-mono">{splash[0]}</p>
+			<p class="pb-8 pl-4 italic md:pt-4 md:pb-4 md:pl-0">{splash[1] || " "}</p>
+		{/each}
+	</div>
+	<p class="border-b pt-12 pb-4 text-xl font-bold">Nighttime</p>
+	<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8">
+		{#each nightSplashes as splash (splash[0])}
+			<p class="pt-4 pb-4 font-mono">{splash[0]}</p>
+			<p class="pb-8 pl-4 italic md:pt-4 md:pb-4 md:pl-0">{splash[1] || " "}</p>
+		{/each}
+	</div>
 </section>
