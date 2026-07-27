@@ -161,7 +161,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"Literally; original thought."
 		],
 		[
-			"It's later than you think, therefore hasten to do the work of god.",
+			"It's later than you think, therefore hasten to do the work of God.",
 			"Quote (2025) by John Maus."
 		],
 		[
