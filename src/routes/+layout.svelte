@@ -18,8 +18,8 @@
 		if (page.url.pathname) {
 			isMobileMenuOpen = false;
 			setTimeout(() => {
-				mainElement?.scrollTo({ top: 0, behavior: "smooth" });
-			}, 300); // Wait for page animation
+				mainElement?.scrollTo({ top: 0, behavior: "instant" });
+			}, 150); // Wait for page fade out
 		}
 	});
 
