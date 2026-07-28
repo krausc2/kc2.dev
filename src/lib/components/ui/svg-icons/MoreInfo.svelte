@@ -1,5 +1,5 @@
 <script>
-	let { size = "1em", strokeWidth = 2.5, class: className = "", ...restProps } = $props();
+	let { size = "1.25em", strokeWidth = 2.5, class: className = "", ...restProps } = $props();
 </script>
 
 <svg
