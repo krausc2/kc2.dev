@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { env } from "$env/dynamic/public";
+	import External from "$lib/components/ui/svg-icons/External.svelte";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
@@ -25,10 +26,10 @@
 			See something that's broken or just kinda sucks? Open an issue on <a
 				href="https://github.com/krausc2?tab=repositories"
 				target="_blank"
-				class="font-mono text-custom-coral hover:underline">GitHub</a
+				class="font-mono inline-flex gap-1 items-center text-custom-coral hover:underline">GitHub <External /></a
 			>
 			or send an email to
-			<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}</a> and I'll
+			<a href={emailHref} class="font-mono inline-flex gap-1 items-center text-custom-coral hover:underline">{emailAddress} <External /></a> and I'll
 			gladly credit your contribution.
 		</p>
 	</div>
