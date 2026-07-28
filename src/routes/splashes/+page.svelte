@@ -8,12 +8,10 @@
 <section class="mb-24 flex flex-col md:mb-32">
 	<p class="border-b pb-4 text-5xl leading-none font-bold">splashes</p>
 	<div class="flex flex-col gap-8 border-b pt-4 pb-4">
-		<p>What is a splash?</p>
-
 		<p>
-			I first discovered the concept in 2012 where they existed as a short, punchy message on the
-			title screen of the video game Minecraft. I then later saw them in the title bar of the video
-			game Terraria, where they were called "Intro Messages".
+			I first discovered the concept of splashes in 2012 where they existed as a short, punchy
+			message on the title screen of the video game Minecraft. I then later saw them in the title
+			bar of the video game Terraria, where they were called "Intro Messages".
 		</p>
 
 		<p>
