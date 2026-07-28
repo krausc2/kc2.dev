@@ -5,6 +5,8 @@
 	import { createAgeCounter } from "$lib/age.svelte";
 	import { env } from "$env/dynamic/public";
 	import BinaryCanvas from "$lib/BinaryCanvas.svelte";
+	import External from "$lib/components/ui/svg-icons/External.svelte";
+	import MoreInfo from "$lib/components/ui/svg-icons/MoreInfo.svelte";
 	import childhoodPhoto from "$lib/assets/childhood_photo.jpg?enhanced";
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
@@ -41,18 +43,40 @@
 
 	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
 		<div class="relative">
-			<h1 class="text-center text-7xl font-bold md:mb-4 md:text-left md:text-5xl">krausc2</h1>
+			<h1
+				class="block text-center text-7xl font-bold md:mb-4 md:inline-flex md:text-left md:text-5xl"
+			>
+				krausc2
+			</h1>
 			<div class="hidden bg-stone-900 px-6 py-4 font-mono text-custom-coral md:grid">
 				<!-- Ghost element to set dynamic height based on longest quote -->
-				<div class="pointer-events-none invisible col-start-1 row-start-1" aria-hidden="true">
-					motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+				<div
+					class="pointer-events-none invisible col-start-1 row-start-1 flex items-start justify-between gap-4"
+					aria-hidden="true"
+				>
+					<div>
+						motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+					</div>
+					<div class="flex h-6 shrink-0 items-center"><MoreInfo /></div>
 				</div>
 				<!-- Visible splash text -->
 				<div
-					class="col-start-1 row-start-1 text-custom-coral {!splashReady ? 'animate-pulse' : ''}"
+					class="col-start-1 row-start-1 flex items-start justify-between gap-4 text-custom-coral {!splashReady
+						? 'animate-pulse'
+						: ''}"
 				>
-					<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
-					motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
+					<div>
+						<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
+						motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
+					</div>
+					<div class="flex h-6 shrink-0 items-center">
+						<a
+							href="/splashes"
+							class="text-stone-600 transition-colors duration-700 hover:text-custom-coral hover:duration-200"
+						>
+							<MoreInfo />
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -145,7 +169,11 @@
 		page for a list of things I've found insightful: tutorials, reviews for books (and albums), philosophy,
 		and other shower thoughts. Feel free to reach out if you'd like to chat about tech, cyber security,
 		or anything in between:
-		<a href={emailHref} class="font-mono text-custom-coral hover:underline">{emailAddress}.</a>
+		<a
+			href={emailHref}
+			class="inline-flex items-center gap-1 font-mono text-custom-coral hover:underline"
+			>{emailAddress}<External /></a
+		>.
 	</p>
 </section>
 
