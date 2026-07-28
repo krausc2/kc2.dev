@@ -155,6 +155,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
 	],
 	night: [
+		["I'm just a child, I lost track of time.", "From \"just a child\" on \"Strung Out Symphony\" (2025) by aldn."],
 		["The best code is written at 2am.", "Original thought."],
 		[
 			"No one is more stressed than a 20y/o who thinks they're out of time.",
