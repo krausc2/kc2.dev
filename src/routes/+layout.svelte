@@ -2,6 +2,7 @@
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
 	import { Button } from "$lib/components/ui/button";
+	import External from "$lib/components/ui/svg-icons/External.svelte";
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
@@ -134,8 +135,8 @@
 										<span class="hidden lg:inline">
 											| Source available at <a
 												href="https://github.com/krausc2/krausc2.dev"
-												class="no-underline hover:underline"
-												target="_blank">GitHub</a
+												class="inline-flex items-center gap-1 no-underline hover:underline"
+												target="_blank">GitHub<External/></a
 											>
 											| v{pkg.version}
 										</span>
