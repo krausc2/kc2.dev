@@ -126,7 +126,14 @@
 	}
 	p a,
 	li a {
-		@apply text-custom-coral underline-offset-3;
+		@apply text-custom-coral underline-offset-3 transition-colors duration-700;
+		text-decoration-line: underline;
+		text-decoration-color: transparent;
+	}
+	p a:hover,
+	li a:hover {
+		@apply duration-200;
+		text-decoration-color: currentColor;
 	}
 	p {
 		/*

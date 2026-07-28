@@ -162,16 +162,11 @@
 	<p class="text-base lg:mb-8">Why are you like this?</p>
 
 	<p class="text-sm">
-		Check out my <a
-			href="/articles"
-			class="font-mono text-custom-coral no-underline hover:underline">articles</a
-		>
+		Check out my <a href="/articles" class="font-mono text-custom-coral">articles</a>
 		page for a list of things I've found insightful: tutorials, reviews for books (and albums), philosophy,
 		and other shower thoughts. Feel free to reach out if you'd like to chat about tech, cyber security,
 		or anything in between:
-		<a
-			href={emailHref}
-			class="inline-flex items-center gap-1 font-mono text-custom-coral hover:underline"
+		<a href={emailHref} class="inline-flex items-center gap-1 font-mono text-custom-coral"
 			>{emailAddress}<External /></a
 		>.
 	</p>

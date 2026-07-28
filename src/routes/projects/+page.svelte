@@ -26,13 +26,10 @@
 			See something that's broken or just kinda sucks? Open an issue on <a
 				href="https://github.com/krausc2?tab=repositories"
 				target="_blank"
-				class="inline-flex items-center gap-1 font-mono text-custom-coral hover:underline"
-				>GitHub <External /></a
+				class="inline-flex items-center gap-1 font-mono text-custom-coral">GitHub <External /></a
 			>
 			or send an email to
-			<a
-				href={emailHref}
-				class="inline-flex items-center gap-1 font-mono text-custom-coral hover:underline"
+			<a href={emailHref} class="inline-flex items-center gap-1 font-mono text-custom-coral"
 				>{emailAddress} <External /></a
 			> and I'll gladly credit your contribution.
 		</p>

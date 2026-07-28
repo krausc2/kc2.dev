@@ -135,8 +135,8 @@
 										<span class="hidden lg:inline">
 											| Source available at <a
 												href="https://github.com/krausc2/krausc2.dev"
-												class="inline-flex items-center gap-1 no-underline hover:underline"
-												target="_blank">GitHub<External/></a
+												class="inline-flex items-center gap-1"
+												target="_blank">GitHub<External /></a
 											>
 											| v{pkg.version}
 										</span>
