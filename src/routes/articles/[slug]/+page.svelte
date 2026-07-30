@@ -1,4 +1,6 @@
 <script>
+	import { formatDate } from "$lib/utils";
+
 	let { data } = $props();
 </script>
 
@@ -12,12 +14,10 @@
 	<p class="invisible pb-4 text-5xl leading-none font-bold">"title"</p>
 </div>
 
-<article class="border-t pt-4">
-	<h1>
-		{data.meta.title}
-	</h1>
+<article class="border-t pt-4 flex flex-col gap-4">
+	<p class="font-bold text-2xl">{data.meta.title}</p>
 
-	<h2>{data.meta.date}</h2>
+	<p>{formatDate(data.meta.date)}</p>
 
 	<div class="article-body">
 		<data.content />
