@@ -1,6 +1,8 @@
 <!--
 #TODO:
 
+Research load functions in Svelte and if that would be better than the below solution.
+
 When article loading becomes prohibitively slow, consider converting setup to pagination and a server-side lazy load cache singleton. Create `src/lib/server/articles.ts` file 
 
 Keep the throbber for UX and initial cache miss.
