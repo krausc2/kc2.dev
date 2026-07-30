@@ -19,6 +19,7 @@ Add search by tags and keyword on server cache.
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
 	import type { Article } from "./data/+server";
+	import { formatDate } from "$lib/utils";
 
 	let articles: Article[] | null = $state(null); // null until fetched from server
 
@@ -73,7 +74,7 @@ Add search by tags and keyword on server cache.
 						<div class="relative z-10 mx-auto max-w-[100ch] px-8">
 							<p>{article.title}</p>
 							<div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
-								<p class="text-sm">Date created: {article.date}</p>
+								<p class="text-sm">Date created: {formatDate(article.date)}</p>
 								<p class="font-mono text-sm text-custom-coral">#{article.tag}</p>
 							</div>
 						</div>
