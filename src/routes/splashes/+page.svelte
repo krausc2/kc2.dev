@@ -17,8 +17,7 @@
 		<p>
 			In all of this, my idea was to collect a set of provocative, memorable, and motivating phrases
 			from the media I consume. For this reason, I don't endorse all of them, but they're still
-			useful nonetheless. Spend some time watching them tick by, or scroll down to cheat your way
-			through.
+			useful nonetheless. Spend some time watching them tick by, or scroll your way down... cheater.
 		</p>
 	</div>
 	<p class="border-b pt-16 pb-4 text-xl font-bold">Daytime</p>
