@@ -14,8 +14,8 @@
 	<p class="invisible pb-4 text-5xl leading-none font-bold">"title"</p>
 </div>
 
-<article class="border-t pt-4 flex flex-col gap-4">
-	<p class="font-bold text-2xl">{data.meta.title}</p>
+<article class="flex flex-col gap-4 border-t pt-4">
+	<p class="text-2xl font-bold">{data.meta.title}</p>
 
 	<p>{formatDate(data.meta.date)}</p>
 
