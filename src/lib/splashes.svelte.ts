@@ -124,6 +124,11 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"I’m exactly where I wanna be, but I’m a long way from home.",
 			'From "Bones" on "Once in a Long, Long While" (2017) by Low Roar.'
 		],
+		["Flee the comfortable misery of the known.", "Original thought."],
+		[
+			"Keep going, keep going, keep going, keep going. It will all be Ok.",
+			'From "Mirror" on "Nurture" (2021) by Porter Robinson.'
+		],
 		[
 			"The pursuit of excellence needs no explanation.",
 			"Only at the end of an age will others understand your drive; original thought."
@@ -155,7 +160,10 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
 	],
 	night: [
-		["I'm just a child, I lost track of time.", "From \"just a child\" on \"Strung Out Symphony\" (2025) by aldn."],
+		[
+			"I'm just a child, I lost track of time.",
+			'From "just a child" on "Strung Out Symphony" (2025) by aldn.'
+		],
 		["The best code is written at 2am.", "Original thought."],
 		[
 			"No one is more stressed than a 20y/o who thinks they're out of time.",
@@ -172,6 +180,10 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		[
 			"Tyranny exercised for the good of its victims may be the most oppressive.",
 			'From "God in the Dock: Essays on Theology" (1970) by C. S. Lewis.'
+		],
+		[
+			"Don't kill yourself, you idiot.",
+			'From "Russian Roulette" on "SMILE! :D" (2025) by Porter Robinson.'
 		],
 		[
 			"The valiant never taste of death but once.",
