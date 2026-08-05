@@ -12,7 +12,6 @@
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
 	let splashReady = $state(false);
-	let aboutSection = $state<HTMLElement>();
 	let photoLoaded = $state(false);
 	let photo = $state<HTMLElement>();
 
@@ -93,10 +92,7 @@
 	Title of section "Let's go back in time" or something like that.
 -->
 
-<section
-	bind:this={aboutSection}
-	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block"
->
+<section class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block">
 	<div class="order-first">
 		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
 
