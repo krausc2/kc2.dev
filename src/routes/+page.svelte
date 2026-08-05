@@ -83,6 +83,16 @@
 	</div>
 </section>
 
+<!--
+	Re-do this whole section eventually.
+
+	Should start with brief into, then image to the side, then Q&A style section with expandable answers.
+	Also add a timeline of career and education in style of git graph, education becomes branch off to the side,
+	volunteer work becomes another branch, etc.
+
+	Title of section "Let's go back in time" or something like that.
+-->
+
 <section
 	bind:this={aboutSection}
 	class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block"
@@ -128,7 +138,7 @@
 		</figcaption>
 	</figure>
 
-	<p class="text-base lg:mb-8">You are not your job though, so who are you?</p>
+	<p class="text-base lg:mb-8">Who are you?</p>
 
 	<p class="text-sm lg:mb-8">
 		I'm <span class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
@@ -150,7 +160,7 @@
 		weight lifting.
 	</p>
 
-	<p class="text-base lg:mb-8">Are you annoying to work with?</p>
+	<p class="text-base lg:mb-8">What are you like to work with?</p>
 
 	<p class="text-sm lg:mb-8">
 		Most of my professional time is spent buried in security tools (Defender, Sentinel, Entra ID,
@@ -159,7 +169,7 @@
 		ideas are detached from ego in pursuit of building great things.
 	</p>
 
-	<p class="text-base lg:mb-8">Why are you like this?</p>
+	<p class="text-base lg:mb-8">How do I become so cool?</p>
 
 	<p class="text-sm">
 		Check out my <a href="/articles" class="font-mono text-custom-coral">articles</a>
