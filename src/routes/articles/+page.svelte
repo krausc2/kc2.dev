@@ -18,17 +18,10 @@ Add search by tags and keyword on server cache.
 -->
 
 <script lang="ts">
-	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
-	import type { Article } from "./data/+server";
 	import { formatDate } from "$lib/utils";
 
-	let articles: Article[] | null = $state(null); // null until fetched from server
-
-	onMount(async () => {
-		const res = await fetch("/articles/data");
-		articles = await res.json();
-	});
+	let { data } = $props();
 </script>
 
 <section class="mb-32">
@@ -53,22 +46,20 @@ Add search by tags and keyword on server cache.
 	<!-- #TODO Add tag pill buttons -->
 	<!-- #TODO Colours for each tag based on vibes -->
 	<div class="grid">
-		<!-- Await articles and display throbber -->
-		{#if !articles}
+		{#await data.streamed.articles}
 			<div
 				class="col-start-1 row-start-1 mx-auto max-w-[100ch] animate-pulse px-8 pt-12"
-				out:fade={{ duration: 300 }}
+				out:fade={{ duration: 150 }}
 			>
 				There is no server error. Your internet just genuinely sucks...
 			</div>
-			<!-- Then display streamed articles -->
-		{:else}
+		{:then articles}
 			<div class="col-start-1 row-start-1 pt-8">
 				{#each articles as article, i (article.slug)}
 					<a
 						href="/articles/{article.slug}"
 						class="group relative block py-4"
-						in:fade|global={{ duration: 300, delay: 300 + i * 150 }}
+						in:fade|global={{ duration: 150, delay: 150 + i * 150 }}
 					>
 						<div
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
@@ -83,6 +74,6 @@ Add search by tags and keyword on server cache.
 					</a>
 				{/each}
 			</div>
-		{/if}
+		{/await}
 	</div>
 </section>

@@ -3,18 +3,15 @@
 	import { fade } from "svelte/transition";
 	import { env } from "$env/dynamic/public";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
-	import type { Project } from "./data/projects";
+
+	let { data } = $props();
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
-	let projects: Project[] | null = $state(null);
 
-	onMount(async () => {
+	onMount(() => {
 		emailAddress = env.PUBLIC_EMAIL;
 		emailHref = `mailto:${env.PUBLIC_EMAIL}`;
-
-		const res = await fetch("/projects/data");
-		projects = await res.json();
 	});
 </script>
 
@@ -44,20 +41,20 @@
 	</div>
 
 	<div class="grid">
-		{#if !projects}
+		{#await data.streamed.projects}
 			<div
 				class="col-start-1 row-start-1 mx-auto max-w-[100ch] animate-pulse px-8 pt-12"
-				out:fade={{ duration: 300 }}
+				out:fade={{ duration: 150 }}
 			>
 				There is no server error. Your internet just genuinely sucks...
 			</div>
-		{:else}
+		{:then projects}
 			<div class="col-start-1 row-start-1 pt-8">
 				{#each projects as project, i (project.slug)}
 					<a
 						href="/projects/{project.slug}"
 						class="group relative block py-4"
-						in:fade|global={{ duration: 300, delay: 300 + i * 150 }}
+						in:fade|global={{ duration: 150, delay: 150 + i * 150 }}
 					>
 						<div
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
@@ -71,6 +68,6 @@
 					</a>
 				{/each}
 			</div>
-		{/if}
+		{/await}
 	</div>
 </section>
