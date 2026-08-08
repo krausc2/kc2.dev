@@ -147,6 +147,10 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"Use your ego, but not so much as to become obtuse; original thought."
 		],
 		[
+			"I'm not a big fan of the internet, that's why I went into cyber security",
+			"Quote (2026) by Dr Helen Teixeria."
+		],
+		[
 			"LARP like your life depends on it.",
 			'Adapted from "fake it till you make it"; original thought.'
 		],
@@ -160,6 +164,10 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
 	],
 	night: [
+		[
+			"What suffering can a young person really experience?",
+			'Quote (1983) by Unknown Man from KBS "Finding Dispersed Families".'
+		],
 		[
 			"I'm just a child, I lost track of time.",
 			'From "just a child" on "Strung Out Symphony" (2025) by aldn.'
