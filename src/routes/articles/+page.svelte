@@ -31,8 +31,8 @@ Add search by tags and keyword on server cache.
 	});
 </script>
 
-<section class="mb-32 flex flex-col">
-	<div class="mx-auto flex max-w-[100ch] flex-col px-8 pt-16">
+<section class="mb-32">
+	<div class="mx-auto max-w-[100ch] px-8 pt-16">
 		<p class="border-b pb-4 text-5xl leading-none font-bold">articles</p>
 
 		<div class="flex flex-col gap-8 border-b border-stone-300 pt-4 pb-4">
