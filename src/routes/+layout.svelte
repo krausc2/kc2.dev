@@ -3,6 +3,8 @@
 	import favicon from "$lib/assets/favicon.svg";
 	import { Button } from "$lib/components/ui/button";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
+	import LinkedIn from "$lib/components/ui/svg-icons/LinkedIn.svelte";
+	import GitHub from "$lib/components/ui/svg-icons/GitHub.svelte";
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
@@ -116,7 +118,7 @@
 							out:fade={{ duration: 150 }}
 						>
 							<!-- Convert this to multiple +layout.svelte files, current way is not idiomatic for Svelte -->
-							{#if page.url.pathname === "/" || page.url.pathname === "/articles"}
+							{#if page.url.pathname === "/" || page.url.pathname === "/articles" || page.url.pathname === "/projects"}
 								{@render children()}
 							{:else}
 								<div class="mx-auto flex w-full max-w-[100ch] flex-col px-8 pt-16">
@@ -126,6 +128,8 @@
 
 							<div class="mx-auto mt-auto w-full max-w-[100ch] px-8">
 								<footer class="border-t pt-4 pb-4 font-mono">
+									<!-- <LinkedIn class="text-stone-900" /> -->
+									<!-- <GitHub class="text-stone-900" /> -->
 									<p>
 										📍 Currently in Sydney ({clock.hours}<span class="blink">:</span>{clock.minutes}
 										{clock.emoji})
