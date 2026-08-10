@@ -12,8 +12,5 @@
 
 	<div class="article-body">
 		<p>This is a test project to verify the new layout.</p>
-		<p>
-			You can now completely customize this page manually without worrying about a dynamic template.
-		</p>
 	</div>
 </article>
