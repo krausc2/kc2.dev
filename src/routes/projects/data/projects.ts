@@ -1,7 +1,7 @@
 export interface Project {
 	slug: string;
 	title: string;
-	tag: string;
+	tags: string[];
 	description: string;
 }
 
@@ -9,7 +9,7 @@ export const projects: Project[] = [
 	{
 		slug: "test-project",
 		title: "Test Project",
-		tag: "svelte",
+		tags: ["Svelte", "TypeScript"],
 		description: "This is a test project to verify the layout."
 	}
 ];
