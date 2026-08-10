@@ -65,13 +65,20 @@
 						class="group relative block py-4"
 						in:fade|global={{ duration: 150, delay: 150 + i * 150 }}
 					>
+						<!-- #TODO Fix formatting/style; currently absolutely jank, but *feels* right -->
 						<div
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 						></div>
-						<div class="relative z-10 mx-auto max-w-[100ch] px-8">
-							<p class="pb-2">{project.title}</p>
-							<p class="pb-4">{project.description}</p>
-							<div class="flex flex-wrap gap-4">
+						<div class="relative z-10 mx-auto flex max-w-[100ch] flex-col gap-4 px-8 md:block">
+							<p class="font-bold md:mb-4">{project.title}</p>
+
+							<div
+								class="aspect-3/2 w-full bg-stone-200 md:float-right md:mb-4 md:ml-4 md:w-1/2"
+							></div>
+
+							<p class="md:mb-4 text-sm">{project.description}</p>
+
+							<div class="flex flex-wrap gap-4 pt-2 pb-2 md:clear-both">
 								{#each project.tags as tag (tag)}
 									{@const Tag = tagComponents[tag]}
 									{#if Tag}
