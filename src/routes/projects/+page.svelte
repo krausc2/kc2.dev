@@ -4,13 +4,15 @@
 	import { env } from "$env/dynamic/public";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
 	import SvelteTag from "$lib/components/ui/tags/SvelteTag.svelte";
+	import TypeScriptTag from "$lib/components/ui/tags/TypeScriptTag.svelte";
 	import GenericTag from "$lib/components/ui/tags/GenericTag.svelte";
 
 	let { data } = $props();
 
 	// #TODO This is a bit fragile when adding new tags, maybe replace at future date.
 	const tagComponents: Record<string, Component> = {
-		Svelte: SvelteTag
+		Svelte: SvelteTag,
+		TypeScript: TypeScriptTag
 	};
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
@@ -68,6 +70,7 @@
 						></div>
 						<div class="relative z-10 mx-auto max-w-[100ch] px-8">
 							<p class="pb-2">{project.title}</p>
+							<p class="pb-4">{project.description}</p>
 							<div class="flex flex-wrap gap-4">
 								{#each project.tags as tag (tag)}
 									{@const Tag = tagComponents[tag]}
