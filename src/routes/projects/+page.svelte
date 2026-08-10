@@ -1,10 +1,17 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount, type Component } from "svelte";
 	import { fade } from "svelte/transition";
 	import { env } from "$env/dynamic/public";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
+	import SvelteTag from "$lib/components/ui/tags/SvelteTag.svelte";
+	import GenericTag from "$lib/components/ui/tags/GenericTag.svelte";
 
 	let { data } = $props();
+
+	// #TODO This is a bit fragile when adding new tags, maybe replace at future date.
+	const tagComponents: Record<string, Component> = {
+		Svelte: SvelteTag
+	};
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
@@ -60,9 +67,16 @@
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 						></div>
 						<div class="relative z-10 mx-auto max-w-[100ch] px-8">
-							<p>{project.title}</p>
-							<div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
-								<p class="font-mono text-sm text-custom-coral">#{project.tag}</p>
+							<p class="pb-2">{project.title}</p>
+							<div class="flex flex-wrap gap-4">
+								{#each project.tags as tag (tag)}
+									{@const Tag = tagComponents[tag]}
+									{#if Tag}
+										<Tag />
+									{:else}
+										<GenericTag {tag} />
+									{/if}
+								{/each}
 							</div>
 						</div>
 					</a>
