@@ -10,7 +10,8 @@ export const projects: Project[] = [
 		slug: "blog-site",
 		title: "krausc2.dev (Site)",
 		tags: ["Svelte", "TypeScript"],
-		description: "Lightweight blog frontend with a variety of optimisations including <Canvas> element with off-screen sprite sheet rendering, .avif compression for images, and minimal dependencies to ship tiny bundles."
+		description:
+			"Lightweight blog frontend with a variety of optimisations including <Canvas> element with off-screen sprite sheet rendering, .avif compression for images, and minimal dependencies to ship tiny bundles."
 	},
 	{
 		slug: "blog-infrastructure",

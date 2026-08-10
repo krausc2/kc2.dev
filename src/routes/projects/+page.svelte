@@ -1,19 +1,11 @@
 <script lang="ts">
-	import { onMount, type Component } from "svelte";
+	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
 	import { env } from "$env/dynamic/public";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
-	import SvelteTag from "$lib/components/ui/tags/SvelteTag.svelte";
-	import TypeScriptTag from "$lib/components/ui/tags/TypeScriptTag.svelte";
-	import GenericTag from "$lib/components/ui/tags/GenericTag.svelte";
+	import ProjectTag from "$lib/components/ui/ProjectTag.svelte";
 
 	let { data } = $props();
-
-	// #TODO This is a bit fragile when adding new tags, maybe replace at future date.
-	const tagComponents: Record<string, Component> = {
-		Svelte: SvelteTag,
-		TypeScript: TypeScriptTag
-	};
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");
@@ -70,22 +62,17 @@
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 						></div>
 						<div class="relative z-10 mx-auto flex max-w-[100ch] flex-col gap-4 px-8 md:block">
-							<p class="font-bold md:mb-4">{project.title}</p>
+							<p class="text-xl font-bold md:mb-4">{project.title}</p>
 
 							<div
 								class="aspect-3/2 w-full bg-stone-200 md:float-right md:mb-4 md:ml-4 md:w-1/2"
 							></div>
 
-							<p class="md:mb-4 text-sm">{project.description}</p>
+							<p class="text-sm md:mb-4">{project.description}</p>
 
 							<div class="flex flex-wrap gap-4 pt-2 pb-2 md:clear-both">
 								{#each project.tags as tag (tag)}
-									{@const Tag = tagComponents[tag]}
-									{#if Tag}
-										<Tag />
-									{:else}
-										<GenericTag {tag} />
-									{/if}
+									<ProjectTag {tag} />
 								{/each}
 							</div>
 						</div>
