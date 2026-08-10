@@ -17,7 +17,7 @@ const articleCache: Article[] = Object.entries(imports).map(([filepath, module])
 	const contents = module as { metadata?: Partial<Article> };
 	const slug = path.parse(filepath).name;
 	const meta = contents.metadata || {};
-	
+
 	return {
 		slug,
 		title: meta.title || "UNDEFINED",
