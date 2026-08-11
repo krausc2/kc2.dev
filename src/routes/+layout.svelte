@@ -9,8 +9,10 @@
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
 	import pkg from "../../package.json";
+	import type { LayoutData } from "./$types";
+	import type { Snippet } from "svelte";
 
-	let { data, children } = $props();
+	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 	let isMobileMenuOpen = $state(false);
 	let mainElement = $state<HTMLElement>();
 	let md = 768; // The cutoff for mobile view from tailwindcss.

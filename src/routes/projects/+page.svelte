@@ -4,8 +4,9 @@
 	import { env } from "$env/dynamic/public";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
 	import ProjectTag from "$lib/components/ui/ProjectTag.svelte";
+	import type { PageData } from "./$types";
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 
 	let emailAddress = $state("[EMAIL PROTECTED]");
 	let emailHref = $state("");

@@ -20,8 +20,9 @@ Add search by tags and keyword on server cache.
 <script lang="ts">
 	import { fade } from "svelte/transition";
 	import { formatDate } from "$lib/utils";
+	import type { PageData } from "./$types";
 
-	let { data } = $props();
+	let { data }: { data: PageData } = $props();
 </script>
 
 <section class="mb-32">
