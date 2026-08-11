@@ -8,6 +8,7 @@
 	import DockerIcon from "$lib/components/ui/svg-icons/Docker.svelte";
 	import GitHubIcon from "$lib/components/ui/svg-icons/GitHub.svelte";
 	import TailscaleIcon from "$lib/components/ui/svg-icons/Tailscale.svelte";
+	import AlpineIcon from "$lib/components/ui/svg-icons/Linux.svelte";
 
 	let { tag } = $props<{ tag: string }>();
 
@@ -17,7 +18,8 @@
 		Cloudflare: { icon: CloudflareIcon, color: "text-[#F48120]" },
 		Docker: { icon: DockerIcon, color: "text-[#2560FF]" },
 		"GitHub Actions": { icon: GitHubIcon, color: "text-[#181717]" },
-		Tailscale: { icon: TailscaleIcon, color: "text-[#1A1A1A]" }
+		Tailscale: { icon: TailscaleIcon, color: "text-[#1A1A1A]" },
+		"Alpine Linux": { icon: AlpineIcon, color: "text-[#333333]" }
 	};
 
 	let config = $derived(tagConfig[tag]);
