@@ -65,7 +65,7 @@
 							<p class="text-xl font-bold md:mb-4">{project.title}</p>
 
 							<div
-								class="aspect-3/2 w-full bg-stone-200 md:float-right md:mb-4 md:ml-4 md:w-1/2"
+								class="aspect-3/2 w-full bg-stone-200 md:float-right md:mb-4 md:ml-8 md:w-1/2"
 							></div>
 
 							<p class="text-sm md:mb-4">{project.description}</p>
