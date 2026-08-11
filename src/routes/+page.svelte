@@ -16,6 +16,11 @@
 	let showTerminal = $state(true);
 	let photoLoaded = $state(false);
 	let photo = $state<HTMLElement>();
+	let terminalWidth = $state(0);
+	let terminalHeight = $state(0);
+	// Odd numbers just feel ugly
+	let evenWidth = $derived(terminalWidth - (terminalWidth % 2));
+	let evenHeight = $derived(terminalHeight - (terminalHeight % 2));
 
 	onMount(() => {
 		emailAddress = env.PUBLIC_EMAIL;
@@ -44,7 +49,7 @@
 
 	<div class="mx-auto flex w-full max-w-[120ch] flex-1 flex-col justify-center px-8">
 		<div class="relative">
-			<h1 class="block text-center text-[5rem] leading-none font-bold md:inline-flex md:text-left">
+			<h1 class="block text-center text-[4rem] leading-none font-bold md:inline-flex md:text-left">
 				krausc2
 			</h1>
 			{#if showTerminal}
@@ -58,15 +63,22 @@
 							></button>
 							<div class="h-3 w-3 rounded-full bg-stone-400"></div>
 							<div class="h-3 w-3 rounded-full bg-stone-600"></div>
+							<span class="ml-2 text-sm text-stone-500"
+								>motd - zsh - {evenWidth} x {evenHeight}</span
+							>
 						</div>
-						<div class="hidden bg-stone-900 px-6 py-6 font-mono text-custom-coral md:grid">
+						<div
+							bind:clientWidth={terminalWidth}
+							bind:clientHeight={terminalHeight}
+							class="hidden bg-stone-900 px-6 py-6 font-mono text-custom-coral md:grid"
+						>
 							<!-- Ghost element to set dynamic height based on longest quote -->
 							<div
 								class="pointer-events-none invisible col-start-1 row-start-1 flex items-start justify-between gap-4"
 								aria-hidden="true"
 							>
 								<div>
-									motd@system:~# {splash.longestValue}<span class="cursor opacity-0">|</span>
+									motd@system ~ # {splash.longestValue}<span class="cursor opacity-0">|</span>
 								</div>
 								<div class="flex h-6 shrink-0 items-center"><MoreInfo /></div>
 							</div>
@@ -78,7 +90,7 @@
 							>
 								<div>
 									<!-- #TODO Investigate layout shift/flicker on line break (quote over 1 line in length) -->
-									motd@system:~# {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
+									motd@system ~ # {splash.value}{#if splashReady}<span class="cursor">|</span>{/if}
 								</div>
 								<div class="flex h-6 shrink-0 items-center">
 									<a
@@ -109,27 +121,18 @@
 
 <section class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block">
 	<div class="order-first">
-		<p class="mb-4 border-b pb-4 text-5xl leading-none font-bold">about</p>
-
-		<p class="text-sm lg:mb-8">
-			G'day, <span class="text-base font-bold">I'm Curtis</span>, a
-			<span class="text-base font-bold">Cyber Security Engineer</span> in Sydney, currently finishing
-			my undergraduate studies at Macquarie University.
-		</p>
+		<p class="mb-8 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</div>
-
-	<p class="text-sm lg:mb-8">
-		My focus area for the past few years has been IT operations, hybrid infrastructure, and cyber
-		risk management. I spent a significant amount of time as a Systems Administrator and Support
-		Technician for independent schools, assisted small business clients at an MSP, and was also a
-		Sales Engineer for a hardware retailer. This hands-on background gave me an understanding of how
-		systems work (and break), which I now use to manage security posture aligned with models such as
-		the ACSC Essential Eight.
-	</p>
 
 	<figure
 		class="mx-auto w-2/3 max-w-sm lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
 	>
+		<div class="flex items-center gap-2 bg-stone-200 px-4 py-3">
+			<div class="h-3 w-3 rounded-full bg-stone-500"></div>
+			<div class="h-3 w-3 rounded-full bg-stone-400"></div>
+			<div class="h-3 w-3 rounded-full bg-stone-600"></div>
+			<span class="ml-2 text-sm text-stone-500">museum-2014.avif</span>
+		</div>
 		<div
 			class="relative aspect-3/4 w-full overflow-hidden [&_picture]:relative [&_picture]:z-10 [&_picture]:block [&_picture]:size-full"
 		>
@@ -144,49 +147,28 @@
 					: 'opacity-0'}"
 			/>
 		</div>
-		<figcaption class="mt-4 text-center font-mono text-sm">
-			Stylish as always, circa 2014.
-		</figcaption>
 	</figure>
 
-	<p class="text-base lg:mb-8">Who are you?</p>
+	<p class="-order-2 text-xl lg:mb-8">
+		G'day, <span class="font text-custom-coral">I'm Curtis</span>, a Cyber Security Engineer in
+		Sydney, currently finishing my undergraduate studies at Macquarie University.
+	</p>
 
-	<p class="text-sm lg:mb-8">
-		I'm <span class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
+	<p class="-order-1 lg:mb-8">
+		My focus area for the past few years has been hybrid infrastructure (Defender, Sentinel, Entra
+		ID, Azure), IT operations, and cyber risk management. I'm <span
+			class="pointer-events-none font-mono text-custom-coral tabular-nums select-none"
 			>{age.value}</span
-		> years old, and have been tinkering with tech since a young age. I enjoy building software (though
-		would not consider myself a software engineer) and am currently learning Svelte, Tauri, Rust, and
-		C for a variety of cross-platform projects. Analogue hardware is another big interest of mine, CRTs
-		and tube amplifiers in particular, along with hardware design and repair more generally. I collect
-		physical media (especially vinyl), and am always reading books that challenge my perception of the
-		world. At university I studied cyber security, but also took electives in philosophy, sound engineering,
-		and medical humanities.
+		> years old, enjoy building software as a hobby, and have a strong interest in the intersection of
+		technology, philosophy, and art.
 	</p>
 
-	<p class="text-base lg:mb-8">Do you play sportsball?</p>
-
-	<p class="text-sm lg:mb-8">
-		Spending too much time lost in thought can leave the mind without physical grounding, so I enjoy
-		going top-rope climbing, bouldering (yeah, yeah, really playing into the trope there), and
-		weight lifting.
-	</p>
-
-	<p class="text-base lg:mb-8">What are you like to work with?</p>
-
-	<p class="text-sm lg:mb-8">
-		Most of my professional time is spent buried in security tools (Defender, Sentinel, Entra ID,
-		Azure), but my favorite part of the job is the human element: translating complex technical
-		risks into actionable mitigation strategies for businesses. I work best in environments where
-		ideas are detached from ego in pursuit of building great things.
-	</p>
-
-	<p class="text-base lg:mb-8">How do I become so cool?</p>
-
-	<p class="text-sm">
-		Check out my <a href="/articles" class="font-mono text-custom-coral">articles</a>
-		page for a list of things I've found insightful: tutorials, reviews for books (and albums), philosophy,
-		and other shower thoughts. Feel free to reach out if you'd like to chat about tech, cyber security,
-		or anything in between:
+	<p class="lg:mb-8">
+		This isn't a dating profile though, so go read some <a
+			href="/articles"
+			class="font-mono text-custom-coral">articles</a
+		>, or otherwise feel free to reach out if you'd like to chat about tech, cyber security, or
+		anything in between:
 		<a href={emailHref} class="inline-flex items-center gap-1 font-mono text-custom-coral"
 			>{emailAddress}<External /></a
 		>.
