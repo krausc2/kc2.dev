@@ -83,7 +83,7 @@
 								<div class="flex h-6 shrink-0 items-center">
 									<a
 										href="/splashes"
-										class="text-stone-600 transition-colors duration-700 hover:text-custom-coral hover:duration-200"
+										class="text-stone-500 transition-colors duration-700 hover:text-custom-coral hover:duration-200"
 									>
 										<MoreInfo />
 									</a>
