@@ -6,6 +6,8 @@
 	import TypeScriptIcon from "$lib/components/ui/svg-icons/TypeScript.svelte";
 	import CloudflareIcon from "$lib/components/ui/svg-icons/Cloudflare.svelte";
 	import DockerIcon from "$lib/components/ui/svg-icons/Docker.svelte";
+	import GitHubIcon from "$lib/components/ui/svg-icons/GitHub.svelte";
+	import TailscaleIcon from "$lib/components/ui/svg-icons/Tailscale.svelte";
 
 	let { tag } = $props<{ tag: string }>();
 
@@ -14,6 +16,8 @@
 		TypeScript: { icon: TypeScriptIcon, color: "text-[#007acc]" },
 		Cloudflare: { icon: CloudflareIcon, color: "text-[#F48120]" },
 		Docker: { icon: DockerIcon, color: "text-[#2560FF]" },
+		"GitHub Actions": { icon: GitHubIcon, color: "text-[#181717]" },
+		Tailscale: { icon: TailscaleIcon, color: "text-[#1A1A1A]" }
 	};
 
 	let config = $derived(tagConfig[tag]);
