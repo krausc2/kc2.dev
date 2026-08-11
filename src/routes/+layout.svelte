@@ -3,14 +3,14 @@
 	import favicon from "$lib/assets/favicon.svg";
 	import { Button } from "$lib/components/ui/button";
 	import External from "$lib/components/ui/svg-icons/External.svelte";
-	import LinkedIn from "$lib/components/ui/svg-icons/LinkedIn.svelte";
-	import GitHub from "$lib/components/ui/svg-icons/GitHub.svelte";
+	//import LinkedIn from "$lib/components/ui/svg-icons/LinkedIn.svelte";
+	//import GitHub from "$lib/components/ui/svg-icons/GitHub.svelte";
 	import { page } from "$app/state";
 	import { fade } from "svelte/transition";
 	import { createClock } from "$lib/clock.svelte";
 	import pkg from "../../package.json";
 
-	let { children } = $props();
+	let { data, children } = $props();
 	let isMobileMenuOpen = $state(false);
 	let mainElement = $state<HTMLElement>();
 	let md = 768; // The cutoff for mobile view from tailwindcss.
@@ -26,13 +26,13 @@
 	});
 
 	/* #TODO Add console.log easter egg here */
-	const navItems = [
+	const navItems = $derived([
 		{ label: "Home", href: "/" },
 		// { label: 'Now', href: '/now' },
-		{ label: "Articles", href: "/articles" },
+		{ label: "Articles", href: "/articles", count: data.counts.articles },
 		// { label: "Influences", href: "/influences" },
-		{ label: "Projects", href: "/projects" }
-	];
+		{ label: "Projects", href: "/projects", count: data.counts.projects }
+	]);
 
 	const clock = createClock();
 </script>
@@ -65,6 +65,9 @@
 					href={item.href}
 				>
 					{item.label}
+					{#if item.count !== undefined}
+						<sup class="ml-1">[{item.count}]</sup>
+					{/if}
 				</Button>
 			</div>
 		{/each}
