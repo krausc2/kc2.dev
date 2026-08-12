@@ -62,14 +62,14 @@
 						<div
 							class="pointer-events-none absolute inset-0 z-0 transform-gpu bg-linear-to-r from-white to-stone-100 opacity-0 transition-opacity duration-700 group-hover:opacity-100 group-hover:duration-200"
 						></div>
-						<div class="relative z-10 mx-auto flex max-w-[100ch] flex-col gap-4 px-8 md:block">
-							<p class="text-xl font-bold md:mb-4">{project.title}</p>
-
+						<div class="relative z-10 mx-auto flex max-w-[100ch] flex-col gap-4 px-8 md:block pt-4">
 							<div
 								class="aspect-3/2 w-full bg-stone-200 md:float-right md:mb-4 md:ml-8 md:w-1/2"
 							></div>
 
-							<p class="text-sm md:mb-4">{project.description}</p>
+							<p class="text-xl font-bold md:mb-4 pt-4 md:pt-0">{project.title}</p>
+
+							<p class="text-base md:mb-4 md:text-sm">{project.description}</p>
 
 							<div class="flex flex-wrap gap-4 pt-2 pb-2 md:clear-both">
 								{#each project.tags as tag (tag)}
