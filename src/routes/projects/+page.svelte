@@ -71,7 +71,7 @@
 
 							<p class="text-base md:mb-4 md:text-sm">{project.description}</p>
 
-							<div class="flex flex-wrap gap-4 pt-2 pb-2 md:clear-both">
+							<div class="flex flex-wrap gap-4 pt-2 pb-4 md:clear-both">
 								{#each project.tags as tag (tag)}
 									<ProjectTag {tag} />
 								{/each}
