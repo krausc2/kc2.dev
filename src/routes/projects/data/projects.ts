@@ -18,6 +18,6 @@ export const projects: Project[] = [
 		title: "krausc2.dev (Infrastructure)",
 		tags: ["Docker", "Cloudflare", "GitHub Actions", "Tailscale", "Alpine Linux"],
 		description:
-			"Self-hosted blog infrastructure optimised for edge performance. Runs on a headless ARM machine over residential Wi-Fi, Cloudflare Tunnel (cloudflared) for reverse proxy, Cloudflare WAF to prevent bandwidth saturation, self-hosted GitHub action runner for CI/CD and Cloudflare maintenance worker."
+			"Self-hosted blog infrastructure optimised for edge performance. Runs on a headless ARM machine over residential Wi-Fi, Cloudflare Tunnel (cloudflared) for reverse proxy, Cloudflare WAF to prevent bandwidth saturation, self-hosted GitHub action runner for CI/CD, and a Cloudflare maintenance worker."
 	}
 ];
