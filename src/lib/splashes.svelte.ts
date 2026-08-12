@@ -23,7 +23,6 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			'From "An Essay on Criticism" (1711) by Alexander Pope.'
 		],
 		["Hello world!", "Do CS50 to figure it out; standard cliche."],
-		["Why not build a digital garden? It's quite fun.", "Like this site 🙂; original thought."],
 		["As you start to walk on the way, the way appears.", "Quote (13th c.) by Rumi."],
 		["Vibe coding? Prompt engineering.", "Original thought."],
 		[
@@ -90,9 +89,8 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"I'm still gonna try, if only 'cause I like the way it feels.",
 			'From "Sing Good" on "I Love My Computer" (2025) by Ninajirachi.'
 		],
-		["I can and I will.", "Original thought."],
 		[
-			"Sometimes you have to consume things that you don’t like.",
+			"Sometimes we have to engage with things that we don’t like.",
 			"Very few people are actually open minded; original thought."
 		],
 		["To be cringe is to be free.", "Live your life authentically; original thought."],
@@ -109,11 +107,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"Quote (2005) by Kanye West."
 		],
 		[
-			"No one cares how hard you worked; people care about what you create.",
-			"Society does not reward pointless toil, though toil can serve its own ends; Original thought."
-		],
-		[
-			"You are the common denominator in every endeavour through life.",
+			"You are the common denominator in life.",
 			"Know that sometimes it is your fault; original thought"
 		],
 		[
@@ -124,9 +118,12 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"I’m exactly where I wanna be, but I’m a long way from home.",
 			'From "Bones" on "Once in a Long, Long While" (2017) by Low Roar.'
 		],
-		["Flee the comfortable misery of the known.", "Original thought."],
 		[
-			"Keep going, keep going, keep going, keep going. It will all be Ok.",
+			"Flee the comfortable misery of the known.",
+			"Convenience is overrated and often destructive; original thought."
+		],
+		[
+			"Keep going, keep going, keep going, keep going. It will all be OK.",
 			'From "Mirror" on "Nurture" (2021) by Porter Robinson.'
 		],
 		[
@@ -139,13 +136,9 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		],
 		[
 			"You can't engineer solutions for a team that only wants to go shopping.",
-			"Don't be like Sisyphus; original thought."
+			"Original thought."
 		],
 		["Your smart fridge is spying on you.", "Okay but really, it is; standard cliche."],
-		[
-			"The ego is a terrible master, but an excellent servant.",
-			"Use your ego, but not so much as to become obtuse; original thought."
-		],
 		[
 			"I'm not a big fan of the internet, that's why I went into cyber security",
 			"Quote (2026) by Dr Helen Teixeria."
@@ -158,7 +151,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["【=◈︿◈=】", 'From "Worlds" (2014) by Porter Robinson; kanomoji/logo.'],
 		[
 			"Society has become far too okay with accepting preventable tragedies.",
-			"What was once shocking occurs in our streets each day; original thought."
+			"What was once shocking occurs in the streets daily; original thought."
 		],
 		["Orwell was an optimist.", "Standard cliche."],
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
@@ -209,7 +202,6 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"As if I'm ever gonna change.",
 			'From "as if" on "i care so much that i don\'t care at all" (2023) by Glavie.'
 		],
-		["...and then? The world.", "Standard cliche."],
 		["You're gonna die either way, so hurry up.", "Positive nihilism; original thought."],
 		["8 hours of sleep is recommended for optimal performance.", "Standard cliche."],
 		["The glowies are asleep.", "Standard cliche."],
@@ -221,8 +213,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			"Inequality is required to motivate men to greatness.",
 			"Without the inequal, the exceptional would cease to exist; original thought."
 		],
-		["Were you expecting a dark mode?", "Original thought."],
-		["#TODO Go to sleep.", "A note for myself; original thought."]
+		["Were you expecting a dark mode?", "Original thought."]
 	]
 };
 
