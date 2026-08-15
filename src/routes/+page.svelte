@@ -127,12 +127,6 @@
 	<figure
 		class="mx-auto w-2/3 max-w-sm lg:float-right lg:mx-0 lg:mb-4 lg:ml-8 lg:w-2/5 lg:max-w-none"
 	>
-		<div class="flex items-center gap-2 bg-stone-200 px-4 py-3">
-			<div class="h-3 w-3 rounded-full bg-stone-500"></div>
-			<div class="h-3 w-3 rounded-full bg-stone-400"></div>
-			<div class="h-3 w-3 rounded-full bg-stone-600"></div>
-			<span class="ml-2 text-sm text-stone-500">museum-2014.avif</span>
-		</div>
 		<div
 			class="relative aspect-3/4 w-full overflow-hidden [&_picture]:relative [&_picture]:z-10 [&_picture]:block [&_picture]:size-full"
 		>
