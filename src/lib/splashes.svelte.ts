@@ -90,6 +90,11 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 			'From "Sing Good" on "I Love My Computer" (2025) by Ninajirachi.'
 		],
 		[
+			"Reach for the stars, so if you fall, you land on a cloud.",
+			'From "Homecoming" on "Graduation" (2007) by Kanye West.'
+		],
+		["A wolf goes hungry sometimes, but it answers to no one.", "Standard cliche."],
+		[
 			"Sometimes we have to engage with things that we don’t like.",
 			"Very few people are actually open minded; original thought."
 		],
