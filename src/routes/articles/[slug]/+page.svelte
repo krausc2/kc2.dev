@@ -12,9 +12,9 @@
 
 <article class="flex flex-col border-t">
 	<div class="mx-auto w-full max-w-[70ch]">
-		<p class="text-2xl font-bold pt-16 text-left">{data.meta.title}</p>
+		<p class="pt-16 text-left text-2xl font-bold">{data.meta.title}</p>
 
-		<p class="text-sm pb-8">{formatDate(data.meta.date)}</p>
+		<p class="pb-8 text-sm">{formatDate(data.meta.date)}</p>
 
 		<div class="article-body">
 			<data.content />
