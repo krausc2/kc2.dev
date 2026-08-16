@@ -12,6 +12,10 @@ const MS_PER_SPLASH = 12000;
 
 const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 	day: [
+		[
+			"Don't let the fire rush to your head.",
+			'From "Eye in the Sky" on "Eye in the Sky" (1982) by The Alan Parsons Project.'
+		],
 		["Any computer is a laptop if you're strong enough.", "Standard cliche."],
 		[
 			"Clippy just wanted to help.",
