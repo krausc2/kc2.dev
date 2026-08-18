@@ -166,6 +166,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
 	],
 	night: [
+		["I promise you it's alright, this all means we're still alive", "From \"HeavenPiercingRounds\" on \"It's Your Life\" (2026) by thayerperiod."],
 		[
 			"What suffering can a young person really experience?",
 			'Quote (1983) by Unknown Man from KBS "Finding Dispersed Families".'
