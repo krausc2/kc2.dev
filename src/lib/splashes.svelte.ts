@@ -12,6 +12,10 @@ const MS_PER_SPLASH = 12000;
 
 const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 	day: [
+		[
+			"Don't let the fire rush to your head.",
+			'From "Eye in the Sky" on "Eye in the Sky" (1982) by The Alan Parsons Project.'
+		],
 		["Any computer is a laptop if you're strong enough.", "Standard cliche."],
 		[
 			"Clippy just wanted to help.",
@@ -162,6 +166,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		["To understand recursion, one must first understand recursion.", "Standard cliche."]
 	],
 	night: [
+		["I promise you it's alright, this all means we're still alive", "From \"HeavenPiercingRounds\" on \"It's Your Life\" (2026) by thayerperiod."],
 		[
 			"What suffering can a young person really experience?",
 			'Quote (1983) by Unknown Man from KBS "Finding Dispersed Families".'
