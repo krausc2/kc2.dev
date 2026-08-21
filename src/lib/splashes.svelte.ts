@@ -145,7 +145,7 @@ const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 		],
 		["Your smart fridge is spying on you.", "Okay but really, it is; standard cliche."],
 		[
-			"I'm not a big fan of the internet, that's why I went into cyber security",
+			"I'm not a big fan of the internet, that's why I went into cyber security.",
 			"Quote (2026) by Dr Helen Teixeria."
 		],
 		[
