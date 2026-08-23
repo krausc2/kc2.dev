@@ -121,7 +121,7 @@
 
 <section class="mx-auto flex w-full max-w-[100ch] flex-col gap-8 px-8 pt-32 pb-32 lg:block">
 	<div class="order-first">
-		<p class="mb-8 border-b pb-4 text-5xl leading-none font-bold">about</p>
+		<p class="lg:mb-8 border-b pb-4 text-5xl leading-none font-bold">about</p>
 	</div>
 
 	<figure
