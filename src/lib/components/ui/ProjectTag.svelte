@@ -27,10 +27,10 @@
 
 {#if config}
 	{@const Icon = config.icon}
-	<span class="inline-flex items-center gap-1.5 border px-2 py-1 font-mono text-sm {config.color}">
+	<span class="inline-flex items-center gap-1.5 px-2 py-1 font-mono text-sm {config.color}">
 		<Icon size="14" />
 		{tag}
 	</span>
 {:else}
-	<span class="border px-2 py-1 font-mono text-sm text-custom-coral">{tag}</span>
+	<span class="px-2 py-1 font-mono text-sm text-custom-coral">{tag}</span>
 {/if}
