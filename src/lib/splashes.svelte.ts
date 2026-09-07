@@ -12,7 +12,7 @@ const MS_PER_SPLASH = 12000;
 
 const SPLASHES: { day: [string, string][]; night: [string, string][] } = {
 	day: [
-		["And they say that life has no meaning.","From \"Jinsei no Tobira\" on \"Denim\" (2005) by Mariya Takeuchi."],
+		["And they say that life has no meaning.","From \"Jinsei no Tobira\" on \"Denim\" (2007) by Mariya Takeuchi."],
 		[
 			"Don't let the fire rush to your head.",
 			'From "Eye in the Sky" on "Eye in the Sky" (1982) by The Alan Parsons Project.'
